@@ -16,7 +16,7 @@
 [![Typst](https://img.shields.io/badge/Typst-PDF_Engine-239DAD?style=for-the-badge)](https://typst.app/)
 [![ADNSU Hackathon](https://img.shields.io/badge/ADNSU_Hackathon-2026-004D98?style=for-the-badge)](#)
 
-[Sürətli Başlanğıc](#sürətli-başlanğıc-lokal-quraşdırma) • [Əsas Xüsusiyyətlər](#əsas-funksionallıqlar) • [Memarlıq](#layihənin-arxitekturası) • [Məxfilik və Qanunvericilik](#məxfilik-və-fərdi-məlumatların-qorunması)
+[Canlı Demo (Vercel)](https://adnsu-hakaton.vercel.app) • [Sürətli Başlanğıc](#sürətli-başlanğıc-lokal-quraşdırma) • [Əsas Xüsusiyyətlər](#əsas-funksionallıqlar) • [Memarlıq](#layihənin-arxitekturası) • [Məxfilik və Qanunvericilik](#məxfilik-və-fərdi-məlumatların-qorunması)
 
 </div>
 
