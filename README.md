@@ -16,7 +16,7 @@
 [![Typst](https://img.shields.io/badge/Typst-PDF_Engine-239DAD?style=for-the-badge)](https://typst.app/)
 [![ADNSU Hackathon](https://img.shields.io/badge/ADNSU_Hackathon-2026-004D98?style=for-the-badge)](#)
 
-[🚀 Sürətli Başlanğıc](#-sürətli-başlanğıc-lokal-quraşdırma) • [📊 Hakaton Təqdimatı](./docs/hakaton_teqdimati.md) • [✨ Əsas Xüsusiyyətlər](#-əsas-funksionallıqlar) • [🏗️ Memarlıq](#-layihənin-arxitekturası) • [🔒 Məxfilik və Qanunvericilik](#-məxfilik-və-fərdi-məlumatların-qorunması)
+[🚀 Sürətli Başlanğıc](#-sürətli-başlanğıc-lokal-quraşdırma) • [✨ Əsas Xüsusiyyətlər](#-əsas-funksionallıqlar) • [🏗️ Memarlıq](#-layihənin-arxitekturası) • [🔒 Məxfilik və Qanunvericilik](#-məxfilik-və-fərdi-məlumatların-qorunması)
 
 </div>
 
@@ -59,8 +59,7 @@ AISE müasir və miqyaslana bilən **Monorepo** arxitekturası üzərində qurul
 aise/
 ├── aiselogo.png                 # Brend loqosu
 ├── favicon.ico                  # Tətbiq ikonu
-├── docs/                        # Hakaton və layihə sənədləri
-│   └── hakaton_teqdimati.md     # ADNSU Hakaton Təqdimatı və Pitch ssenarisi
+├── docs/                        # Layihə və arxitektura sənədləri
 ├── packages/
 │   └── shared-types/            # Web və API arasında ortaq TypeScript tipləri
 └── apps/
@@ -132,13 +131,6 @@ AISE platforması fərdi məlumatların qorunmasını ən yüksək prioritet hes
 - **Şifrələmə:** İstifadəçi şifrələri və həssas profil dataları müasir hashing və tokenizasiya standartları ilə saxlanılır.
 - **Yalnız İstifadəçi İcazəsi ilə Paylaşım:** Namizədin CV və əlaqə məlumatları yalnız özü müraciət düyməsini sıxdığı halda müvafiq işəgötürənə təqdim olunur.
 - **İstənilən Vaxt Silinmə Hüququ:** Namizəd istənilən an öz profilini və yüklənmiş sənədlərini sistemdən tamamilə silmək hüququna malikdir.
-
----
-
-## 📊 Hakaton Təqdimatı
-
-Hakaton münsifləri və komanda üçün hazırlanmış 3 dəqiqəlik çıxış ssenarisi, sual-cavab arqumentləri və biznes model təhlili:
-👉 **[Hakaton Təqdimat Sənədi (docs/hakaton_teqdimati.md)](./docs/hakaton_teqdimati.md)**
 
 ---
 
