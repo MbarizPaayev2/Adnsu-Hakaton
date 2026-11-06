@@ -134,7 +134,7 @@ const nextConfig: NextConfig = {
   // Traces the real dependency graph (including the @aise/shared-types
   // workspace package) into .next/standalone, so the Docker runtime image
   // can ship that folder alone instead of the whole monorepo node_modules.
-  output: 'standalone',
+  output: process.env.VERCEL ? undefined : 'standalone',
 
   // Don't advertise the framework and version to scanners.
   poweredByHeader: false,

@@ -70,3 +70,5 @@ dump.rdb
 
 # Generated private Premium extension archive (built into the API image).
 apps/api/private/agent/
+
+.vercel
