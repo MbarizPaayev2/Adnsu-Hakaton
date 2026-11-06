@@ -16,21 +16,21 @@
 [![Typst](https://img.shields.io/badge/Typst-PDF_Engine-239DAD?style=for-the-badge)](https://typst.app/)
 [![ADNSU Hackathon](https://img.shields.io/badge/ADNSU_Hackathon-2026-004D98?style=for-the-badge)](#)
 
-[🚀 Sürətli Başlanğıc](#-sürətli-başlanğıc-lokal-quraşdırma) • [✨ Əsas Xüsusiyyətlər](#-əsas-funksionallıqlar) • [🏗️ Memarlıq](#-layihənin-arxitekturası) • [🔒 Məxfilik və Qanunvericilik](#-məxfilik-və-fərdi-məlumatların-qorunması)
+[Sürətli Başlanğıc](#sürətli-başlanğıc-lokal-quraşdırma) • [Əsas Xüsusiyyətlər](#əsas-funksionallıqlar) • [Memarlıq](#layihənin-arxitekturası) • [Məxfilik və Qanunvericilik](#məxfilik-və-fərdi-məlumatların-qorunması)
 
 </div>
 
 ---
 
-## 📌 Problem və Həll
+## Problem və Həll
 
-### 🛑 Mövcud Problemlər
-1. **Parçalanmış Vakansiya Bazarı:** Azərbaycanda vakansiyalar 20-dən çox fərqli platforma, Telegram kanalı və şirkət saytlarına səpələnib. Namizədlər hər gün saatlarla fərqli mənbələri axtarmalı olurlar.
-2. **ATS Uğursuzluğu və Standartsız CV-lər:** Bir çox namizəd hər vakansiyaya eyni şablon CV göndərir və açar sözlər uyğun gəlmədiyi üçün sənədlər HR və ATS filtrlərində dərhal kənarlaşdırılır.
+### Mövcud Problemlər
+1. **Parçalanmış Vakansiya Bazarı:** Azərbaycanda vakansiyalar 20-dən çox fərqli platforma, Telegram kanalı və şirkət saytlarına səpələnib. Namizədlər hər gün fərqli mənbələri tək-tək axtarmağa vaxt sərf edirlər.
+2. **ATS Uğursuzluğu və Standartsız CV-lər:** Bir çox namizəd hər vakansiyaya eyni şablon CV göndərir və açar sözlər uyğun gəlmədiyi üçün müraciətlər HR/ATS filtrlərində dərhal kənarlaşdırılır.
 3. **HR və Şirkətlərin Yükü:** İşəgötürənlər hər vakansiya üçün yüzlərlə qeyri-adekvat müraciəti əllə incələməyə məcbur qalır, vaxt və resurs itirirlər.
 4. **Yerli Dildə AI Dəstəyinin Yoxluğu:** Mövcud qlobal AI alətləri Azərbaycan əmək bazarının reallıqlarını və qrammatikasını dəqiq əks etdirmir.
 
-### 💡 AISE Həlli
+### AISE Həlli
 - **Mərkəzləşdirilmiş Aqreqasiya:** Ölkənin 20+ aparıcı platformasından (Glorri, yerli banklar, holdinqlər və s.) vakansiyaların tək portala toplanması.
 - **Ağıllı Semantik Uyğunluq (AI Matching):** Namizədin bacarıqlarını vakansiyanın tələbləri ilə dərindən müqayisə edib faiz göstəricisi (skor) və inkişaf tövsiyələri təqdim etmək.
 - **Typst Əsaslı Harvard CV Generatoru:** Saniyələr içində seçilən vakansiyanın açar sözlərinə tam uyğunlaşdırılmış, ATS-dostu və qüsursuz Azərbaycan dilində PDF CV hazırlamaq.
@@ -38,20 +38,20 @@
 
 ---
 
-## ✨ Əsas Funksionallıqlar
+## Əsas Funksionallıqlar
 
 | Xüsusiyyət | Təsvir |
 |---|---|
-| 🧠 **AI Semantic Matching** | Namizəd bacarıqları ilə vakansiya tələblərini qarşılaşdıraraq uyğunluq dərəcəsini (% skor) və çatışmayan bacarıqları göstərir. |
-| 📄 **Harvard CV Mühərriki (Typst)** | Müraciət edilən vakansiyaya özəl, ATS sistemləri tərəfindən 100% oxunan Harvard formatında PDF sənəd generasiya edir. |
-| 🔄 **Ağıllı Yenidən Müraciət** | Namizədlərə profillərini və CV-lərini təkmilləşdirərək əvvəlki müraciətlərini yeniləməyə və təkrar şans qazanmağa imkan verir. |
-| 🏢 **Şirkətlər üçün HR Kabineti** | Vakansiyaların idarə edilməsi, müraciət etmiş namizədlərin süni intellektlə reytinqlənməsi və statusların izlənməsi. |
-| 👤 **Namizəd İdarəetmə Paneli** | Real-vaxt rejimində müraciət statusları, tövsiyə olunan vakansiyalar və fərdi profil məlumatlarının idarəsi. |
-| 🌐 **Çoxmənbəli Vakansiya Toplayıcısı** | Glorri, şirkət karyera portalları və ATS-lərdən avtomatlaşdırılmış inteqrasiya və məlumat təmizlənməsi. |
+| **AI Semantic Matching** | Namizəd bacarıqları ilə vakansiya tələblərini qarşılaşdıraraq uyğunluq dərəcəsini (% skor) və çatışmayan bacarıqları göstərir. |
+| **Harvard CV Mühərriki (Typst)** | Müraciət edilən vakansiyaya özəl, ATS sistemləri tərəfindən 100% oxunan Harvard formatında PDF sənəd generasiya edir. |
+| **Ağıllı Yenidən Müraciət** | Namizədlərə profillərini və CV-lərini təkmilləşdirərək əvvəlki müraciətlərini yeniləməyə və təkrar şans qazanmağa imkan verir. |
+| **Şirkətlər üçün HR Kabineti** | Vakansiyaların idarə edilməsi, müraciət etmiş namizədlərin süni intellektlə reytinqlənməsi və statusların izlənməsi. |
+| **Namizəd İdarəetmə Paneli** | Real-vaxt rejimində müraciət statusları, tövsiyə olunan vakansiyalar və fərdi profil məlumatlarının idarəsi. |
+| **Çoxmənbəli Vakansiya Toplayıcısı** | Glorri, şirkət karyera portalları və ATS-lərdən avtomatlaşdırılmış inteqrasiya və məlumat təmizlənməsi. |
 
 ---
 
-## 🏗️ Layihənin Arxitekturası
+## Layihənin Arxitekturası
 
 AISE müasir və miqyaslana bilən **Monorepo** arxitekturası üzərində qurulub:
 
@@ -72,7 +72,7 @@ aise/
 
 ---
 
-## 🚀 Sürətli Başlanğıc (Lokal Quraşdırma)
+## Sürətli Başlanğıc (Lokal Quraşdırma)
 
 ### Tələblər
 - **Node.js**: v20 və ya daha yuxarı
@@ -124,9 +124,9 @@ npm run dev:web     # http://localhost:3000
 
 ---
 
-## 🔒 Məxfilik və Fərdi Məlumatların Qorunması
+## Məxfilik və Fərdi Məlumatların Qorunması
 
-AISE platforması fərdi məlumatların qorunmasını ən yüksək prioritet hesab edir:
+AISE platforması fərdi məlumatların qorunmasını əsas tələb hesab edir:
 - **Azərbaycan Respublikasının Qanunvericiliyi:** "Fərdi məlumatlar haqqında" Azərbaycan Respublikasının Qanununun tələblərinə tam riayət olunur.
 - **Şifrələmə:** İstifadəçi şifrələri və həssas profil dataları müasir hashing və tokenizasiya standartları ilə saxlanılır.
 - **Yalnız İstifadəçi İcazəsi ilə Paylaşım:** Namizədin CV və əlaqə məlumatları yalnız özü müraciət düyməsini sıxdığı halda müvafiq işəgötürənə təqdim olunur.
@@ -134,7 +134,7 @@ AISE platforması fərdi məlumatların qorunmasını ən yüksək prioritet hes
 
 ---
 
-## 👥 Komanda və Əlaqə
+## Komanda və Əlaqə
 
 Layihə **ADNSU Hakaton 2026** çərçivəsində əmək bazarındakı işsizlik və vakansiya uyğunsuzluğu problemini həll etmək məqsədilə hazırlanmışdır.
 
