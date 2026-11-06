@@ -1,71 +1,150 @@
-# AISE
+<div align="center">
 
-Job matching and applications for candidates and employers in Azerbaijan.
+<img src="./aiselogo.png" alt="AISE Logo" width="160" />
 
-| Path | What it is |
+# AISE (AI Smart Employment)
+### Süni İntellekt Əsaslı Karyera və Vakansiya Ekosistemi
+
+**Azərbaycan əmək bazarı üçün fərdiləşdirilmiş süni intellekt dəstəkli iş axtarışı, semantik vakansiya uyğunlaşdırma və Harvard standartlı avtomatlaşdırılmış CV mühərriki.**
+
+[![Next.js](https://img.shields.io/badge/Next.js-16.0-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![NestJS](https://img.shields.io/badge/NestJS-11.0-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)](https://nestjs.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.6-blue?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Prisma](https://img.shields.io/badge/Prisma-6.0-2D3748?style=for-the-badge&logo=prisma&logoColor=white)](https://www.prisma.io/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Typst](https://img.shields.io/badge/Typst-PDF_Engine-239DAD?style=for-the-badge)](https://typst.app/)
+[![ADNSU Hackathon](https://img.shields.io/badge/ADNSU_Hackathon-2026-004D98?style=for-the-badge)](#)
+
+[🚀 Sürətli Başlanğıc](#-sürətli-başlanğıc-lokal-quraşdırma) • [📊 Hakaton Təqdimatı](./docs/hakaton_teqdimati.md) • [✨ Əsas Xüsusiyyətlər](#-əsas-funksionallıqlar) • [🏗️ Memarlıq](#-layihənin-arxitekturası) • [🔒 Məxfilik və Qanunvericilik](#-məxfilik-və-fərdi-məlumatların-qorunması)
+
+</div>
+
+---
+
+## 📌 Problem və Həll
+
+### 🛑 Mövcud Problemlər
+1. **Parçalanmış Vakansiya Bazarı:** Azərbaycanda vakansiyalar 20-dən çox fərqli platforma, Telegram kanalı və şirkət saytlarına səpələnib. Namizədlər hər gün saatlarla fərqli mənbələri axtarmalı olurlar.
+2. **ATS Uğursuzluğu və Standartsız CV-lər:** Bir çox namizəd hər vakansiyaya eyni şablon CV göndərir və açar sözlər uyğun gəlmədiyi üçün sənədlər HR və ATS filtrlərində dərhal kənarlaşdırılır.
+3. **HR və Şirkətlərin Yükü:** İşəgötürənlər hər vakansiya üçün yüzlərlə qeyri-adekvat müraciəti əllə incələməyə məcbur qalır, vaxt və resurs itirirlər.
+4. **Yerli Dildə AI Dəstəyinin Yoxluğu:** Mövcud qlobal AI alətləri Azərbaycan əmək bazarının reallıqlarını və qrammatikasını dəqiq əks etdirmir.
+
+### 💡 AISE Həlli
+- **Mərkəzləşdirilmiş Aqreqasiya:** Ölkənin 20+ aparıcı platformasından (Glorri, yerli banklar, holdinqlər və s.) vakansiyaların tək portala toplanması.
+- **Ağıllı Semantik Uyğunluq (AI Matching):** Namizədin bacarıqlarını vakansiyanın tələbləri ilə dərindən müqayisə edib faiz göstəricisi (skor) və inkişaf tövsiyələri təqdim etmək.
+- **Typst Əsaslı Harvard CV Generatoru:** Saniyələr içində seçilən vakansiyanın açar sözlərinə tam uyğunlaşdırılmış, ATS-dostu və qüsursuz Azərbaycan dilində PDF CV hazırlamaq.
+- **Yenidən Müraciət (Re-Application) Ekosistemi:** Əvvəl rədd edilmiş və ya təkrar müraciət etmək istəyən namizədlər üçün çevik yeniləmə imkanı.
+
+---
+
+## ✨ Əsas Funksionallıqlar
+
+| Xüsusiyyət | Təsvir |
 |---|---|
-| `apps/api` | NestJS API (Prisma + PostgreSQL, BullMQ + Redis) |
-| `apps/web` | Next.js web app (candidates, employers, admin) |
-| `apps/apply-worker` | Browser worker for external applications (off by default) |
-| `apps/matching-service` | Python matching/scoring service |
-| `packages/shared-types` | Types shared by the apps |
+| 🧠 **AI Semantic Matching** | Namizəd bacarıqları ilə vakansiya tələblərini qarşılaşdıraraq uyğunluq dərəcəsini (% skor) və çatışmayan bacarıqları göstərir. |
+| 📄 **Harvard CV Mühərriki (Typst)** | Müraciət edilən vakansiyaya özəl, ATS sistemləri tərəfindən 100% oxunan Harvard formatında PDF sənəd generasiya edir. |
+| 🔄 **Ağıllı Yenidən Müraciət** | Namizədlərə profillərini və CV-lərini təkmilləşdirərək əvvəlki müraciətlərini yeniləməyə və təkrar şans qazanmağa imkan verir. |
+| 🏢 **Şirkətlər üçün HR Kabineti** | Vakansiyaların idarə edilməsi, müraciət etmiş namizədlərin süni intellektlə reytinqlənməsi və statusların izlənməsi. |
+| 👤 **Namizəd İdarəetmə Paneli** | Real-vaxt rejimində müraciət statusları, tövsiyə olunan vakansiyalar və fərdi profil məlumatlarının idarəsi. |
+| 🌐 **Çoxmənbəli Vakansiya Toplayıcısı** | Glorri, şirkət karyera portalları və ATS-lərdən avtomatlaşdırılmış inteqrasiya və məlumat təmizlənməsi. |
 
-## Local development
+---
 
-You need Node.js 20, npm and Docker. No production secret is needed or used
-locally: email and payments run in mock mode, and the Glorri importer and
-external applications are off.
+## 🏗️ Layihənin Arxitekturası
 
-1. **Environment files** — copy each template and keep the copy out of Git:
+AISE müasir və miqyaslana bilən **Monorepo** arxitekturası üzərində qurulub:
 
-   ```bash
-   cp .env.example .env
-   cp apps/api/.env.example apps/api/.env
-   cp apps/web/.env.example apps/web/.env.local
-   cp apps/apply-worker/.env.example apps/apply-worker/.env   # only if you work on the worker
-   ```
+```
+aise/
+├── aiselogo.png                 # Brend loqosu
+├── favicon.ico                  # Tətbiq ikonu
+├── docs/                        # Hakaton və layihə sənədləri
+│   └── hakaton_teqdimati.md     # ADNSU Hakaton Təqdimatı və Pitch ssenarisi
+├── packages/
+│   └── shared-types/            # Web və API arasında ortaq TypeScript tipləri
+└── apps/
+    ├── web/                     # Next.js 16 (React 19, Tailwind CSS v4, Turbopack)
+    ├── api/                     # NestJS 11 (PostgreSQL, Prisma, BullMQ, Typst Compiler)
+    ├── matching-service/        # Süni intellekt semantik analiz və skorinq xidməti
+    ├── apply-worker/            # Avtomatlaşdırılmış xarici müraciət worker-i (Playwright)
+    └── extension/               # Vakansiyaları bir kliklə daxil edən brauzer əlavəsi
+```
 
-   Replace `NEXTAUTH_SECRET` (the same value in `.env` and
-   `apps/web/.env.local`) with your own random string (`openssl rand -hex 32`).
-   Each file explains its variables.
+---
 
-2. **Dependencies and database**
+## 🚀 Sürətli Başlanğıc (Lokal Quraşdırma)
 
-   ```bash
-   npm ci
-   npm run build --workspace=packages/shared-types
-   docker compose up -d postgres redis
-   cd apps/api && npx prisma migrate deploy && npx prisma generate && cd ../..
-   npm run db:seed        # optional sample data
-   ```
+### Tələblər
+- **Node.js**: v20 və ya daha yuxarı
+- **npm**: v10 və ya daha yuxarı
+- *(İstəyə bağlı)* **Docker**: PostgreSQL və Redis üçün
 
-3. **Run**
+### 1. Repozitoriyanı klonlayın
+```bash
+git clone https://github.com/MbarizPaayev2/Adnsu-Hakaton.git
+cd Adnsu-Hakaton
+```
 
-   ```bash
-   npm run dev:api        # http://localhost:4000
-   npm run dev:web        # http://localhost:3000
-   ```
+### 2. Frontend Tətbiqini İşə Salın (Sürətli nümayiş)
+PostgreSQL olmadan frontend interfeysini və UI komponentlərini test etmək üçün:
+```bash
+# Ortaq tipləri kompilyasiya edin
+npm run build --workspace=packages/shared-types
 
-   Emails are printed in the API log (`[EMAIL MOCK] …`) instead of being sent.
+# Frontend asılılıqlarını quraşdırın və işə salın
+npm install --workspace=apps/web
+npm run dev --workspace=apps/web
+```
+Brauzerdə açın: **[http://localhost:3000](http://localhost:3000)**
 
-4. **Tests**
+---
 
-   ```bash
-   npm test --workspace=apps/api
-   npm test --workspace=apps/web
-   ```
+### 3. Tam Ekosistemi İşə Salın (Backend + Database)
+Verilənlər bazası və API ilə tam inteqrasiya üçün:
 
-## Secrets
+```bash
+# Ətraf mühit dəyişənlərini köçürün
+cp .env.example .env
+cp apps/api/.env.example apps/api/.env
+cp apps/web/.env.example apps/web/.env.local
 
-- Never commit `.env`, `.env.local` or any real key. The `*.env.example`
-  files contain development placeholders only.
-- Production secrets exist only on the production server. Do not copy them to
-  your machine, chat or email.
-- If you need a real third-party key for your own testing (Resend, Dodo test
-  mode, NVIDIA), ask for a separate key issued to you, so it can be revoked on
-  its own.
+# Verilənlər bazasını və Redisi başladın
+docker compose up -d postgres redis
 
-## More
+# Prisma miqrasiyalarını icra edin
+cd apps/api
+npx prisma migrate deploy
+npx prisma generate
+cd ../..
 
-- Deployment: `DEPLOY.md`
-- Release record and runbook: `docs/release-2026-10-05.md`
+# API və Web servislərini başladın
+npm run dev:api     # http://localhost:4000
+npm run dev:web     # http://localhost:3000
+```
+
+---
+
+## 🔒 Məxfilik və Fərdi Məlumatların Qorunması
+
+AISE platforması fərdi məlumatların qorunmasını ən yüksək prioritet hesab edir:
+- **Azərbaycan Respublikasının Qanunvericiliyi:** "Fərdi məlumatlar haqqında" Azərbaycan Respublikasının Qanununun tələblərinə tam riayət olunur.
+- **Şifrələmə:** İstifadəçi şifrələri və həssas profil dataları müasir hashing və tokenizasiya standartları ilə saxlanılır.
+- **Yalnız İstifadəçi İcazəsi ilə Paylaşım:** Namizədin CV və əlaqə məlumatları yalnız özü müraciət düyməsini sıxdığı halda müvafiq işəgötürənə təqdim olunur.
+- **İstənilən Vaxt Silinmə Hüququ:** Namizəd istənilən an öz profilini və yüklənmiş sənədlərini sistemdən tamamilə silmək hüququna malikdir.
+
+---
+
+## 📊 Hakaton Təqdimatı
+
+Hakaton münsifləri və komanda üçün hazırlanmış 3 dəqiqəlik çıxış ssenarisi, sual-cavab arqumentləri və biznes model təhlili:
+👉 **[Hakaton Təqdimat Sənədi (docs/hakaton_teqdimati.md)](./docs/hakaton_teqdimati.md)**
+
+---
+
+## 👥 Komanda və Əlaqə
+
+Layihə **ADNSU Hakaton 2026** çərçivəsində əmək bazarındakı işsizlik və vakansiya uyğunsuzluğu problemini həll etmək məqsədilə hazırlanmışdır.
+
+- **GitHub Repository:** [https://github.com/MbarizPaayev2/Adnsu-Hakaton](https://github.com/MbarizPaayev2/Adnsu-Hakaton)
+- **Təşkilat:** Azərbaycan Dövlət Neft və Sənaye Universiteti (ADNSU)
