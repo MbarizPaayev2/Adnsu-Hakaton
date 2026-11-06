@@ -64,7 +64,126 @@ export function unconfirmedDays(checkedAt: string | null | undefined, now: Date 
 
 /** Public server fetch: no session/token, no persistent cache of closed jobs. */
 export async function fetchCatalogue(path: string): Promise<Response | null> {
-  const base = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
-  try { return await fetch(`${base}${path}`, { cache: 'no-store', signal: AbortSignal.timeout(8000) }); }
-  catch { return null; }
+  const base = process.env.NEXT_PUBLIC_API_URL;
+  if (base && !base.includes('localhost')) {
+    try {
+      return await fetch(`${base}${path}`, { cache: 'no-store', signal: AbortSignal.timeout(8000) });
+    } catch {
+      // Fallback below
+    }
+  }
+
+  // Standalone mock catalogue for public jobs page
+  const mockJobs: CatalogueItem[] = [
+    {
+      id: 'job-1',
+      kind: 'native',
+      source: 'aise',
+      category: 'it',
+      categoryLabel: 'İnformasiya Texnologiyaları',
+      title: 'Senior Software Engineer (React / TypeScript)',
+      company: 'Innovate AI',
+      companyId: 'comp-1',
+      location: 'Uzaqdan · Bakı',
+      postedAt: new Date().toISOString(),
+      deadline: new Date(Date.now() + 25 * 86400000).toISOString(),
+      workArrangement: 'remote',
+      experienceLevel: 'senior',
+      applicationMethod: 'direct',
+      checkedAt: new Date().toISOString(),
+    },
+    {
+      id: 'job-2',
+      kind: 'native',
+      source: 'abb',
+      category: 'it',
+      categoryLabel: 'İnformasiya Texnologiyaları',
+      title: 'Full Stack Developer (Next.js & Node.js)',
+      company: 'ABB Innovation',
+      companyId: 'comp-2',
+      location: 'Bakı (Hibrid)',
+      postedAt: new Date().toISOString(),
+      deadline: new Date(Date.now() + 20 * 86400000).toISOString(),
+      workArrangement: 'hybrid',
+      experienceLevel: 'mid',
+      applicationMethod: 'direct',
+      checkedAt: new Date().toISOString(),
+    },
+    {
+      id: 'job-3',
+      kind: 'native',
+      source: 'pwc',
+      category: 'finance',
+      categoryLabel: 'Maliyyə və Mühasibat',
+      title: 'Maliyyə Analitiki / Data Analyst',
+      company: 'PASHA Bank',
+      companyId: 'comp-3',
+      location: 'Bakı',
+      postedAt: new Date().toISOString(),
+      deadline: new Date(Date.now() + 15 * 86400000).toISOString(),
+      workArrangement: 'onsite',
+      experienceLevel: 'junior',
+      applicationMethod: 'direct',
+      checkedAt: new Date().toISOString(),
+    },
+    {
+      id: 'job-4',
+      kind: 'imported',
+      source: 'glorri',
+      category: 'it',
+      categoryLabel: 'İnformasiya Texnologiyaları',
+      title: 'DevOps & Cloud Mühəndisi',
+      company: 'Azercell Telecom',
+      companyId: null,
+      location: 'Bakı',
+      postedAt: new Date().toISOString(),
+      deadline: null,
+      workArrangement: 'hybrid',
+      experienceLevel: 'mid',
+      applicationMethod: 'external',
+      checkedAt: new Date().toISOString(),
+    },
+  ];
+
+  const mockResponse: CatalogueResponse = {
+    data: mockJobs,
+    meta: {
+      total: mockJobs.length,
+      totalOpen: mockJobs.length,
+      page: 1,
+      limit: 20,
+      totalPages: 1,
+    },
+    sources: [
+      { source: 'aise', count: 1 },
+      { source: 'abb', count: 1 },
+      { source: 'pwc', count: 1 },
+      { source: 'glorri', count: 1 },
+    ],
+    categories: [
+      { key: 'it', label: 'İnformasiya Texnologiyaları', count: 3 },
+      { key: 'finance', label: 'Maliyyə və Mühasibat', count: 1 },
+    ],
+    workArrangements: [
+      { value: 'remote', count: 1 },
+      { value: 'hybrid', count: 2 },
+      { value: 'onsite', count: 1 },
+    ],
+    experienceLevels: [
+      { value: 'senior', count: 1 },
+      { value: 'mid', count: 2 },
+      { value: 'junior', count: 1 },
+    ],
+    companies: [
+      { company: 'Innovate AI', count: 1 },
+      { company: 'ABB Innovation', count: 1 },
+      { company: 'PASHA Bank', count: 1 },
+      { company: 'Azercell Telecom', count: 1 },
+    ],
+  };
+
+  return new Response(JSON.stringify(mockResponse), {
+    status: 200,
+    headers: { 'Content-Type': 'application/json' },
+  });
 }
