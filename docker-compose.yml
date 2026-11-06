@@ -1,0 +1,180 @@
+# Container logs are rotated so a noisy service cannot fill the disk.
+x-logging: &logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "5"
+
+# Every published port is bound to 127.0.0.1. Docker-published ports bypass
+# host firewalls such as ufw, so "0.0.0.0" would expose them to the internet
+# even with a firewall in place. Public traffic arrives only through the
+# reverse proxy (the external `proxy` network) behind Cloudflare.
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: aise-postgres
+    logging: *logging
+    # Host access for local tools only (backups use `docker exec`).
+    ports:
+      - "127.0.0.1:5433:5432"
+    environment:
+      POSTGRES_USER: postgres
+      # Only applied when the volume is first created. Changing it for an
+      # existing volume needs ALTER USER too — see docs/release-2026-10-05.md.
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:-postgrespassword}"
+      POSTGRES_DB: aise
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d aise"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: aise-redis
+    logging: *logging
+    ports:
+      - "127.0.0.1:6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+    restart: unless-stopped
+
+  matching-service:
+    build: ./apps/matching-service
+    container_name: aise-matching-service
+    logging: *logging
+    # Bound to loopback only — apps/api runs on the host (not in this compose
+    # network) and reaches it via 127.0.0.1:8000, but this must never be
+    # published on 0.0.0.0 since /score has no auth beyond MATCHING_SERVICE_TOKEN.
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      MATCHING_SERVICE_TOKEN: "${MATCHING_SERVICE_TOKEN:?set MATCHING_SERVICE_TOKEN in apps/api/.env and export it, or pass it inline}"
+    restart: unless-stopped
+
+  apply-worker:
+    build:
+      context: .
+      dockerfile: apps/apply-worker/Dockerfile
+    container_name: aise-apply-worker
+    logging: *logging
+    # Bound to loopback only, same posture as matching-service — this drives a
+    # real headless browser filling in real users' PII on glorri.az and must
+    # never be reachable except from apps/api via 127.0.0.1:8100.
+    ports:
+      - "127.0.0.1:8100:8100"
+    environment:
+      APPLY_WORKER_TOKEN: "${APPLY_WORKER_TOKEN:?set APPLY_WORKER_TOKEN in apps/api/.env and export it, or pass it inline}"
+      EXTERNAL_APPLY_MAX_SESSIONS: "${EXTERNAL_APPLY_MAX_SESSIONS:-10}"
+      EXTERNAL_APPLY_MAX_CONCURRENCY: "${EXTERNAL_APPLY_MAX_CONCURRENCY:-4}"
+      EXTERNAL_APPLY_SESSION_TTL_MS: "${EXTERNAL_APPLY_SESSION_TTL_MS:-1200000}"
+    restart: unless-stopped
+
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    container_name: aise-api
+    logging: *logging
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    # Most config comes straight from apps/api/.env (the dotenv parser
+    # docker-compose uses for env_file handles the quoted values there
+    # correctly — unlike the bare `docker run --env-file` flag, which does
+    # NOT strip quotes and will pass a broken, still-quoted DATABASE_URL).
+    env_file:
+      - ./apps/api/.env
+    environment:
+      # Overrides for values in apps/api/.env that assume apps/api runs
+      # directly on the host (hitting localhost / loopback-published ports).
+      # Inside this compose network, sibling services are reached by their
+      # service name instead.
+      DATABASE_URL: "postgresql://postgres:${POSTGRES_PASSWORD:-postgrespassword}@postgres:5432/aise?schema=public"
+      REDIS_HOST: "redis"
+      REDIS_PORT: "6379"
+      MATCHING_SERVICE_URL: "http://matching-service:8000"
+      APPLY_WORKER_URL: "http://apply-worker:8100"
+      BACKUP_STATUS_FILE: "/var/lib/aise/backup-status/status.json"
+      # Set by scripts/deploy.sh from the checked-out commit.
+      RELEASE_SHA: "${RELEASE_SHA:-}"
+      APP_ENV: "${APP_ENV:-production}"
+    ports:
+      - "127.0.0.1:4000:4000"
+    # Ready = database and Redis answer (GET /health/ready, no details).
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:4000/health/ready').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      start_period: 120s
+      retries: 4
+    # No Docker socket: the public API must not hold host-root privileges.
+    # Restarts/deploys are done by an operator on the host (scripts/deploy.sh).
+    volumes:
+      # Read-only backup/restore-test status written by scripts/backup.sh and
+      # scripts/restore-test.sh on the host (shown on /admin/system).
+      # BACKUP_STATUS_DIR is where scripts/backup-daily.sh writes status.json
+      # (production: /home/tefma/aise-backups/status). The default keeps older hosts working.
+      - ${BACKUP_STATUS_DIR:-/var/backups/aise/status}:/var/lib/aise/backup-status:ro
+      # Uploaded files MUST live on a volume.
+      #
+      # LocalStorageService writes to `process.cwd()/uploads`, and this
+      # image's WORKDIR is /repo/apps/api, so without this mount every
+      # uploaded CV, generated CV, ID-document photo and application
+      # attachment is written into the container's own writable layer and
+      # destroyed the next time the container is replaced or restarted —
+      # including by the admin panel's own restart button.
+      #
+      # The database keeps the paths regardless (Resume.fileUrl,
+      # Profile.idDocumentUrl, ApplicationFile.fileUrl), so the result is not
+      # just data loss but rows pointing at files that no longer exist.
+      - uploads:/repo/apps/api/uploads
+    networks:
+      - default
+      - proxy
+    restart: unless-stopped
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    container_name: aise-web
+    logging: *logging
+    depends_on:
+      - api
+    networks:
+      - default
+      - proxy
+    environment:
+      # NEXT_PUBLIC_API_URL is NOT set here on purpose: Next.js inlines
+      # NEXT_PUBLIC_* vars into the client bundle at `next build` time (baked
+      # in from apps/web/.env.local), not read again at container runtime —
+      # setting it here would silently do nothing. NEXTAUTH_URL/SECRET *are*
+      # read server-side at runtime, and the standalone output doesn't ship
+      # apps/web/.env.local, so they must be supplied here instead.
+      NEXTAUTH_URL: "${NEXTAUTH_URL:-http://localhost:3000}"
+      NEXTAUTH_SECRET: "${NEXTAUTH_SECRET:?set NEXTAUTH_SECRET in apps/api/.env and export it, or pass it inline}"
+      # Google sign-in for candidates: offered only when both are set (server-side only; never NEXT_PUBLIC). The API verifies ID tokens with GOOGLE_CLIENT_ID alone (apps/api/.env).
+      GOOGLE_CLIENT_ID: "${GOOGLE_CLIENT_ID:-}"
+      GOOGLE_CLIENT_SECRET: "${GOOGLE_CLIENT_SECRET:-}"
+    ports:
+      - "127.0.0.1:3000:3000"
+    restart: unless-stopped
+
+networks:
+  proxy:
+    external: true
+
+volumes:
+  pgdata:
+  # User-uploaded and generated files. Back this up alongside pgdata — a
+  # database dump on its own restores rows whose files are missing.
+  uploads:

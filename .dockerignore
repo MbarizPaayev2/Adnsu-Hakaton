@@ -1,0 +1,30 @@
+# Build context for the images in docker-compose.yml (built from the repo root).
+# Dependencies and build output are rebuilt inside the image.
+**/node_modules
+**/dist
+**/.next
+**/*.tsbuildinfo
+.git
+
+# Never in an image or a cached build layer: candidates' uploaded files
+# (CVs, ID-document photos) and server secrets. The API reads its env at
+# runtime (compose env_file); uploads live on the `uploads` volume.
+apps/api/uploads
+apps/api/.env
+apps/api/.env.*
+.env
+.last-deployed-commit
+
+# apps/web/.env.local is deliberately NOT ignored: NEXT_PUBLIC_* values are
+# inlined at `next build` time (see scripts/deploy.sh).
+
+**/*.log
+**/test-results
+**/playwright-report
+**/coverage
+
+# Regenerated in the image; never copy a stale local extension archive.
+apps/api/private/agent
+
+# Old anonymous extension downloads must never re-enter the web image.
+apps/web/public/agent

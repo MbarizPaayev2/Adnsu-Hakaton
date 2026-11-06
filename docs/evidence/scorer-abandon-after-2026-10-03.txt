@@ -1,0 +1,2 @@
+eligible jobs 1426
+baseline 10-job request 7242 ms; abandoned request AbortError after 204 ms; 10-job request issued right after the abort 332 ms

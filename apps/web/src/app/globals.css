@@ -1,0 +1,539 @@
+/* Google Fonts (Inter) are loaded via
+   <link> tags in layout.tsx, not @import url(...) here — Tailwind's CSS
+   bundler resolves @import at BUILD time, and if the build environment has
+   no/unreliable outbound network access, the import silently drops with no
+   error and no runtime retry (confirmed happening in this repo's sandbox: the
+   fonts never made it into the compiled CSS). A <link rel="stylesheet"> is
+   fetched by the end user's browser at runtime instead, which is standard
+   practice for third-party fonts and doesn't depend on build-time network. */
+@import "tailwindcss";
+
+@theme {
+  /* The approved landing palette. Primary stays dark so existing white-label
+     actions retain contrast; lime is an accent, never a small text colour. */
+  --color-primary: #253b2c;
+  --color-primary-hover: #364d36;
+  --color-primary-strong: #253b2c;
+  --color-background-warm: #f6f7f0;
+  --color-accent: #253b2c;
+  --color-accent-hover: #364d36;
+  --color-neutral-dark: #232a24;
+  --color-surface: #ffffff;
+  --color-highlight: #d2f77c;
+
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --color-background: #f6f7f0;
+  --color-on-background: #232a24;
+  --color-on-primary-container: #f3f6e9;
+  --color-primary-fixed: #d2f77c;
+  --color-secondary: #5c7250;
+  --color-surface-container: #e9eddf;
+  --color-surface-container-low: #f0f2e8;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-surface: #232a24;
+  --color-on-surface-variant: #667064;
+  --color-outline: #8a9483;
+  --color-outline-variant: #dce0d5;
+
+  --font-display-lg-mobile: var(--font-sans);
+  --font-label-md: var(--font-sans);
+  --font-headline-lg: var(--font-sans);
+  --font-headline-md: var(--font-sans);
+  --font-body-md: var(--font-sans);
+  --font-display-lg: var(--font-sans);
+  --font-label-sm: var(--font-sans);
+
+  /* Named "landing-" to avoid colliding with Tailwind's own reserved sizing-scale
+     keys — defining bare --spacing-md/--spacing-xl overrides max-w-md, w-xl, gap-md,
+     etc. app-wide (e.g. login/register's `sm:max-w-md` card collapsed to 24px). */
+  --spacing-gutter: 24px;
+  --spacing-landing-xl: 80px;
+  --spacing-landing-md: 24px;
+
+  --text-display-lg-mobile: 40px;
+  --text-display-lg-mobile--line-height: 48px;
+  --text-display-lg-mobile--letter-spacing: -0.02em;
+  --text-display-lg-mobile--font-weight: 600;
+
+  --text-label-md: 14px;
+  --text-label-md--line-height: 20px;
+  --text-label-md--letter-spacing: 0.02em;
+  --text-label-md--font-weight: 500;
+
+  --text-headline-lg: 32px;
+  --text-headline-lg--line-height: 40px;
+  --text-headline-lg--letter-spacing: -0.01em;
+  --text-headline-lg--font-weight: 600;
+
+  --text-headline-md: 24px;
+  --text-headline-md--line-height: 32px;
+  --text-headline-md--letter-spacing: -0.01em;
+  --text-headline-md--font-weight: 500;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--letter-spacing: 0;
+  --text-body-md--font-weight: 400;
+
+  --text-display-lg: 64px;
+  --text-display-lg--line-height: 72px;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--font-weight: 600;
+
+  --text-label-sm: 12px;
+  --text-label-sm--line-height: 16px;
+  --text-label-sm--letter-spacing: 0.05em;
+  --text-label-sm--font-weight: 600;
+
+  /* On-dark text pair for the dark stats band. The band previously used
+     `text-surface-variant`, which was never defined in this @theme — Tailwind
+     emitted no rule at all, so the labels silently inherited the band's bright
+     `on-primary-container` cream and sat at the same visual weight as the
+     numbers they were meant to subtitle. */
+  --color-on-dark: #f3f6e9;
+  --color-on-dark-variant: #c0cabb;
+}
+
+:root {
+  /* Accent serif for the italic phrases in headings. Source Serif 4 has every Azerbaijani letter (ə Ə ğ ı İ ş ç ö ü); Georgia, used before,
+     has no ə, so on macOS and Windows those words were drawn from two different fonts. */
+  --font-accent: "Source Serif 4", "Noto Serif", "Times New Roman", serif;
+  --background: #f6f7f0;
+  --foreground: #232a24;
+}
+
+body {
+  background-color: var(--color-background-warm);
+  color: var(--color-neutral-dark);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f6f7f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #bcc5b4;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8a9483;
+}
+
+/* Landing-page icons are bundled SVGs (lucide-react), never an icon font:
+   with a font, a slow or blocked Google Fonts request showed raw ligature
+   names ("arrow_forward", "menu") instead of icons. */
+.group:hover .aise-icon {
+  transform: rotate(-8deg);
+  transition: transform 300ms ease;
+}
+
+/* ---------------------------------------------------------------------------
+   Landing-page motion system
+   ---------------------------------------------------------------------------
+   Deliberately plain CSS keyframes driven by a single IntersectionObserver
+   (see components/reveal.tsx) rather than a motion library: the landing page
+   is the only place in the app that animates, and pulling in framer-motion
+   (~40kB gzipped) to fade a few sections in would be the largest dependency
+   in apps/web for the least reach.
+
+   Every animation here is opt-in via a class, so the `prefers-reduced-motion`
+   block at the bottom can neutralize all of them in one place.
+   --------------------------------------------------------------------------- */
+
+@keyframes aise-rise {
+  from { opacity: 0; transform: translate3d(0, 24px, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes aise-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes aise-scale-in {
+  from { opacity: 0; transform: scale(0.94); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes aise-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+@keyframes aise-pulse-ring {
+  0%   { opacity: 0.5; transform: scale(0.85); }
+  70%  { opacity: 0;   transform: scale(1.5); }
+  100% { opacity: 0;   transform: scale(1.5); }
+}
+
+/* Horizontal source ticker. Translating -50% works because the track renders
+   its children twice, so the midpoint is visually identical to the start. */
+@keyframes aise-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Reveal-on-scroll.
+   ---------------------------------------------------------------------------
+   The hidden state is scoped to `html.js-reveal`, a class set by a blocking
+   inline script in layout.tsx. That scoping is load-bearing, not stylistic:
+   an unscoped `.reveal { opacity: 0 }` means CSS hides the content and only JS
+   can bring it back, so anything that stops the reveal code from running —
+   a hydration error, a throttled background tab, a webview that never fires
+   intersections — leaves the whole page below the hero permanently blank.
+   With the class applied by script, no script means no hiding, and the page
+   degrades to plain visible content.
+
+   `.reveal` never sets visibility:hidden or display:none, so screen readers
+   and crawlers always see the text regardless. */
+html.js-reveal .reveal {
+  opacity: 0;
+}
+
+/* `opacity: 1` is declared here as well as animated, and that redundancy is
+   the whole point.
+   
+   Relying on the animation's `forwards` fill to reveal the element makes
+   visibility depend on the animation actually running — and CSS animations do
+   not run in a background tab. An element could therefore be correctly marked
+   .is-visible and still paint at opacity 0 forever, which is exactly what
+   happened: 43 of 44 elements carried the class while the whole page below the
+   hero stayed blank.
+   
+   With the declaration present, the animation wins while it is running
+   (animations take precedence over declared values) and the declaration is
+   what remains when animations never start, are disabled, or are cut short.
+   The fill must be `forwards`, not `both`. `both` also fills *backwards* —
+   it applies the `from` keyframe (opacity: 0) during the animation's before
+   phase — so an animation that never starts pins the element at 0 and defeats
+   the declaration above. With `forwards` there is no backwards fill, so the
+   declared opacity: 1 is what paints when the animation never runs, and the
+   animation still holds its end state when it does. */
+html.js-reveal .reveal.is-visible {
+  opacity: 1;
+  animation: aise-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+/* Hard escape hatch, applied by the backstop timer in components/reveal.tsx.
+   
+   `.is-visible` alone is not a guarantee while an animation is attached: an
+   animation that has *started* and then frozen — a tab backgrounded
+   mid-animation — keeps reporting its current value, which at 0% is
+   opacity 0, and that beats the declared opacity: 1. Cancelling the
+   animation is the only way to be certain, so the last-resort class removes
+   it rather than trying to out-specify it. */
+html.js-reveal .reveal.reveal-shown {
+  opacity: 1 !important;
+  animation: none !important;
+  transform: none !important;
+}
+
+html.js-reveal .reveal-fade.is-visible {
+  animation-name: aise-fade;
+}
+html.js-reveal .reveal-scale.is-visible {
+  animation-name: aise-scale-in;
+}
+
+.aise-float {
+  animation: aise-float 6s ease-in-out infinite;
+}
+
+.aise-marquee-track {
+  /* Layer-promoted: without this the whole strip repaints every frame for the
+     lifetime of the page. */
+  will-change: transform;
+  animation: aise-marquee 32s linear infinite;
+}
+
+.aise-pulse-ring {
+  animation: aise-pulse-ring 2.4s ease-out infinite;
+}
+
+/* Soft radial brand wash used behind the hero and CTA bands. Kept as a class
+   rather than an inline style so the color stops live next to the tokens. */
+.aise-glow {
+  background:
+    radial-gradient(60% 55% at 15% 10%, color-mix(in srgb, var(--color-primary) 16%, transparent) 0%, transparent 60%),
+    radial-gradient(50% 50% at 85% 20%, color-mix(in srgb, var(--color-accent) 14%, transparent) 0%, transparent 60%);
+}
+
+/* Animated conic sweep for the match-score ring. --aise-score (0-100) is set
+   inline per instance; the ring animates by transitioning that custom property,
+   which needs @property to be interpolatable rather than snapping. */
+@property --aise-score {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+.aise-score-ring {
+  --aise-score: 0;
+  background: conic-gradient(
+    var(--color-primary) calc(var(--aise-score) * 1%),
+    color-mix(in srgb, var(--color-primary) 12%, transparent) 0
+  );
+  transition: --aise-score 1.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Scanner visual (components/landing/scan-grid.tsx): a beam sweeps across a
+   grid of vacancy chips once and the matching ones light up as it passes,
+   then everything holds its settled state — a one-time reveal rather than a
+   loop that keeps sweeping for as long as this section is on screen. Chips
+   are synced to the beam purely by animation-delay derived from their
+   column, so the whole thing runs on the compositor with no JS timers. */
+@keyframes aise-scan-beam {
+  0%   { transform: translateX(-15%); opacity: 0; }
+  8%   { opacity: 1; }
+  92%  { opacity: 1; }
+  100% { transform: translateX(115%); opacity: 0; }
+}
+
+@keyframes aise-chip-match {
+  0% {
+    border-color: var(--color-outline-variant);
+    background-color: var(--color-surface-container-lowest);
+    color: var(--color-on-surface-variant);
+    transform: scale(1);
+  }
+  55% {
+    transform: scale(1.06);
+  }
+  100% {
+    border-color: var(--color-primary);
+    background-color: color-mix(in srgb, var(--color-primary) 12%, white);
+    color: var(--color-primary-strong);
+    transform: scale(1);
+  }
+}
+
+.aise-scan-beam {
+  will-change: transform;
+  animation: aise-scan-beam 5s cubic-bezier(0.4, 0, 0.6, 1) both;
+}
+
+.aise-chip-match {
+  /* The settled "matched" look — also what's visible under
+     prefers-reduced-motion, where the animation below is switched off
+     entirely and these declared properties are all that's left. */
+  border-color: var(--color-primary);
+  background-color: color-mix(in srgb, var(--color-primary) 12%, white);
+  color: var(--color-primary-strong);
+  animation: aise-chip-match 1s ease-out both;
+}
+
+/* Respect the OS "reduce motion" setting: everything lands in its final
+   state immediately instead of animating. Looping decorative animations are
+   switched off outright rather than sped up. */
+@media (prefers-reduced-motion: reduce) {
+  html.js-reveal .reveal,
+  html.js-reveal .reveal.is-visible {
+    opacity: 1;
+    animation: none;
+  }
+  .aise-float,
+  .aise-marquee-track,
+  .aise-pulse-ring,
+  .aise-scan-beam,
+  .aise-chip-match {
+    animation: none;
+  }
+  .aise-score-ring {
+    transition: none;
+  }
+  .group:hover .aise-icon {
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Workflow demo (components/landing/workflow-demo.tsx): the demo's progress
+   bar, filling once across its single pass through the five stages rather
+   than looping. Driven by CSS rather than a React state tick so it advances
+   on the compositor at display refresh rate — a re-render per frame would be
+   60 renders a second for a decorative bar, and any dropped frame would show
+   as a stutter. The 7s here is only a fallback — the component sets
+   animation-duration from its own TOTAL_MS, so the bar and the stage timings
+   cannot drift apart. */
+@keyframes aise-progress {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+.aise-progress-bar {
+  transform-origin: left center;
+  animation: aise-progress 7s linear forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aise-progress-bar {
+    animation: none;
+    transform: scaleX(1);
+  }
+}
+
+/* Page-enter and drawer animations (tw-animate "animate-in") and hover lifts
+   in the signed-in areas: none of them carry meaning, so reduced motion
+   turns them off everywhere rather than page by page. */
+@media (prefers-reduced-motion: reduce) {
+  .animate-in,
+  .animate-pulse {
+    animation: none !important;
+  }
+  .transition-all,
+  .transition-transform {
+    transition: none !important;
+  }
+}
+
+/* Shared product surfaces: the landing's visual language, adapted for work. */
+/* Deliberately outside utility layers: opt-in surface classes own their treatment. */
+  .aise-wordmark { display: inline-flex; align-items: center; gap: .6rem; color: var(--color-neutral-dark); font-family: var(--font-sans); font-weight: 700; letter-spacing: -.045em; }
+  .aise-brand-mark { flex-shrink: 0; }
+  .workspace-shell { background: var(--color-background-warm); }
+  .workspace-sidebar { background: var(--color-background-warm); border-color: var(--color-outline-variant); }
+  .workspace-sidebar nav a { min-height: 44px; color: var(--color-on-surface-variant); border-radius: 999px; font-weight: 500; }
+  .workspace-sidebar nav a:hover { background: var(--color-surface-container); color: var(--color-neutral-dark); }
+  .workspace-sidebar nav a[aria-current="page"] { background: var(--color-highlight); color: var(--color-primary); }
+  .workspace-label { margin-top: 1.2rem; color: var(--color-on-surface-variant); font-size: 10px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+  .workspace-main { padding-top: 2.5rem; }
+  .workspace-main h1 { font-weight: 500; letter-spacing: -.055em; line-height: 1.15; }
+  .workspace-main h2 { font-weight: 600; letter-spacing: -.035em; }
+  .product-card { background: var(--color-surface); border-color: var(--color-outline-variant); box-shadow: none; }
+  .product-card:hover { border-color: var(--color-outline); }
+  .product-page-title { font-weight: 500; letter-spacing: -.055em; }
+  .auth-card { background: var(--color-surface); border: 1px solid var(--color-outline-variant); box-shadow: 0 12px 50px -30px #253b2c22; border-radius: 24px; }
+  .admin-toolbar { background: var(--color-background-warm); border-color: var(--color-outline-variant); }
+  .admin-toolbar nav a { min-height: 44px; border-radius: 999px; }
+  .admin-toolbar nav a[aria-current="page"] { background: var(--color-highlight); color: var(--color-primary); }
+  .product-action { min-height: 44px; border-radius: 999px; }
+
+/* ── Touch targets ───────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   Every standalone pointer target keeps a hit area of at least 44×44 CSS px. Visual size is unchanged where the design needs it small:
+   icons stay icon-sized and only the hit box grows. Inline links inside running text are exempt (WCAG 2.5.8 inline exception).
+   Verified in Chromium by apps/api/test/touch-audit-browser.ts, which sweeps document.elementFromPoint (real geometry, not classes). */
+input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]):not([type="file"]):not([type="range"]), select { min-height: 44px; }
+.tap { min-height: 44px; }
+.tap:has(> svg:only-child) { min-width: 44px; justify-content: center; }
+.tap-inline { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; }
+footer a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; }
+
+@layer base {
+  ::selection { background: #d2f77c; color: #232a24; }
+  :focus-visible { outline: 2px solid #5c7250; outline-offset: 4px; }
+  input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]), select, textarea { accent-color: #253b2c; }
+}
+@media (min-width: 768px) {
+  .workspace-sidebar { position: sticky; top: 0; height: 100dvh; min-height: 0; overflow-y: auto; flex-shrink: 0; }
+}
+@media (max-width: 767px) {
+  .workspace-main { padding-top: 1.75rem; }
+}
+
+.workspace-welcome { position: relative; overflow: hidden; padding: clamp(24px, 4vw, 40px); border-radius: 24px; background: #253b2c; color: #f3f6e9; }
+.workspace-main .workspace-welcome h1 { color: #f3f6e9; font-size: clamp(26px, 3vw, 40px); max-width: 24ch; }
+.workspace-welcome-calm { background: var(--color-surface); color: var(--color-neutral-dark); border: 1px solid var(--color-outline-variant); }
+.workspace-main .workspace-welcome-calm h1 { color: var(--color-neutral-dark); }
+.workspace-welcome-calm .workspace-eyebrow { color: var(--color-secondary); }
+.workspace-welcome-calm p { color: #4f584e; }
+.workspace-eyebrow { margin-bottom: 20px; color: #d2f77c; font-size: 10px; font-weight: 600; letter-spacing: .16em; }
+.auth-scene { background-image: radial-gradient(ellipse at 15% 10%, #d2f77c30, transparent 45%); }
+.auth-scene h2 { font-weight: 500; letter-spacing: -.045em; line-height: 1.25; }
+
+@media (max-width: 639px) {
+  .auth-scene { padding-inline: 16px; }
+  .workspace-stat { padding: 18px; align-items: flex-start; }
+  .workspace-stat > div:nth-child(2) { display: none; }
+  .workspace-stat p:first-child { font-size: 12px; white-space: normal; }
+}
+
+.product-match-card { background: var(--color-surface); box-shadow: none; }
+
+.workspace-sidebar[role="dialog"] { overflow-y: auto; overscroll-behavior: contain; }
+
+.match-page-head h1 { font-size: clamp(30px, 4vw, 44px); }
+.match-fit { display: grid; justify-items: center; gap: 5px; flex-shrink: 0; }
+.match-fit-orbit { position: relative; width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; background: conic-gradient(#d2f77c var(--match-fill), #edf0e6 0); }
+.match-fit-orbit::before { content: ''; position: absolute; inset: 6px; border-radius: inherit; background: #fff; }
+.match-fit-orbit > span { position: relative; font-size: 18px; font-weight: 600; letter-spacing: -.04em; color: #253b2c; }
+.match-fit-orbit small { font-size: 10px; margin-left: 1px; }
+@media (max-width: 767px) {
+  .match-header { display: grid; grid-template-columns: minmax(0, 1fr) 80px; padding: 22px; gap: 16px; }
+  .match-header > div:last-child { flex-direction: column; gap: 8px; }
+}
+
+.workspace-stat > div:first-child { min-width: 0; }
+.workspace-stat > div:last-child { flex-shrink: 0; }
+.workspace-stat p:first-child { white-space: normal; }
+
+/* ── Shared UI (components/ui.tsx) ──────────────────────────────────────────────────────────────────────────────────────────────
+   One button, card, badge, field and page-state style for every candidate, employer and public page. Primary actions are the dark
+   brand green; secondary actions are outlined; quiet actions are text-weight. Lime is an accent surface, never small text.
+   In @layer components so a page can still adjust spacing with utilities. */
+@layer components {
+  .ui-btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 44px; padding: .625rem 1.25rem; border-radius: 999px;
+    font-size: .875rem; line-height: 1.25rem; font-weight: 600; text-align: center; transition: background-color .15s, border-color .15s, color .15s; cursor: pointer; }
+  .ui-btn:disabled, .ui-btn[aria-disabled="true"] { opacity: .5; cursor: not-allowed; }
+  .ui-btn-primary { background: var(--color-primary); color: #fff; }
+  .ui-btn-primary:hover:not(:disabled) { background: var(--color-primary-hover); }
+  .ui-btn-secondary { background: var(--color-surface); color: var(--color-neutral-dark); border: 1px solid #c9cfc2; }
+  .ui-btn-secondary:hover:not(:disabled) { border-color: var(--color-outline); background: var(--color-surface-container-low); }
+  .ui-btn-quiet { color: var(--color-primary); padding-inline: .75rem; }
+  .ui-btn-quiet:hover:not(:disabled) { background: var(--color-surface-container-low); }
+  .ui-btn-danger { background: var(--color-surface); color: #9f1d1d; border: 1px solid #f0b8b8; }
+  .ui-btn-danger:hover:not(:disabled) { background: #fdf0f0; }
+
+  .ui-card { background: var(--color-surface); border: 1px solid var(--color-outline-variant); border-radius: 1rem; padding: 1.25rem; }
+  @media (min-width: 640px) { .ui-card { padding: 1.5rem; } }
+
+  .ui-badge { display: inline-flex; align-items: center; gap: .25rem; border-radius: 999px; border: 1px solid; padding: .125rem .625rem; font-size: .75rem;
+    line-height: 1.25rem; font-weight: 600; white-space: nowrap; }
+  .ui-badge-neutral { background: #f3f4ef; color: #3c443b; border-color: #dfe3d8; }
+  .ui-badge-progress { background: #eef4fb; color: #1f4b7a; border-color: #cddcee; }
+  .ui-badge-good { background: #edf7ee; color: #1d5a2b; border-color: #c8e4cc; }
+  .ui-badge-warn { background: #fdf6e7; color: #7a4b06; border-color: #f0dcae; }
+  .ui-badge-bad { background: #fdf0f0; color: #8f1d1d; border-color: #f2c7c7; }
+
+  .ui-page-header { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 1rem; }
+  .ui-eyebrow { margin-bottom: .5rem; color: var(--color-secondary); font-size: .6875rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+  .ui-page-title { font-size: clamp(1.75rem, 3.2vw, 2.5rem); line-height: 1.15; font-weight: 500; letter-spacing: -.04em; color: var(--color-neutral-dark); }
+  .ui-page-intro { margin-top: .5rem; max-width: 65ch; color: #4f584e; font-size: .9375rem; line-height: 1.6; }
+  .ui-page-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+  .ui-section-header { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: .75rem; margin-bottom: .75rem; }
+  .ui-section-title { font-size: 1.25rem; line-height: 1.75rem; font-weight: 600; letter-spacing: -.02em; color: var(--color-neutral-dark); }
+  .ui-section-description { margin-top: .125rem; max-width: 70ch; color: #586157; font-size: .875rem; line-height: 1.5; }
+
+  .ui-state { display: flex; align-items: center; gap: .5rem; padding: 1.5rem; color: #586157; font-size: .875rem; }
+  .ui-empty { border: 1px dashed #cfd5c8; border-radius: 1rem; background: var(--color-surface); padding: 2.5rem 1.25rem; text-align: center; }
+  .ui-empty-icon { display: inline-grid; place-items: center; width: 3rem; height: 3rem; margin-bottom: .75rem; border-radius: 999px; background: var(--color-surface-container-low); color: var(--color-secondary); }
+  .ui-empty-title { font-weight: 600; color: var(--color-neutral-dark); }
+  .ui-empty-text { margin: .375rem auto 0; max-width: 52ch; color: #586157; font-size: .875rem; line-height: 1.55; }
+
+  .ui-notice { display: flex; align-items: flex-start; gap: .625rem; border: 1px solid; border-radius: .875rem; padding: .875rem 1rem; font-size: .875rem; line-height: 1.5; }
+  .ui-notice-icon { width: 1.125rem; height: 1.125rem; flex-shrink: 0; margin-top: .125rem; }
+  .ui-notice-info { background: #f3f6ee; border-color: #dce3d2; color: #2d3a2c; }
+  .ui-notice-success { background: #edf7ee; border-color: #c8e4cc; color: #1d5a2b; }
+  .ui-notice-warn { background: #fdf6e7; border-color: #f0dcae; color: #6b4206; }
+  .ui-notice-error { background: #fdf0f0; border-color: #f2c7c7; color: #8f1d1d; }
+
+  .ui-field { display: grid; gap: .375rem; }
+  .ui-label { font-size: .875rem; font-weight: 600; color: var(--color-neutral-dark); }
+  .ui-hint { font-size: .75rem; color: #5f685e; line-height: 1.45; }
+  .ui-error { font-size: .75rem; color: #8f1d1d; font-weight: 500; }
+  .ui-input { width: 100%; border-radius: .75rem; border: 1px solid #c9cfc2; background: #fff; padding: .5rem .75rem; font-size: .9375rem; color: var(--color-neutral-dark); }
+  .ui-input:focus { outline: 2px solid #5c7250; outline-offset: 1px; border-color: transparent; }
+  .ui-input:disabled { opacity: .6; background: #f6f7f2; }
+  textarea.ui-input { line-height: 1.55; }
+
+  /* A bar that keeps the main decision in reach on a phone while a long review is scrolled. */
+  .ui-sticky-actions { position: sticky; bottom: 0; z-index: 20; margin-inline: -1rem; padding: .75rem 1rem calc(.75rem + env(safe-area-inset-bottom));
+    background: color-mix(in srgb, var(--color-background-warm) 92%, transparent); backdrop-filter: blur(6px); border-top: 1px solid var(--color-outline-variant); }
+  @media (min-width: 768px) { .ui-sticky-actions { position: static; margin: 0; padding: 0; background: none; border: 0; backdrop-filter: none; } }
+}

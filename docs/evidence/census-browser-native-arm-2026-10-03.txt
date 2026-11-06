@@ -1,0 +1,14 @@
+PASS catalogue shows 1426 open vacancies = database eligible count (stored 2248, expired excluded 780)
+PASS search, source, company and location+category filters return the expected vacancies
+PASS expired and hidden postings vanish, a cross-source duplicate is linked and excluded while the original stays; counts follow
+PASS detail keeps attribution and sends the candidate to the source site; no e-mail path invented
+PASS browser: register, verify, upload CV, complete onboarding
+  … 120 s after onboarding, no persisted matches yet
+  … 240 s after onboarding, no persisted matches yet
+  … 360 s after onboarding, no persisted matches yet
+  … 480 s after onboarding, no persisted matches yet
+  … 600 s after onboarding, no persisted matches yet
+  … 720 s after onboarding, no persisted matches yet
+  … 840 s after onboarding, no persisted matches yet
+  … 960 s after onboarding, no persisted matches yet
+  … 1080 s after onboarding, no persisted matches yet

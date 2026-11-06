@@ -1,0 +1,113 @@
+{
+  "sidebar": [
+    {
+      "heading": "Contact",
+      "items": [
+        "www.linkedin.com/in/tural-example (LinkedIn)"
+      ]
+    },
+    {
+      "heading": "Top Skills",
+      "items": [
+        "Python",
+        "React.js",
+        "Teamwork"
+      ]
+    },
+    {
+      "heading": "Languages",
+      "items": [
+        "English (Full Professional)",
+        "Turkish (Professional Working)"
+      ]
+    },
+    {
+      "heading": "Certifications",
+      "items": [
+        "CS50's Introduction to Computer Science",
+        "Responsive Web Design",
+        "AWS Certified Cloud Practitioner Foundational Training Course Completion",
+        "JavaScript Algorithms and Data Structures",
+        "Git and GitHub for Collaborative Software Projects"
+      ]
+    }
+  ],
+  "main": [
+    [
+      "name",
+      "Tural Example"
+    ],
+    [
+      "headline",
+      "Computer Science Student at ADA University"
+    ],
+    [
+      "location",
+      "Baku"
+    ],
+    [
+      "h",
+      "Experience"
+    ],
+    [
+      "company",
+      "Example Software LLC"
+    ],
+    [
+      "title",
+      "Software Engineering Intern"
+    ],
+    [
+      "dates",
+      "July 2025 - August 2025 (2 months)"
+    ],
+    [
+      "place",
+      "Baku, Azerbaijan"
+    ],
+    [
+      "p",
+      "- Fixed front-end bugs in the customer portal written in React."
+    ],
+    [
+      "p",
+      "- Wrote unit tests for two API endpoints with the backend team."
+    ],
+    [
+      "company",
+      "ADA University"
+    ],
+    [
+      "title",
+      "Teaching Assistant, Introduction to Programming"
+    ],
+    [
+      "dates",
+      "February 2025 - June 2025 (5 months)"
+    ],
+    [
+      "p",
+      "Held weekly lab hours for first-year students and checked programming assignments."
+    ],
+    [
+      "h",
+      "Education"
+    ],
+    [
+      "inst",
+      "ADA University"
+    ],
+    [
+      "p",
+      "Bachelor of Science - BS, Computer Science · (September 2022 - June 2026)"
+    ],
+    [
+      "inst",
+      "Lyceum No. 6"
+    ],
+    [
+      "p",
+      "High School Diploma · (2011 - 2022)"
+    ]
+  ]
+}

@@ -1,0 +1,552 @@
+{
+ "D1_dev_en": {
+  "split": "dev",
+  "embedding_stored": 154,
+  "rules_stored": 25,
+  "embedding_floor": 16,
+  "rules_floor": 19,
+  "spearman": 0.30077459144788066,
+  "top10_overlap": 0.4,
+  "embedding_seconds_warm": 70.08224683300068,
+  "rules_seconds_features_cached": 19.598139083002025,
+  "top5_embedding": [
+   [
+    "Backend Developer (Node.js)",
+    0.61
+   ],
+   [
+    "React developer(middle)",
+    0.573
+   ],
+   [
+    "Rəqəmsal Mühəndislik Departamenti üzrə Təcrübəçi",
+    0.571
+   ],
+   [
+    "Servis mühəndisi",
+    0.555
+   ],
+   [
+    "Proqram təminatı üzrə mühəndis (.NET Developer)",
+    0.554
+   ]
+  ],
+  "top5_rules": [
+   [
+    "Təlimçi (backend)",
+    0.792
+   ],
+   [
+    "SQL developer ( kiçik mütəxəssis)",
+    0.762
+   ],
+   [
+    "Oracle BI üzrə təcrübə proqramı (Oracle BI developer intern)",
+    0.742
+   ],
+   [
+    "“Rabitəbank” ASC Bank proqramları departamenti, Bank proqramlarının inkişafı şöbəsinin Proqramçısı ( backend)",
+    0.738
+   ],
+   [
+    "1C Proqramçı (remote-təcrübəçi)",
+    0.736
+   ]
+  ]
+ },
+ "D2_acc_az": {
+  "split": "dev",
+  "embedding_stored": 718,
+  "rules_stored": 34,
+  "embedding_floor": 144,
+  "rules_floor": 21,
+  "spearman": 0.43225351672964196,
+  "top10_overlap": 0.7,
+  "embedding_seconds_warm": 62.35060241600149,
+  "rules_seconds_features_cached": 0.02922625000064727,
+  "top5_embedding": [
+   [
+    "Mühasib",
+    0.75
+   ],
+   [
+    "Mühasibatlıq Departamenti üzrə Təcrübəçi",
+    0.742
+   ],
+   [
+    "Əmək haqqı üzrə mühasib",
+    0.711
+   ],
+   [
+    "Mühasib operator",
+    0.703
+   ],
+   [
+    "İnsan Resursları üzrə Mütəxəssis",
+    0.687
+   ]
+  ],
+  "top5_rules": [
+   [
+    "Mühasibatlıq Departamenti üzrə Təcrübəçi",
+    0.926
+   ],
+   [
+    "Mühasib",
+    0.844
+   ],
+   [
+    "Kiçik mühasib/Olivia (Beauty and Care)",
+    0.821
+   ],
+   [
+    "Mühasib operator",
+    0.817
+   ],
+   [
+    "Mühasib köməkçisi",
+    0.808
+   ]
+  ]
+ },
+ "D3_sales_az": {
+  "split": "dev",
+  "embedding_stored": 879,
+  "rules_stored": 215,
+  "embedding_floor": 312,
+  "rules_floor": 158,
+  "spearman": 0.5653022809675775,
+  "top10_overlap": 0.6,
+  "embedding_seconds_warm": 66.38027008300196,
+  "rules_seconds_features_cached": 0.02342004199817893,
+  "top5_embedding": [
+   [
+    "Satış Meneceri",
+    0.893
+   ],
+   [
+    "Satış Meneceri",
+    0.893
+   ],
+   [
+    "Satış meneceri",
+    0.891
+   ],
+   [
+    "Satış məsləhətçisi",
+    0.859
+   ],
+   [
+    "Satış Məsləhətçisi",
+    0.851
+   ]
+  ],
+  "top5_rules": [
+   [
+    "Satış meneceri",
+    0.95
+   ],
+   [
+    "Satış məsləhətçisi",
+    0.95
+   ],
+   [
+    "Satış Məsləhətçisi",
+    0.925
+   ],
+   [
+    "Mebel satıcı",
+    0.9
+   ],
+   [
+    "Satış meneceri",
+    0.9
+   ]
+  ]
+ },
+ "D4_incomplete": {
+  "split": "dev",
+  "embedding_stored": 0,
+  "rules_stored": 0,
+  "embedding_floor": 0,
+  "rules_floor": 0,
+  "spearman": 0.0,
+  "top10_overlap": 0.0,
+  "embedding_seconds_warm": 56.42577870799869,
+  "rules_seconds_features_cached": 0.014451750001171604,
+  "top5_embedding": [
+   [
+    "English Language Instructor",
+    0.233
+   ],
+   [
+    "SAT Verbal Müəllimi",
+    0.227
+   ],
+   [
+    "Kurs müəllimləri",
+    0.221
+   ],
+   [
+    "Primary Homeroom Teacher – Maternity Leave Cover (Full-Time)",
+    0.22
+   ],
+   [
+    "İngilis dili müəllimi",
+    0.218
+   ]
+  ],
+  "top5_rules": [
+   [
+    "",
+    0.0
+   ],
+   [
+    "",
+    0.0
+   ],
+   [
+    "",
+    0.0
+   ],
+   [
+    "",
+    0.0
+   ],
+   [
+    "",
+    0.0
+   ]
+  ]
+ },
+ "D5_junior_mkt": {
+  "split": "dev",
+  "embedding_stored": 294,
+  "rules_stored": 52,
+  "embedding_floor": 35,
+  "rules_floor": 45,
+  "spearman": 0.21777054937624424,
+  "top10_overlap": 0.5,
+  "embedding_seconds_warm": 61.42788562499845,
+  "rules_seconds_features_cached": 0.027270417002000613,
+  "top5_embedding": [
+   [
+    "SMM",
+    0.758
+   ],
+   [
+    "Sosial Media Marketinq (SMM) mütəxəssisi",
+    0.685
+   ],
+   [
+    "SMM Mobilograf",
+    0.674
+   ],
+   [
+    "SMM",
+    0.652
+   ],
+   [
+    "SMM mütəxəssisi",
+    0.649
+   ]
+  ],
+  "top5_rules": [
+   [
+    "Marketinq Meneceri",
+    0.85
+   ],
+   [
+    "SMM",
+    0.85
+   ],
+   [
+    "SMM / Kontent Menecer",
+    0.85
+   ],
+   [
+    "Sosial Media Marketinq (SMM) mütəxəssisi",
+    0.825
+   ],
+   [
+    "Marketinq Meneceri",
+    0.787
+   ]
+  ]
+ },
+ "D6_risk_bank": {
+  "split": "dev",
+  "embedding_stored": 266,
+  "rules_stored": 33,
+  "embedding_floor": 15,
+  "rules_floor": 14,
+  "spearman": 0.2626406631309628,
+  "top10_overlap": 0.7,
+  "embedding_seconds_warm": 67.44727191600032,
+  "rules_seconds_features_cached": 0.027962708001723513,
+  "top5_embedding": [
+   [
+    "Kredit risklərinin qiymətləndirilməsi bölməsinin aparıcı eksperti",
+    0.706
+   ],
+   [
+    "Risklərin İdarə Edilməsi üzrə kiçik mütəxəssis",
+    0.653
+   ],
+   [
+    "Bank Təhlükəsizliyi departamenti/ Təhlükəsizlik sistemlərinin tətbiqi və dəstəklənməsi şöbəsinin mütəxəssisi",
+    0.625
+   ],
+   [
+    "Təşkilati Risklərin İdarə Edilməsi üzrə Kiçik mütəxəssis",
+    0.612
+   ],
+   [
+    "Risk hadisələrinin idarə edilməsi şöbəsinin Aparıcı Mütəxəssisi",
+    0.563
+   ]
+  ],
+  "top5_rules": [
+   [
+    "Risklərin İdarə Edilməsi üzrə kiçik mütəxəssis",
+    0.823
+   ],
+   [
+    "Kredit risklərinin qiymətləndirilməsi bölməsinin aparıcı eksperti",
+    0.703
+   ],
+   [
+    "Risklərin idarə edilməsi departamenti, Girovların qiymətləndirilməsi və nəzarəti şöbəsi/mütəxəssis",
+    0.675
+   ],
+   [
+    "Əməliyyat və Tənzimləyici Risklərin idarə edilməsi üzrə Kiçik mütəxəssis (analıq məzuniyyəti)",
+    0.67
+   ],
+   [
+    "Qrup Hesabatları və MHBS-a Uyğunluq aparıcı mütəxəssis/ekspert / Group Reporting and IFRS Compliance",
+    0.66
+   ]
+  ]
+ },
+ "D7_teacher": {
+  "split": "dev",
+  "embedding_stored": 419,
+  "rules_stored": 43,
+  "embedding_floor": 47,
+  "rules_floor": 28,
+  "spearman": 0.26990804630412557,
+  "top10_overlap": 0.6,
+  "embedding_seconds_warm": 63.05137562500022,
+  "rules_seconds_features_cached": 0.024564332998124883,
+  "top5_embedding": [
+   [
+    "Riyaziyyat/Məntiq Müəllimi",
+    0.713
+   ],
+   [
+    "İngilis dili müəllimi",
+    0.664
+   ],
+   [
+    "Riteyl sahəsi üzrə təcrübə proqramı",
+    0.645
+   ],
+   [
+    "Müəllim (rus bölməsi üzrə məktəbəqədər)",
+    0.619
+   ],
+   [
+    "İngilis dili müəllimi",
+    0.619
+   ]
+  ],
+  "top5_rules": [
+   [
+    "Müəllim (rus bölməsi üzrə məktəbəqədər)",
+    0.775
+   ],
+   [
+    "İngilis dili müəllimi",
+    0.775
+   ],
+   [
+    "SAT Math müəllimi",
+    0.775
+   ],
+   [
+    "Riyaziyyat/Məntiq Müəllimi",
+    0.75
+   ],
+   [
+    "İngilis dili müəllimi",
+    0.733
+   ]
+  ]
+ },
+ "H1_support_ru_az": {
+  "split": "heldout",
+  "embedding_stored": 780,
+  "rules_stored": 63,
+  "embedding_floor": 218,
+  "rules_floor": 33,
+  "spearman": 0.34177624465316114,
+  "top10_overlap": 0.2,
+  "embedding_seconds_warm": 65.45815791700079,
+  "rules_seconds_features_cached": 0.024835749998601386,
+  "top5_embedding": [
+   [
+    "Telefon məlumat bölməsinin rəhbəri",
+    0.732
+   ],
+   [
+    "Gəncə Əlaqə Mərkəzi təmsilçisi (ştatdankənar)",
+    0.731
+   ],
+   [
+    "Məlumat mərkəzinin mütəxəssisi",
+    0.713
+   ],
+   [
+    "Telefon operatoru",
+    0.697
+   ],
+   [
+    "Call Center mütəxəssisi",
+    0.676
+   ]
+  ],
+  "top5_rules": [
+   [
+    "Virtual Müştəri Xidmətləri departamentinin Fərdi Müştərilərə Dəstək şöbəsinin Kiçik Mütəxəssisi",
+    0.847
+   ],
+   [
+    "Service üzrə çağrı mərkəzi operatoru",
+    0.809
+   ],
+   [
+    "Call Center Operatoru",
+    0.769
+   ],
+   [
+    "Call Center mütəxəssisi",
+    0.765
+   ],
+   [
+    "Call Center Operatoru",
+    0.76
+   ]
+  ]
+ },
+ "H2_nurse": {
+  "split": "heldout",
+  "embedding_stored": 404,
+  "rules_stored": 4,
+  "embedding_floor": 69,
+  "rules_floor": 3,
+  "spearman": 0.10858693051816382,
+  "top10_overlap": 0.3,
+  "embedding_seconds_warm": 61.50303370799884,
+  "rules_seconds_features_cached": 0.02295479199892725,
+  "top5_embedding": [
+   [
+    "Tibb bacısı",
+    0.702
+   ],
+   [
+    "Tibb bacısı",
+    0.698
+   ],
+   [
+    "Baş tibb bacısı",
+    0.629
+   ],
+   [
+    "Fəhlə",
+    0.624
+   ],
+   [
+    "Fəhlə",
+    0.614
+   ]
+  ],
+  "top5_rules": [
+   [
+    "Tibb bacısı",
+    0.768
+   ],
+   [
+    "Tibb bacısı",
+    0.735
+   ],
+   [
+    "Baş tibb bacısı",
+    0.665
+   ],
+   [
+    "Tibbi Nümayəndə",
+    0.358
+   ],
+   [
+    "Sənəd Dövriyyəsi Şöbəsinin Təcrübəçisi",
+    0.3
+   ]
+  ]
+ },
+ "H3_civil_eng": {
+  "split": "heldout",
+  "embedding_stored": 386,
+  "rules_stored": 61,
+  "embedding_floor": 38,
+  "rules_floor": 15,
+  "spearman": 0.34052925723409455,
+  "top10_overlap": 0.4,
+  "embedding_seconds_warm": 63.53407458299989,
+  "rules_seconds_features_cached": 0.028261750001547625,
+  "top5_embedding": [
+   [
+    "Texniki ofis mühəndisi",
+    0.636
+   ],
+   [
+    "Servis mühəndisi",
+    0.603
+   ],
+   [
+    "Texniki işlər üzrə çertyojçu",
+    0.59
+   ],
+   [
+    "Smeta mühəndisi",
+    0.59
+   ],
+   [
+    "Texniki ofis mühəndisi",
+    0.573
+   ]
+  ],
+  "top5_rules": [
+   [
+    "Senior Construction Engineer",
+    0.823
+   ],
+   [
+    "Layihə inşaat mühəndisi",
+    0.681
+   ],
+   [
+    "İnşaat mühəndisi / Tikinti üzrə iş icraçısı",
+    0.673
+   ],
+   [
+    "Smeta mühəndisi",
+    0.631
+   ],
+   [
+    "Servis mühəndisi",
+    0.604
+   ]
+  ]
+ }
+}

@@ -1,0 +1,1062 @@
+[
+  {
+    "id": "socar",
+    "name": "SOCAR",
+    "sector": "energy-industry",
+    "priority": 1,
+    "websiteCandidate": "https://www.socar.az",
+    "careerUrl": "https://jobs.socar.az/search/",
+    "evidence": "official-career-link-checked",
+    "adapter": "sap-careers"
+  },
+  {
+    "id": "socar-polymer",
+    "name": "SOCAR Polymer",
+    "sector": "energy-industry",
+    "priority": 2,
+    "websiteCandidate": "https://socarpolymer.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "socar-aqs",
+    "name": "SOCAR AQS",
+    "sector": "energy-industry",
+    "priority": 2,
+    "websiteCandidate": "https://socar-aqs.com",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "socar-downstream",
+    "name": "SOCAR Downstream",
+    "sector": "energy-industry",
+    "priority": 2,
+    "websiteCandidate": "https://www.socar.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "bp-azerbaijan",
+    "name": "BP Azerbaijan",
+    "sector": "energy-industry",
+    "priority": 2,
+    "websiteCandidate": "https://www.bp.com/en_az/azerbaijan/home.html",
+    "careerUrl": "https://bpinternational.wd3.myworkdayjobs.com/bpCareers",
+    "evidence": "official-career-link-checked",
+    "adapter": "workday"
+  },
+  {
+    "id": "totalenergies",
+    "name": "TotalEnergies",
+    "sector": "energy-industry",
+    "priority": 2,
+    "websiteCandidate": "https://totalenergies.com",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "slb",
+    "name": "SLB",
+    "sector": "energy-industry",
+    "priority": 2,
+    "websiteCandidate": "https://www.slb.com",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "halliburton",
+    "name": "Halliburton",
+    "sector": "energy-industry",
+    "priority": 2,
+    "websiteCandidate": "https://www.halliburton.com",
+    "careerUrl": "https://jobs.halliburton.com/search/?q=&locationsearch=Azerbaijan",
+    "evidence": "official-career-link-checked",
+    "adapter": "sap-careers"
+  },
+  {
+    "id": "baker-hughes",
+    "name": "Baker Hughes",
+    "sector": "energy-industry",
+    "priority": 2,
+    "websiteCandidate": "https://www.bakerhughes.com",
+    "careerUrl": "https://bakerhughes.wd5.myworkdayjobs.com/BakerHughes",
+    "evidence": "official-career-link-checked",
+    "adapter": "workday"
+  },
+  {
+    "id": "weatherford",
+    "name": "Weatherford",
+    "sector": "energy-industry",
+    "priority": 2,
+    "websiteCandidate": "https://www.weatherford.com",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "saipem",
+    "name": "Saipem",
+    "sector": "energy-industry",
+    "priority": 2,
+    "websiteCandidate": "https://www.saipem.com",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "nobel-energy",
+    "name": "Nobel Energy",
+    "sector": "energy-industry",
+    "priority": 2,
+    "websiteCandidate": "https://www.nobelenergy.com",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "azfen",
+    "name": "Azfen",
+    "sector": "energy-industry",
+    "priority": 2,
+    "websiteCandidate": "https://www.azfen.com",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "technip-energies",
+    "name": "Technip Energies",
+    "sector": "energy-industry",
+    "priority": 2,
+    "websiteCandidate": "https://www.ten.com",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "azergold",
+    "name": "AzerGold",
+    "sector": "energy-industry",
+    "priority": 2,
+    "websiteCandidate": "https://azergold.az",
+    "careerUrl": "https://careers.azergold.az/vacancies",
+    "evidence": "official-career-link-checked",
+    "adapter": "local-employer"
+  },
+  {
+    "id": "azeraluminium",
+    "name": "Azeraluminium",
+    "sector": "energy-industry",
+    "priority": 2,
+    "websiteCandidate": "https://azeraluminium.com",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "holcim-azerbaijan",
+    "name": "Holcim Azerbaijan",
+    "sector": "energy-industry",
+    "priority": 2,
+    "websiteCandidate": "https://www.holcim.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "norm",
+    "name": "Norm",
+    "sector": "energy-industry",
+    "priority": 2,
+    "websiteCandidate": "https://www.norm.az",
+    "careerUrl": "https://www.norm.az/page/careers",
+    "evidence": "official-career-link-checked",
+    "adapter": "local-employer"
+  },
+  {
+    "id": "stp",
+    "name": "STP",
+    "sector": "energy-industry",
+    "priority": 2,
+    "websiteCandidate": "https://stp.az",
+    "careerUrl": "https://www.stpcareer.com/vakansiyalar",
+    "evidence": "official-career-link-checked",
+    "adapter": "local-employer"
+  },
+  {
+    "id": "baku-steel-company",
+    "name": "Baku Steel Company",
+    "sector": "energy-industry",
+    "priority": 2,
+    "websiteCandidate": "https://www.bakusteel.com",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "pasha-holding",
+    "name": "PASHA Holding",
+    "sector": "finance-insurance",
+    "priority": 1,
+    "websiteCandidate": "https://pasha-holding.az",
+    "careerUrl": "https://apply.workable.com/pasha-holding/",
+    "evidence": "official-career-link-checked",
+    "adapter": "workable"
+  },
+  {
+    "id": "pasha-bank",
+    "name": "PASHA Bank",
+    "sector": "finance-insurance",
+    "priority": 1,
+    "websiteCandidate": "https://www.pashabank.az",
+    "careerUrl": "https://www.pashabank.az/careers/lang,az/",
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "pasha-insurance",
+    "name": "PASHA Insurance",
+    "sector": "finance-insurance",
+    "priority": 1,
+    "websiteCandidate": "https://www.pasha-insurance.az",
+    "careerUrl": "https://career.pasha-insurance.az/",
+    "evidence": "official-career-link-checked",
+    "adapter": "teamtailor"
+  },
+  {
+    "id": "pasha-life",
+    "name": "PASHA Life",
+    "sector": "finance-insurance",
+    "priority": 1,
+    "websiteCandidate": "https://www.pasha-life.az",
+    "careerUrl": "https://www.pasha-life.az/about?lang=az#career",
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "kapital-bank",
+    "name": "Kapital Bank / Bir",
+    "sector": "finance-insurance",
+    "priority": 2,
+    "websiteCandidate": "https://kapitalbank.az",
+    "careerUrl": "https://careers.bir.az/vacancies",
+    "evidence": "official-career-link-checked",
+    "adapter": "kapital"
+  },
+  {
+    "id": "abb",
+    "name": "ABB",
+    "sector": "finance-insurance",
+    "priority": 2,
+    "websiteCandidate": "https://abb-bank.az",
+    "careerUrl": "https://careers.abb-bank.az/vakansiyalar",
+    "evidence": "official-career-link-checked",
+    "adapter": "abb"
+  },
+  {
+    "id": "xalq-bank",
+    "name": "Xalq Bank",
+    "sector": "finance-insurance",
+    "priority": 2,
+    "websiteCandidate": "https://www.xalqbank.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "bank-of-baku",
+    "name": "Bank of Baku",
+    "sector": "finance-insurance",
+    "priority": 2,
+    "websiteCandidate": "https://www.bankofbaku.com",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "bank-respublika",
+    "name": "Bank Respublika",
+    "sector": "finance-insurance",
+    "priority": 2,
+    "websiteCandidate": "https://www.bankrespublika.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "unibank",
+    "name": "Unibank",
+    "sector": "finance-insurance",
+    "priority": 2,
+    "websiteCandidate": "https://unibank.az",
+    "careerUrl": "https://unibank.az/az/bank-haqqinda/vakansiyalar",
+    "evidence": "needs-direct-employer-ats-verification",
+    "adapter": null
+  },
+  {
+    "id": "accessbank",
+    "name": "AccessBank",
+    "sector": "finance-insurance",
+    "priority": 2,
+    "websiteCandidate": "https://www.accessbank.az",
+    "careerUrl": "https://www.accessbank.az/az/our-bank/career/",
+    "evidence": "workable-tenant-belongs-to-nigerian-accessbank-plc-quarantined",
+    "adapter": null
+  },
+  {
+    "id": "yelo-bank",
+    "name": "Yelo Bank",
+    "sector": "finance-insurance",
+    "priority": 2,
+    "websiteCandidate": "https://www.yelo.az",
+    "careerUrl": "https://www.yelo.az/az/about-bank/career/",
+    "evidence": "official-career-link-checked",
+    "adapter": "yelo"
+  },
+  {
+    "id": "rabitabank",
+    "name": "Rabitabank",
+    "sector": "finance-insurance",
+    "priority": 2,
+    "websiteCandidate": "https://www.rabitabank.com",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "turanbank",
+    "name": "TuranBank",
+    "sector": "finance-insurance",
+    "priority": 2,
+    "websiteCandidate": "https://www.turanbank.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "expressbank",
+    "name": "Expressbank",
+    "sector": "finance-insurance",
+    "priority": 2,
+    "websiteCandidate": "https://www.expressbank.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "azer-turk-bank",
+    "name": "Azer Turk Bank",
+    "sector": "finance-insurance",
+    "priority": 2,
+    "websiteCandidate": "https://atb.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "bank-avrasiya",
+    "name": "Bank Avrasiya",
+    "sector": "finance-insurance",
+    "priority": 2,
+    "websiteCandidate": "https://www.bankavrasiya.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "afb-bank",
+    "name": "AFB Bank",
+    "sector": "finance-insurance",
+    "priority": 2,
+    "websiteCandidate": "https://www.afb.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "premium-bank",
+    "name": "Premium Bank",
+    "sector": "finance-insurance",
+    "priority": 2,
+    "websiteCandidate": "https://www.premiumbank.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "asb-bank",
+    "name": "ASB Bank",
+    "sector": "finance-insurance",
+    "priority": 2,
+    "websiteCandidate": "https://www.asb.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "atasigorta",
+    "name": "AtaSigorta",
+    "sector": "finance-insurance",
+    "priority": 2,
+    "websiteCandidate": "https://www.atasigorta.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "ateshgah-insurance",
+    "name": "Ateshgah Insurance",
+    "sector": "finance-insurance",
+    "priority": 2,
+    "websiteCandidate": "https://ateshgah.com",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "azercell",
+    "name": "Azercell",
+    "sector": "telecom-technology",
+    "priority": 1,
+    "websiteCandidate": "https://www.azercell.com",
+    "careerUrl": "https://careers.digitalecosystem.az/Azercell/search/",
+    "evidence": "official-career-link-checked",
+    "adapter": "sap-careers"
+  },
+  {
+    "id": "bakcell",
+    "name": "Bakcell",
+    "sector": "telecom-technology",
+    "priority": 2,
+    "websiteCandidate": "https://www.bakcell.com",
+    "careerUrl": null,
+    "evidence": "needs-direct-employer-ats-verification",
+    "adapter": null
+  },
+  {
+    "id": "nar-azerfon",
+    "name": "Nar / Azerfon",
+    "sector": "telecom-technology",
+    "priority": 2,
+    "websiteCandidate": "https://www.nar.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "azerconnect",
+    "name": "Azerconnect",
+    "sector": "telecom-technology",
+    "priority": 2,
+    "websiteCandidate": "https://www.azerconnect.az",
+    "careerUrl": "https://www.azerconnect.az/en/career/vacancies",
+    "evidence": "career-portal-uses-oracle-cloud-not-workable-adapter-quarantined",
+    "adapter": null
+  },
+  {
+    "id": "azintelecom",
+    "name": "AzInTelecom",
+    "sector": "telecom-technology",
+    "priority": 2,
+    "websiteCandidate": "https://azintelecom.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "aztelekom",
+    "name": "Aztelekom",
+    "sector": "telecom-technology",
+    "priority": 2,
+    "websiteCandidate": "https://www.aztelekom.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "delta-telecom",
+    "name": "Delta Telecom",
+    "sector": "telecom-technology",
+    "priority": 2,
+    "websiteCandidate": "https://delta-telecom.net",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "enginet-citynet",
+    "name": "Enginet / CityNet",
+    "sector": "telecom-technology",
+    "priority": 2,
+    "websiteCandidate": "https://www.citynet.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "pashapay",
+    "name": "PashaPay",
+    "sector": "telecom-technology",
+    "priority": 2,
+    "websiteCandidate": "https://pashapay.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "azericard",
+    "name": "Azericard",
+    "sector": "telecom-technology",
+    "priority": 2,
+    "websiteCandidate": "https://www.azericard.com",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "goldenpay",
+    "name": "GoldenPay",
+    "sector": "telecom-technology",
+    "priority": 2,
+    "websiteCandidate": "https://goldenpay.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "sinam",
+    "name": "SINAM",
+    "sector": "telecom-technology",
+    "priority": 2,
+    "websiteCandidate": "https://sinam.net",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "deloitte",
+    "name": "Deloitte",
+    "sector": "professional-services",
+    "priority": 1,
+    "websiteCandidate": "https://www.deloitte.com/az/en.html",
+    "careerUrl": "https://www.deloitte.com/az/en/careers.html",
+    "evidence": "official-career-link-checked",
+    "adapter": null
+  },
+  {
+    "id": "ey",
+    "name": "EY",
+    "sector": "professional-services",
+    "priority": 1,
+    "websiteCandidate": "https://www.ey.com",
+    "careerUrl": "https://careers.ey.com/ey/search/?q=&locationsearch=Baku",
+    "evidence": "official-career-link-checked",
+    "adapter": "sap-careers"
+  },
+  {
+    "id": "pwc",
+    "name": "PwC",
+    "sector": "professional-services",
+    "priority": 1,
+    "websiteCandidate": "https://www.pwc.com/az/en.html",
+    "careerUrl": "https://jobs-cee.pwc.com/ea/en/search-results-azerbaijan",
+    "evidence": "official-career-link-checked",
+    "adapter": "pwc"
+  },
+  {
+    "id": "kpmg",
+    "name": "KPMG",
+    "sector": "professional-services",
+    "priority": 1,
+    "websiteCandidate": "https://kpmg.com/az/en/home.html",
+    "careerUrl": "https://kpmg.com/az/en/careers/our-vacancies.html",
+    "evidence": "official-career-link-checked",
+    "adapter": null
+  },
+  {
+    "id": "mckinsey",
+    "name": "McKinsey",
+    "sector": "professional-services",
+    "priority": 1,
+    "websiteCandidate": "https://www.mckinsey.com",
+    "careerUrl": "https://www.mckinsey.com/careers/search-jobs",
+    "evidence": "official-career-link-checked",
+    "adapter": null
+  },
+  {
+    "id": "bcg",
+    "name": "BCG",
+    "sector": "professional-services",
+    "priority": 1,
+    "websiteCandidate": "https://www.bcg.com/azerbaijan",
+    "careerUrl": "https://careers.bcg.com/global/en/locations/azerbaijan",
+    "evidence": "official-career-link-checked",
+    "adapter": null
+  },
+  {
+    "id": "bain",
+    "name": "Bain",
+    "sector": "professional-services",
+    "priority": 1,
+    "websiteCandidate": "https://www.bain.com",
+    "careerUrl": "https://www.bain.com/careers/",
+    "evidence": "official-career-link-checked",
+    "adapter": null
+  },
+  {
+    "id": "grant-thornton",
+    "name": "Grant Thornton",
+    "sector": "professional-services",
+    "priority": 2,
+    "websiteCandidate": "https://www.grantthornton.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "bdo",
+    "name": "BDO",
+    "sector": "professional-services",
+    "priority": 2,
+    "websiteCandidate": "https://www.bdo.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "azal",
+    "name": "AZAL",
+    "sector": "aviation-logistics",
+    "priority": 2,
+    "websiteCandidate": "https://www.azal.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "asg-aviation",
+    "name": "ASG Aviation",
+    "sector": "aviation-logistics",
+    "priority": 2,
+    "websiteCandidate": "https://asg.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "azerbaijan-railways-ady",
+    "name": "Azerbaijan Railways / ADY",
+    "sector": "aviation-logistics",
+    "priority": 2,
+    "websiteCandidate": "https://ady.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "asco",
+    "name": "ASCO",
+    "sector": "aviation-logistics",
+    "priority": 2,
+    "websiteCandidate": "https://www.asco.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "port-of-baku",
+    "name": "Port of Baku",
+    "sector": "aviation-logistics",
+    "priority": 2,
+    "websiteCandidate": "https://portofbaku.com",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "silk-way-airlines",
+    "name": "Silk Way Airlines",
+    "sector": "aviation-logistics",
+    "priority": 2,
+    "websiteCandidate": "https://www.silkwayairlines.com",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "silk-way-west-airlines",
+    "name": "Silk Way West Airlines",
+    "sector": "aviation-logistics",
+    "priority": 2,
+    "websiteCandidate": "https://www.silkwaywest.com",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "bravo",
+    "name": "Bravo",
+    "sector": "retail-consumer",
+    "priority": 2,
+    "websiteCandidate": "https://bravosupermarket.az",
+    "careerUrl": "https://www.bravosupermarket.az/career/all-vacancies/",
+    "evidence": "official-career-link-checked",
+    "adapter": "local-employer"
+  },
+  {
+    "id": "araz-supermarket",
+    "name": "Araz Supermarket",
+    "sector": "retail-consumer",
+    "priority": 2,
+    "websiteCandidate": "https://arazmarket.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "oba-market",
+    "name": "OBA Market",
+    "sector": "retail-consumer",
+    "priority": 2,
+    "websiteCandidate": "https://www.obamarket.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "bazarstore",
+    "name": "Bazarstore",
+    "sector": "retail-consumer",
+    "priority": 2,
+    "websiteCandidate": "https://bazarstore.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "kontakt",
+    "name": "Kontakt",
+    "sector": "retail-consumer",
+    "priority": 2,
+    "websiteCandidate": "https://kontakt.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "baku-electronics",
+    "name": "Baku Electronics",
+    "sector": "retail-consumer",
+    "priority": 2,
+    "websiteCandidate": "https://www.bakuelectronics.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "irshad",
+    "name": "Irshad",
+    "sector": "retail-consumer",
+    "priority": 2,
+    "websiteCandidate": "https://irshad.az",
+    "careerUrl": "https://irshad.az/az/sirket/vakansiyalar",
+    "evidence": "official-career-link-checked",
+    "adapter": "local-employer"
+  },
+  {
+    "id": "soliton",
+    "name": "Soliton",
+    "sector": "retail-consumer",
+    "priority": 2,
+    "websiteCandidate": "https://soliton.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "veyseloglu",
+    "name": "Veyseloglu",
+    "sector": "retail-consumer",
+    "priority": 2,
+    "websiteCandidate": "https://www.veyseloglu.az",
+    "careerUrl": "https://karyera.veyseloglu.az/home/allvacancies?pageIndex=1&pageSize=5",
+    "evidence": "official-career-link-checked",
+    "adapter": "local-employer"
+  },
+  {
+    "id": "azersun",
+    "name": "Azersun",
+    "sector": "retail-consumer",
+    "priority": 2,
+    "websiteCandidate": "https://www.azersun.com",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "coca-cola-cci",
+    "name": "Coca-Cola CCI",
+    "sector": "retail-consumer",
+    "priority": 2,
+    "websiteCandidate": "https://www.cci.com.tr",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "carlsberg-azerbaijan",
+    "name": "Carlsberg Azerbaijan",
+    "sector": "retail-consumer",
+    "priority": 2,
+    "websiteCandidate": "https://carlsbergazerbaijan.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "a-co",
+    "name": "A+Co",
+    "sector": "retail-consumer",
+    "priority": 2,
+    "websiteCandidate": "https://aplusco.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "nestle",
+    "name": "Nestle",
+    "sector": "retail-consumer",
+    "priority": 2,
+    "websiteCandidate": "https://www.nestle.com",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "procter-gamble",
+    "name": "Procter & Gamble",
+    "sector": "retail-consumer",
+    "priority": 2,
+    "websiteCandidate": "https://www.pgcareers.com",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "jti",
+    "name": "JTI",
+    "sector": "retail-consumer",
+    "priority": 2,
+    "websiteCandidate": "https://www.jti.com",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "british-american-tobacco",
+    "name": "British American Tobacco",
+    "sector": "retail-consumer",
+    "priority": 2,
+    "websiteCandidate": "https://www.bat.com",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "pmd-group",
+    "name": "PMD Group",
+    "sector": "construction-agriculture-hospitality",
+    "priority": 2,
+    "websiteCandidate": "https://pmdgroup.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "pasha-construction",
+    "name": "PASHA Construction",
+    "sector": "construction-agriculture-hospitality",
+    "priority": 2,
+    "websiteCandidate": "https://www.pashaconstruction.com",
+    "careerUrl": "https://www.pashaconstruction.com/az/careers/",
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "pasha-real-estate",
+    "name": "PASHA Real Estate",
+    "sector": "construction-agriculture-hospitality",
+    "priority": 2,
+    "websiteCandidate": "https://pasharealestate.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "gilan-holding",
+    "name": "Gilan Holding",
+    "sector": "construction-agriculture-hospitality",
+    "priority": 2,
+    "websiteCandidate": "https://www.gilanholding.com",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "ag-group",
+    "name": "AG Group",
+    "sector": "construction-agriculture-hospitality",
+    "priority": 2,
+    "websiteCandidate": "https://aggroup.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "cahan-holding",
+    "name": "Cahan Holding",
+    "sector": "construction-agriculture-hospitality",
+    "priority": 2,
+    "websiteCandidate": "https://cahan.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "agro-dairy",
+    "name": "Agro Dairy",
+    "sector": "construction-agriculture-hospitality",
+    "priority": 2,
+    "websiteCandidate": "https://www.agrodairy.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "grand-agro",
+    "name": "Grand Agro",
+    "sector": "construction-agriculture-hospitality",
+    "priority": 2,
+    "websiteCandidate": "https://grandagro.az",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "four-seasons-baku",
+    "name": "Four Seasons Baku",
+    "sector": "construction-agriculture-hospitality",
+    "priority": 2,
+    "websiteCandidate": "https://www.fourseasons.com/baku/",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "fairmont-baku",
+    "name": "Fairmont Baku",
+    "sector": "construction-agriculture-hospitality",
+    "priority": 2,
+    "websiteCandidate": "https://www.fairmont.com/baku/",
+    "careerUrl": "https://careers.accor.com/global/en/jobs?options=313&page=1",
+    "evidence": "official-career-link-checked",
+    "adapter": "local-employer"
+  },
+  {
+    "id": "hilton-baku",
+    "name": "Hilton Baku",
+    "sector": "construction-agriculture-hospitality",
+    "priority": 2,
+    "websiteCandidate": "https://www.hilton.com/en/hotels/gydhbhi-hilton-baku/",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "marriott-baku",
+    "name": "Marriott Baku",
+    "sector": "construction-agriculture-hospitality",
+    "priority": 2,
+    "websiteCandidate": "https://www.marriott.com",
+    "careerUrl": null,
+    "evidence": "needs-verification",
+    "adapter": null
+  },
+  {
+    "id": "pasha-capital",
+    "name": "PASHA Capital",
+    "sector": "finance-insurance",
+    "priority": 2,
+    "websiteCandidate": "https://www.pashacapital.az",
+    "careerUrl": null,
+    "evidence": "needs-direct-employer-ats-verification",
+    "adapter": null
+  },
+  {
+    "id": "xsolla",
+    "name": "Xsolla",
+    "sector": "technology",
+    "priority": 1,
+    "websiteCandidate": "https://xsolla.com",
+    "careerUrl": "https://jobs.lever.co/xsolla",
+    "evidence": "official-career-link-checked",
+    "adapter": "lever"
+  },
+  {
+    "id": "avrora",
+    "name": "Avrora",
+    "sector": "Manufacturing, distribution and retail",
+    "priority": 2,
+    "websiteCandidate": "https://www.avrora.az",
+    "careerUrl": "https://www.avrora.az/az/karyera",
+    "evidence": "official-career-link-checked",
+    "adapter": "local-employer"
+  },
+  {
+    "id": "alumil",
+    "name": "ALUMIL",
+    "sector": "manufacturing",
+    "priority": 2,
+    "websiteCandidate": "https://www.alumil.com",
+    "careerUrl": "https://apply.workable.com/alumil/",
+    "evidence": "official-career-link-checked",
+    "adapter": "workable"
+  },
+  {
+    "id": "fugro",
+    "name": "Fugro",
+    "sector": "energy-industry",
+    "priority": 2,
+    "websiteCandidate": "https://www.fugro.com",
+    "careerUrl": "https://fugro.wd3.myworkdayjobs.com/Careers",
+    "evidence": "official-career-link-checked",
+    "adapter": "workday"
+  },
+  {
+    "id": "supportyourapp",
+    "name": "SupportYourApp",
+    "sector": "technology and customer support",
+    "priority": 2,
+    "websiteCandidate": "https://supportyourapp.com",
+    "careerUrl": "https://apply.workable.com/supportyourapp/",
+    "evidence": "official-career-link-checked",
+    "adapter": "workable"
+  },
+  {
+    "id": "wolt",
+    "name": "Wolt Azerbaijan",
+    "sector": "retail, delivery and technology",
+    "priority": 1,
+    "websiteCandidate": "https://wolt.com",
+    "careerUrl": "https://job-boards.greenhouse.io/wolt",
+    "evidence": "official-career-link-checked",
+    "adapter": "greenhouse"
+  }
+]

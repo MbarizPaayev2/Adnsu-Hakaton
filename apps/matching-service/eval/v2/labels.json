@@ -1,0 +1,121 @@
+{
+ "_doc": "v2 labels. Written by the engineer on 3 October 2026 BEFORE any scorer was run on this set. ENGINEER-LABELLED, not independent human review. strong = a good suggestion; partial = adjacent or weaker fit; hard = must never be recommended (mandatory qualification/seniority/regulated mismatch); every unlisted pair = poor.",
+ "Q1_support_az": {
+  "strong": [
+   "v01",
+   "v04"
+  ],
+  "partial": [
+   "v05",
+   "v07"
+  ],
+  "hard": []
+ },
+ "Q2_it_support_en": {
+  "strong": [
+   "v02",
+   "v03"
+  ],
+  "partial": [
+   "v06"
+  ],
+  "hard": []
+ },
+ "Q3_math_teacher": {
+  "strong": [
+   "v22"
+  ],
+  "partial": [
+   "v24",
+   "v26",
+   "v27"
+  ],
+  "hard": []
+ },
+ "Q4_sales_junior": {
+  "strong": [
+   "v11",
+   "v29"
+  ],
+  "partial": [
+   "v09",
+   "v28",
+   "v07"
+  ],
+  "hard": [
+   "v10"
+  ]
+ },
+ "Q5_pm_senior": {
+  "strong": [
+   "v14",
+   "v15"
+  ],
+  "partial": [
+   "v49",
+   "v50"
+  ],
+  "hard": []
+ },
+ "Q6_driver": {
+  "strong": [
+   "v41"
+  ],
+  "partial": [
+   "v42"
+  ],
+  "hard": []
+ },
+ "Q7_incomplete": {
+  "strong": [],
+  "partial": [],
+  "hard": []
+ },
+ "S1_english_teacher": {
+  "strong": [
+   "v23"
+  ],
+  "partial": [
+   "v25",
+   "v27"
+  ],
+  "hard": []
+ },
+ "S2_accountant_acca": {
+  "strong": [
+   "v17",
+   "v18",
+   "v20",
+   "v21"
+  ],
+  "partial": [
+   "v19"
+  ],
+  "hard": []
+ },
+ "S3_telesales_ru": {
+  "strong": [
+   "v07"
+  ],
+  "partial": [
+   "v01",
+   "v04",
+   "v11",
+   "v05"
+  ],
+  "hard": []
+ },
+ "S4_fin_analyst": {
+  "strong": [
+   "v19"
+  ],
+  "partial": [
+   "v17",
+   "v21",
+   "v34"
+  ],
+  "hard": [
+   "v20"
+  ]
+ }
+}

@@ -1,0 +1,10 @@
+-- Registers two reviewed public listing adapters (eJob.az, JobSearch.az classic). Additive: two rows, no other source changes.
+-- Access: robots.txt was read on 2026-10-03 and allows the listing and vacancy paths for our user agent; JobSearch asks every crawler for a
+-- 30 s crawl-delay (enforced by the collector from the file itself) and eJob asks AI crawlers for 5 s (kept as our floor). Terms and attribution are NOT
+-- reviewed, so this is ROBOTS_ALLOWED_TERMS_PENDING, never an approval to republish. Scheduling stays off (scheduled = false): nothing runs these
+-- collectors unless an operator starts them. Neither listing is treated as a complete census, so neither can close postings on its own.
+INSERT INTO "JobSource" ("key","name","employer","homepageUrl","collectionMethod","scope","accessReview","accessNote","applicationMethods","enabled","scheduled","updatedAt")
+VALUES
+ ('ejob','eJob.az',NULL,'https://ejob.az/is-elanlari/','public-html-pagination-and-jobposting-metadata','Public vacancy listing and detail pages only; no CV, cabinet, message or PDF surfaces','ROBOTS_ALLOWED_TERMS_PENDING','robots.txt allows /is-elanlari/ and /is-elani/ for our agent (checked 2026-10-03; 5 s pacing floor kept). Contacts are shown as an image or message form, so an application address exists only when the vacancy text states one. Terms and attribution not reviewed; listing census not proven.',ARRAY['EXTERNAL_SITE','EMAIL']::"ApplicationMethod"[],true,false,CURRENT_TIMESTAMP),
+ ('jobsearch','JobSearch.az',NULL,'https://classic.jobsearch.az/vacancies?hl=az','public-classic-listing-cards','Classic public vacancy listing (latest cards) and detail pages only; no candidate account surfaces','ROBOTS_ALLOWED_TERMS_PENDING','robots.txt allows /vacancies for our agent with Crawl-delay 30 (checked 2026-10-03; enforced). The application address is filled in by script and is not read. Listing is a bounded recent snapshot. Terms and attribution not reviewed.',ARRAY['EXTERNAL_SITE','EMAIL']::"ApplicationMethod"[],true,false,CURRENT_TIMESTAMP)
+ON CONFLICT ("key") DO NOTHING;

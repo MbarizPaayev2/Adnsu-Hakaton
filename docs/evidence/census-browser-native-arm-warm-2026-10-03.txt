@@ -1,0 +1,10 @@
+PASS catalogue shows 1426 open vacancies = database eligible count (stored 2248, expired excluded 780)
+PASS search, source, company and location+category filters return the expected vacancies
+PASS expired and hidden postings vanish, a cross-source duplicate is linked and excluded while the original stays; counts follow
+PASS detail keeps attribution and sends the candidate to the source site; no e-mail path invented
+PASS browser: register, verify, upload CV, complete onboarding
+TIME_TO_PERSISTED_MATCHES_S 60.2 (real scorer; eligible jobs 1425)
+REAL scores: 0.654, 0.621, 0.613
+PASS matching (REAL scorer) produced 3 matches, all on eligible imported postings (sources: smartjob, hellojob)
+PASS browser: an explicitly e-mail-applicable vacancy → preview → approval → one message with the exact CV to the local sink only; shown as provider-accepted
+ALL 7 CENSUS BROWSER CHECKS PASSED. Evidence: (local screenshots, not committed)

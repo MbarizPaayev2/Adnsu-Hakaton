@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="az"><head><meta charset="utf-8"><title>AISE Agent</title>
+<style>
+  body { font: 14px/1.45 system-ui, sans-serif; margin: 0; padding: 14px; width: 300px; color: #1b2a24; background: #f7f6f2; }
+  h1 { font-size: 15px; margin: 0 0 8px; }
+  .row { margin: 8px 0; } .muted { color: #5b6b64; font-size: 12px; }
+  input { width: 100%; box-sizing: border-box; padding: 8px; font-size: 16px; letter-spacing: 2px; text-transform: uppercase; border: 1px solid #b9c4be; border-radius: 6px; }
+  button { padding: 8px 12px; border-radius: 6px; border: 1px solid #2b3d34; background: #2b3d34; color: #fff; cursor: pointer; font-size: 13px; }
+  button.secondary { background: transparent; color: #2b3d34; }
+  button:focus-visible, input:focus-visible { outline: 3px solid #1f7a5a; outline-offset: 2px; }
+  .err { color: #9b1c1c; } .ok { color: #1f6b4a; }
+</style></head>
+<body>
+  <h1>AISE Agent <span id="version" class="muted"></span></h1>
+  <div id="unpaired" hidden>
+    <p class="muted">Bu brauzeri AISE hesabınızla qoşun: AISE-də <b>Brauzer köməkçisi</b> səhifəsini açıb <b>Bu brauzeri qoş</b> düyməsinə basın. Və ya orada kod yaradıb buraya yazın.</p>
+    <div class="row"><label for="code" class="muted">Cütləmə kodu</label><input id="code" maxlength="9" autocomplete="off" aria-describedby="msg"></div>
+    <div class="row"><button id="pair">Brauzeri cütlə</button> <button id="open-aise" class="secondary">Kodu AISE-də yarat</button></div>
+  </div>
+  <div id="paired" hidden>
+    <p class="ok" id="state"></p>
+    <p class="muted" id="detail"></p>
+    <div class="row"><b>Bu səhifədə nə edə bilərəm?</b><p id="target" class="muted"></p><p id="mode" class="muted"></p><button id="prefill">Məlumatlarımı bu formaya köçür</button></div>
+    <div class="row"><button id="poll">İndi yoxla</button> <button id="disconnect" class="secondary">Ayır</button></div>
+  </div>
+  <p id="msg" class="muted" role="status" aria-live="polite"></p>
+  <script type="module" src="popup.js"></script>
+</body></html>

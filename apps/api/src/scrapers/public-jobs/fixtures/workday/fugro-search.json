@@ -1,0 +1,99 @@
+{
+  "total": 1,
+  "jobPostings": [
+    {
+      "title": "Asset Management Lead",
+      "externalPath": "/job/Baku-Azerbaijan/Asset-Management-Lead_R0032325",
+      "locationsText": "Baku, Azerbaijan",
+      "remoteType": "On Site",
+      "bulletFields": [
+        "R0032325"
+      ]
+    }
+  ],
+  "facets": [
+    {
+      "facetParameter": "jobFamilyGroup",
+      "descriptor": "Job Category",
+      "values": [
+        {
+          "descriptor": "Technical and Operations",
+          "id": "8854051a8cc901def36a33e3f80537e3",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "facetParameter": "Location",
+      "descriptor": "Location",
+      "values": [
+        {
+          "descriptor": "Baku, Azerbaijan",
+          "id": "db5d6ec5f1e1016007d9963d2c22c061",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "facetParameter": "workerSubType",
+      "descriptor": "Job Type",
+      "values": [
+        {
+          "descriptor": "Regular",
+          "id": "8854051a8cc901f50811ac955405e516",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "facetParameter": "remoteType",
+      "descriptor": "Remote Type",
+      "values": [
+        {
+          "descriptor": "On Site",
+          "id": "c8d7d13a63a61001a5e2381ad0360000",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "facetParameter": "timeType",
+      "descriptor": "Time Type",
+      "values": [
+        {
+          "descriptor": "Full time",
+          "id": "6f09b286fe3c01949b2217fbb8016a00",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "facetParameter": "locationMainGroup",
+      "values": [
+        {
+          "facetParameter": "locationCountry",
+          "descriptor": "Location Country",
+          "values": [
+            {
+              "descriptor": "Azerbaijan",
+              "id": "db69b812446c11de98360015c5e6daf6",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "facetParameter": "isRemote",
+          "descriptor": "Remote Opportunity?",
+          "values": [
+            {
+              "descriptor": "True",
+              "id": "dc7503d8446c11de98360015c5e6daf6",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "userAuthenticated": false
+}

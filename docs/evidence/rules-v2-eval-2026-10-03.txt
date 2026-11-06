@@ -1,0 +1,72 @@
+
+=== scorer embedding  split dev      ===
+  PASS C1 strong ranked above poor                                    bound 0.950  measured 1.000
+  PASS C2 strong ranked above partial                                 bound 0.800  measured 0.950
+  PASS C3 partial ranked above poor                                   bound 0.800  measured 0.917
+  PASS C4 hard mismatches stored as a match                           bound 0      measured 0
+  FAIL C5 poor/hard pairs at or above the email floor                 bound 0      measured 2
+  PASS C6 strong pairs reaching the email floor                       bound 0.700  measured 1.000
+  PASS C7 median(strong) - median(poor)                               bound 0.200  measured 0.380
+  PASS C8 incomplete profile: pairs at or above the email floor       bound 0      measured 0
+  n/a  C9 employment-type-as-location twin within 0.05 of its twin    bound 0.050  measured n/a
+  PASS C10 mean NDCG@5                                                bound 0.850  measured 0.924
+  score by label (0-1):
+    strong   n=10  min 0.513  median 0.583  max 0.674
+    partial  n=12  min 0.231  median 0.453  max 0.581
+    poor     n=327 min 0.016  median 0.204  max 0.586
+    hard     n=1   min 0.200  median 0.200  max 0.200
+  pairs stored (>= 0.35) per persona: [11, 7, 16, 9, 7, 1, 0] ; at email floor (>= 0.50): [3, 2, 3, 3, 2, 1, 0]
+
+=== scorer embedding  split sealed   ===
+  PASS C1 strong ranked above poor                                    bound 0.900  measured 1.000
+  PASS C2 strong ranked above partial                                 bound 0.750  measured 1.000
+  PASS C3 partial ranked above poor                                   bound 0.750  measured 0.888
+  PASS C4 hard mismatches stored as a match                           bound 0      measured 0
+  FAIL C5 poor/hard pairs at or above the email floor                 bound 0      measured 1
+  PASS C6 strong pairs reaching the email floor                       bound 0.600  measured 1.000
+  PASS C7 median(strong) - median(poor)                               bound 0.200  measured 0.419
+  PASS C8 incomplete profile: pairs at or above the email floor       bound 0      measured 0
+  n/a  C9 employment-type-as-location twin within 0.05 of its twin    bound 0.050  measured n/a
+  PASS C10 mean NDCG@5                                                bound 0.850  measured 0.896
+  score by label (0-1):
+    strong   n=7   min 0.513  median 0.645  max 0.712
+    partial  n=10  min 0.236  median 0.403  max 0.479
+    poor     n=182 min 0.042  median 0.225  max 0.505
+    hard     n=1   min 0.271  median 0.271  max 0.271
+  pairs stored (>= 0.35) per persona: [7, 15, 9, 3] ; at email floor (>= 0.50): [1, 4, 2, 1]
+
+=== scorer rules      split dev      ===
+  PASS C1 strong ranked above poor                                    bound 0.950  measured 1.000
+  PASS C2 strong ranked above partial                                 bound 0.800  measured 0.900
+  PASS C3 partial ranked above poor                                   bound 0.800  measured 0.986
+  PASS C4 hard mismatches stored as a match                           bound 0      measured 0
+  FAIL C5 poor/hard pairs at or above the email floor                 bound 0      measured 1
+  PASS C6 strong pairs reaching the email floor                       bound 0.700  measured 1.000
+  PASS C7 median(strong) - median(poor)                               bound 0.200  measured 0.699
+  PASS C8 incomplete profile: pairs at or above the email floor       bound 0      measured 0
+  n/a  C9 employment-type-as-location twin within 0.05 of its twin    bound 0.050  measured n/a
+  PASS C10 mean NDCG@5                                                bound 0.850  measured 0.974
+  score by label (0-1):
+    strong   n=10  min 0.768  median 0.802  max 0.880
+    partial  n=12  min 0.267  median 0.554  max 0.768
+    poor     n=327 min 0.000  median 0.103  max 0.844
+    hard     n=1   min 0.105  median 0.105  max 0.105
+  pairs stored (>= 0.35) per persona: [5, 4, 4, 7, 4, 2, 0] ; at email floor (>= 0.50): [3, 2, 4, 5, 4, 1, 0]
+
+=== scorer rules      split sealed   ===
+  PASS C1 strong ranked above poor                                    bound 0.900  measured 1.000
+  PASS C2 strong ranked above partial                                 bound 0.750  measured 0.923
+  PASS C3 partial ranked above poor                                   bound 0.750  measured 0.989
+  PASS C4 hard mismatches stored as a match                           bound 0      measured 0
+  FAIL C5 poor/hard pairs at or above the email floor                 bound 0      measured 1
+  PASS C6 strong pairs reaching the email floor                       bound 0.600  measured 0.857
+  PASS C7 median(strong) - median(poor)                               bound 0.200  measured 0.705
+  PASS C8 incomplete profile: pairs at or above the email floor       bound 0      measured 0
+  n/a  C9 employment-type-as-location twin within 0.05 of its twin    bound 0.050  measured n/a
+  PASS C10 mean NDCG@5                                                bound 0.850  measured 0.976
+  score by label (0-1):
+    strong   n=7   min 0.406  median 0.840  max 0.887
+    partial  n=10  min 0.267  median 0.454  max 0.621
+    poor     n=182 min 0.017  median 0.135  max 0.511
+    hard     n=1   min 0.078  median 0.078  max 0.078
+  pairs stored (>= 0.35) per persona: [6, 5, 8, 4] ; at email floor (>= 0.50): [2, 3, 4, 1]

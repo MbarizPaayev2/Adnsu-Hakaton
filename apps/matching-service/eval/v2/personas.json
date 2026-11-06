@@ -1,0 +1,575 @@
+[
+ {
+  "evalId": "Q1_support_az",
+  "split": "dev",
+  "expectNoEmail": false,
+  "persona": {
+   "candidate_id": "eval-Q1_support_az",
+   "name": "",
+   "email": "",
+   "location": "Bakı",
+   "languages": [
+    {
+     "code": "az"
+    },
+    {
+     "code": "ru"
+    }
+   ],
+   "years_of_experience": 2,
+   "summary": "Müştəri xidməti üzrə operator",
+   "target_titles": [
+    "Müştəri xidməti mütəxəssisi",
+    "Çağrı mərkəzi operatoru"
+   ],
+   "hard_skills": [
+    "CRM",
+    "Telefon",
+    "Şikayətlərin həlli",
+    "Azərbaycan dili",
+    "Rus dili"
+   ],
+   "soft_skills": [],
+   "experience_history": [
+    {
+     "company": "Nümunə MMC",
+     "role": "Çağrı mərkəzi operatoru",
+     "location": "",
+     "dates": "",
+     "achievements": [
+      "Gələn zəngləri cavablandırdım, müştəri müraciətlərini CRM-də qeyd etdim."
+     ]
+    }
+   ],
+   "education": {
+    "rank": 2
+   },
+   "salary_expectation": {},
+   "preferred_cities": [
+    "Bakı"
+   ],
+   "work_arrangements": [
+    "onsite"
+   ],
+   "certifications": []
+  }
+ },
+ {
+  "evalId": "Q2_it_support_en",
+  "split": "dev",
+  "expectNoEmail": false,
+  "persona": {
+   "candidate_id": "eval-Q2_it_support_en",
+   "name": "",
+   "email": "",
+   "location": "Bakı",
+   "languages": [
+    {
+     "code": "en"
+    },
+    {
+     "code": "az"
+    }
+   ],
+   "years_of_experience": 3,
+   "summary": "IT support specialist with helpdesk experience",
+   "target_titles": [
+    "IT Support Specialist",
+    "Helpdesk Engineer"
+   ],
+   "hard_skills": [
+    "Windows",
+    "Active Directory",
+    "Networking",
+    "Hardware troubleshooting",
+    "Helpdesk",
+    "English"
+   ],
+   "soft_skills": [],
+   "experience_history": [
+    {
+     "company": "Nümunə MMC",
+     "role": "IT Support Specialist",
+     "location": "",
+     "dates": "",
+     "achievements": [
+      "Resolved workstation, account and network issues for 200 users through the helpdesk system."
+     ]
+    }
+   ],
+   "education": {
+    "rank": 4
+   },
+   "salary_expectation": {},
+   "preferred_cities": [
+    "Bakı"
+   ],
+   "work_arrangements": [
+    "onsite"
+   ],
+   "certifications": []
+  }
+ },
+ {
+  "evalId": "Q3_math_teacher",
+  "split": "dev",
+  "expectNoEmail": false,
+  "persona": {
+   "candidate_id": "eval-Q3_math_teacher",
+   "name": "",
+   "email": "",
+   "location": "Bakı",
+   "languages": [
+    {
+     "code": "az"
+    }
+   ],
+   "years_of_experience": 5,
+   "summary": "Riyaziyyat müəllimi, imtahana hazırlıq",
+   "target_titles": [
+    "Riyaziyyat müəllimi"
+   ],
+   "hard_skills": [
+    "Riyaziyyat",
+    "Dərs planı",
+    "İmtahana hazırlıq"
+   ],
+   "soft_skills": [],
+   "experience_history": [
+    {
+     "company": "Nümunə MMC",
+     "role": "Riyaziyyat müəllimi",
+     "location": "",
+     "dates": "",
+     "achievements": [
+      "Orta məktəbdə riyaziyyat tədris etdim və şagirdləri imtahana hazırladım."
+     ]
+    }
+   ],
+   "education": {
+    "rank": 4
+   },
+   "salary_expectation": {},
+   "preferred_cities": [
+    "Bakı"
+   ],
+   "work_arrangements": [
+    "onsite"
+   ],
+   "certifications": []
+  }
+ },
+ {
+  "evalId": "Q4_sales_junior",
+  "split": "dev",
+  "expectNoEmail": false,
+  "persona": {
+   "candidate_id": "eval-Q4_sales_junior",
+   "name": "",
+   "email": "",
+   "location": "Bakı",
+   "languages": [
+    {
+     "code": "az"
+    },
+    {
+     "code": "ru"
+    }
+   ],
+   "years_of_experience": 1,
+   "summary": "Mağaza satış məsləhətçisi",
+   "target_titles": [
+    "Satış məsləhətçisi",
+    "Sales Consultant"
+   ],
+   "hard_skills": [
+    "Satış",
+    "Müştəri xidməti",
+    "Kassa"
+   ],
+   "soft_skills": [],
+   "experience_history": [
+    {
+     "company": "Nümunə MMC",
+     "role": "Satış məsləhətçisi",
+     "location": "",
+     "dates": "",
+     "achievements": [
+      "Mağazada müştərilərə məhsul seçimində məsləhət verdim və kassada işlədim."
+     ]
+    }
+   ],
+   "education": {
+    "rank": 2
+   },
+   "salary_expectation": {},
+   "preferred_cities": [
+    "Bakı"
+   ],
+   "work_arrangements": [
+    "onsite"
+   ],
+   "certifications": []
+  }
+ },
+ {
+  "evalId": "Q5_pm_senior",
+  "split": "dev",
+  "expectNoEmail": false,
+  "persona": {
+   "candidate_id": "eval-Q5_pm_senior",
+   "name": "",
+   "email": "",
+   "location": "Bakı",
+   "languages": [
+    {
+     "code": "en"
+    },
+    {
+     "code": "az"
+    }
+   ],
+   "years_of_experience": 7,
+   "summary": "IT project manager with 7 years of delivery experience",
+   "target_titles": [
+    "Layihə meneceri",
+    "Project Manager"
+   ],
+   "hard_skills": [
+    "Scrum",
+    "Agile",
+    "Jira",
+    "Risk management",
+    "Stakeholder management",
+    "English"
+   ],
+   "soft_skills": [],
+   "experience_history": [
+    {
+     "company": "Nümunə MMC",
+     "role": "IT Project Manager",
+     "location": "",
+     "dates": "",
+     "achievements": [
+      "Delivered 12 software projects with teams of 6-15 using Scrum; managed scope, schedule and risks."
+     ]
+    }
+   ],
+   "education": {
+    "rank": 4
+   },
+   "salary_expectation": {},
+   "preferred_cities": [
+    "Bakı"
+   ],
+   "work_arrangements": [
+    "onsite"
+   ],
+   "certifications": []
+  }
+ },
+ {
+  "evalId": "Q6_driver",
+  "split": "dev",
+  "expectNoEmail": false,
+  "persona": {
+   "candidate_id": "eval-Q6_driver",
+   "name": "",
+   "email": "",
+   "location": "Bakı",
+   "languages": [
+    {
+     "code": "az"
+    },
+    {
+     "code": "ru"
+    }
+   ],
+   "years_of_experience": 6,
+   "summary": "Təcrübəli sürücü, B və C kateqoriyası",
+   "target_titles": [
+    "Sürücü"
+   ],
+   "hard_skills": [
+    "Sürücülük",
+    "Bakını yaxşı bilmək"
+   ],
+   "soft_skills": [],
+   "experience_history": [
+    {
+     "company": "Nümunə MMC",
+     "role": "Sürücü",
+     "location": "",
+     "dates": "",
+     "achievements": [
+      "Şirkət avtomobilini idarə etdim, işçiləri və sənədləri çatdırdım."
+     ]
+    }
+   ],
+   "education": {
+    "rank": 2
+   },
+   "salary_expectation": {},
+   "preferred_cities": [
+    "Bakı"
+   ],
+   "work_arrangements": [
+    "onsite"
+   ],
+   "certifications": [
+    "Sürücülük vəsiqəsi B, C"
+   ]
+  }
+ },
+ {
+  "evalId": "Q7_incomplete",
+  "split": "dev",
+  "expectNoEmail": true,
+  "persona": {
+   "candidate_id": "eval-Q7_incomplete",
+   "name": "",
+   "email": "",
+   "location": "Bakı",
+   "languages": [],
+   "years_of_experience": 0,
+   "summary": "",
+   "target_titles": [],
+   "hard_skills": [
+    "Excel"
+   ],
+   "soft_skills": [],
+   "experience_history": [],
+   "education": {
+    "rank": 0
+   },
+   "salary_expectation": {},
+   "preferred_cities": [
+    "Bakı"
+   ],
+   "work_arrangements": [
+    "onsite"
+   ],
+   "certifications": []
+  }
+ },
+ {
+  "evalId": "S1_english_teacher",
+  "split": "sealed",
+  "expectNoEmail": false,
+  "persona": {
+   "candidate_id": "eval-S1_english_teacher",
+   "name": "",
+   "email": "",
+   "location": "Bakı",
+   "languages": [
+    {
+     "code": "az"
+    },
+    {
+     "code": "en"
+    }
+   ],
+   "years_of_experience": 4,
+   "summary": "İngilis dili müəllimi",
+   "target_titles": [
+    "İngilis dili müəllimi",
+    "English Teacher"
+   ],
+   "hard_skills": [
+    "İngilis dili",
+    "IELTS",
+    "Dərs planı"
+   ],
+   "soft_skills": [],
+   "experience_history": [
+    {
+     "company": "Nümunə MMC",
+     "role": "İngilis dili müəllimi",
+     "location": "",
+     "dates": "",
+     "achievements": [
+      "İngilis dilini müxtəlif səviyyələrdə tədris etdim, IELTS-ə hazırlıq kursları apardım."
+     ]
+    }
+   ],
+   "education": {
+    "rank": 4
+   },
+   "salary_expectation": {},
+   "preferred_cities": [
+    "Bakı"
+   ],
+   "work_arrangements": [
+    "onsite"
+   ],
+   "certifications": []
+  }
+ },
+ {
+  "evalId": "S2_accountant_acca",
+  "split": "sealed",
+  "expectNoEmail": false,
+  "persona": {
+   "candidate_id": "eval-S2_accountant_acca",
+   "name": "",
+   "email": "",
+   "location": "Bakı",
+   "languages": [
+    {
+     "code": "az"
+    },
+    {
+     "code": "en"
+    }
+   ],
+   "years_of_experience": 6,
+   "summary": "Mühasib, ACCA sertifikatlı",
+   "target_titles": [
+    "Mühasib",
+    "Maliyyə nəzarətçisi"
+   ],
+   "hard_skills": [
+    "1C",
+    "Excel",
+    "MHBS",
+    "Vergi uçotu",
+    "Büdcə"
+   ],
+   "soft_skills": [],
+   "experience_history": [
+    {
+     "company": "Nümunə MMC",
+     "role": "Baş mühasib",
+     "location": "",
+     "dates": "",
+     "achievements": [
+      "Mühasibat uçotunu təşkil etdim, MHBS hesabatları hazırladım, vergi orqanları ilə əlaqə saxladım."
+     ]
+    }
+   ],
+   "education": {
+    "rank": 4
+   },
+   "salary_expectation": {},
+   "preferred_cities": [
+    "Bakı"
+   ],
+   "work_arrangements": [
+    "onsite"
+   ],
+   "certifications": [
+    "ACCA"
+   ]
+  }
+ },
+ {
+  "evalId": "S3_telesales_ru",
+  "split": "sealed",
+  "expectNoEmail": false,
+  "persona": {
+   "candidate_id": "eval-S3_telesales_ru",
+   "name": "",
+   "email": "",
+   "location": "Bakı",
+   "languages": [
+    {
+     "code": "ru"
+    },
+    {
+     "code": "az"
+    }
+   ],
+   "years_of_experience": 2,
+   "summary": "Оператор телефонных продаж",
+   "target_titles": [
+    "Оператор телефонных продаж",
+    "Telefon satışı operatoru"
+   ],
+   "hard_skills": [
+    "Телефонные продажи",
+    "CRM",
+    "Переговоры",
+    "Rus dili",
+    "Azərbaycan dili"
+   ],
+   "soft_skills": [],
+   "experience_history": [
+    {
+     "company": "Nümunə MMC",
+     "role": "Оператор телефонных продаж",
+     "location": "",
+     "dates": "",
+     "achievements": [
+      "Продавал услуги по телефону, выполнял план продаж, вёл базу клиентов в CRM."
+     ]
+    }
+   ],
+   "education": {
+    "rank": 2
+   },
+   "salary_expectation": {},
+   "preferred_cities": [
+    "Bakı"
+   ],
+   "work_arrangements": [
+    "onsite"
+   ],
+   "certifications": []
+  }
+ },
+ {
+  "evalId": "S4_fin_analyst",
+  "split": "sealed",
+  "expectNoEmail": false,
+  "persona": {
+   "candidate_id": "eval-S4_fin_analyst",
+   "name": "",
+   "email": "",
+   "location": "Bakı",
+   "languages": [
+    {
+     "code": "en"
+    },
+    {
+     "code": "az"
+    }
+   ],
+   "years_of_experience": 3,
+   "summary": "Financial analyst, no professional certification",
+   "target_titles": [
+    "Financial Analyst",
+    "Maliyyə analitiki"
+   ],
+   "hard_skills": [
+    "Financial modelling",
+    "Excel",
+    "Budgeting",
+    "Reporting",
+    "English"
+   ],
+   "soft_skills": [],
+   "experience_history": [
+    {
+     "company": "Nümunə MMC",
+     "role": "Financial Analyst",
+     "location": "",
+     "dates": "",
+     "achievements": [
+      "Prepared budgets and forecasts, analysed monthly results and presented them to management."
+     ]
+    }
+   ],
+   "education": {
+    "rank": 4
+   },
+   "salary_expectation": {},
+   "preferred_cities": [
+    "Bakı"
+   ],
+   "work_arrangements": [
+    "onsite"
+   ],
+   "certifications": []
+  }
+ }
+]

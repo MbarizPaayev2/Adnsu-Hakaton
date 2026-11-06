@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Disallow: /jobs?*
+Disallow: /heartists-opportunities
+Disallow: /admin*
+Disallow: /workflow*
+Disallow: /snippettest*
+Disallow: /register*
+Disallow: /recruitersearch*
+Disallow: /newprofile*
+Disallow: /login*
+Disallow: /editprofile*
+Disallow: /candidateupdatecredentials*
+Disallow: /candidateresetpassword*
+Disallow: /candidatehome*
+
+Sitemap: https://careers.accor.com/sitemap.xml
+Sitemap: https://careers.accor.com/vacanciessitemap.xml
+Sitemap: https://careers.accor.com/contentsitemap.xml

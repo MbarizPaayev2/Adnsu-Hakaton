@@ -1,0 +1,17 @@
+# AISE schedules for the tefma user. ADD these lines; do not replace the existing crontab
+# (other services on this host have their own entries): crontab -l > ~/crontab.before.$(date +%F)
+# then: (crontab -l; cat ops/crontab.tefma.example) | crontab -
+#
+# Only public values appear here. The age PUBLIC key is safe on the server; the private key never is.
+# Rclone credentials live in ~/.config/rclone/rclone.conf (mode 600), not in this file.
+PATH=/home/tefma/.local/bin:/usr/local/bin:/usr/bin:/bin
+AISE_BACKUP_AGE_RECIPIENT=age1r39tccafrtcu5r44h60n6zapktuy9j44g24ajl03pep986jm2gtq2sstut
+AISE_OFFHOST_REMOTE=REPLACE_REMOTE:REPLACE_BUCKET/daily
+# Notification channels (set at least one; both are optional): email through Resend (the key is read from the API's own
+# env file at send time) and/or an Uptime Kuma Push monitor URL.
+ALERT_EMAIL_TO=REPLACE_WITH_ALERT_ADDRESS
+UPTIME_KUMA_PUSH_URL=REPLACE_WITH_KUMA_PUSH_URL
+# 03:10 Baku time (23:10 UTC) daily: encrypted backup + verified off-host copy
+10 23 * * * /srv/stacks/aise/scripts/backup-daily.sh >> /home/tefma/aise-backups/daily.log 2>&1
+# every 15 minutes: API readiness, backup freshness, off-host copy, restore-test freshness, disk; pushes up/down to Uptime Kuma
+*/15 * * * * STATUS_FILE=/home/tefma/aise-backups/status/status.json /srv/stacks/aise/scripts/check-health.sh >> /home/tefma/aise-backups/health.log 2>&1

@@ -1,0 +1,480 @@
+{
+  "jobs": [
+    {
+      "absolute_url": "https://job-boards.greenhouse.io/wolt/jobs/6693347",
+      "data_compliance": [
+        {
+          "type": "gdpr",
+          "requires_consent": false,
+          "requires_processing_consent": false,
+          "requires_retention_consent": false,
+          "retention_period": null,
+          "demographic_data_consent_applies": true
+        }
+      ],
+      "internal_job_id": 3091835,
+      "location": {
+        "name": "Baku, Azerbaijan"
+      },
+      "metadata": [
+        {
+          "id": 875125,
+          "name": "Availability Date",
+          "value": "2025-01-01",
+          "value_type": "date"
+        },
+        {
+          "id": 875200,
+          "name": "Earliest Hire Date",
+          "value": "2025-01-01",
+          "value_type": "date"
+        },
+        {
+          "id": 170345,
+          "name": "Business Line",
+          "value": "Marketplace",
+          "value_type": "single_select"
+        },
+        {
+          "id": 170346,
+          "name": "Market",
+          "value": "Azerbaijan",
+          "value_type": "single_select"
+        },
+        {
+          "id": 172948,
+          "name": "Entity",
+          "value": "Wolt Services Azerbaijan Limited Liability Company",
+          "value_type": "single_select"
+        },
+        {
+          "id": 174556,
+          "name": "Job Family",
+          "value": "Fulfillment",
+          "value_type": "single_select"
+        },
+        {
+          "id": 1495483,
+          "name": "Engineering Discipline",
+          "value": null,
+          "value_type": "multi_select"
+        },
+        {
+          "id": 172717,
+          "name": "Job Location",
+          "value": "Landmark Baku (WM)",
+          "value_type": "single_select"
+        },
+        {
+          "id": 875215,
+          "name": "Time Type",
+          "value": "Full time",
+          "value_type": "single_select"
+        },
+        {
+          "id": 923113,
+          "name": "Hiring Manager with Job Title",
+          "value": null,
+          "value_type": "single_select"
+        },
+        {
+          "id": 172248,
+          "name": "Careers Page Sorting: Department",
+          "value": null,
+          "value_type": "single_select"
+        },
+        {
+          "id": 32781020,
+          "name": "US1 - Base Salary Band Midpoint",
+          "value": {
+            "unit": "USD",
+            "amount": "21.8"
+          },
+          "value_type": "currency"
+        },
+        {
+          "id": 32794284,
+          "name": "US4 - Base Salary Band Minimum",
+          "value": {
+            "unit": "USD",
+            "amount": "14.8"
+          },
+          "value_type": "currency"
+        },
+        {
+          "id": 32794304,
+          "name": "US1 - Equity Band Midpoint",
+          "value": null,
+          "value_type": "currency"
+        },
+        {
+          "id": 32796921,
+          "name": "USA: Pay Transparency Range",
+          "value": {
+            "unit": "USD",
+            "max_value": "21.8",
+            "min_value": "14.8"
+          },
+          "value_type": "currency_range"
+        },
+        {
+          "id": 33181307,
+          "name": "Canada: Pay Transparency Range",
+          "value": {
+            "unit": "CAD",
+            "max_value": "0.0",
+            "min_value": "0.0"
+          },
+          "value_type": "currency_range"
+        },
+        {
+          "id": 40636812,
+          "name": "Umbrella Corp:",
+          "value": "Wolt",
+          "value_type": "single_select"
+        },
+        {
+          "id": 40689956,
+          "name": "Wolt: Careers Site Department",
+          "value": "Store",
+          "value_type": "single_select"
+        },
+        {
+          "id": 50331873,
+          "name": "Business Title",
+          "value": null,
+          "value_type": "short_text"
+        },
+        {
+          "id": 54550527,
+          "name": "Fountain HVH",
+          "value": null,
+          "value_type": "yes_no"
+        },
+        {
+          "id": 54550663,
+          "name": "Fountain Opening ID",
+          "value": null,
+          "value_type": "short_text"
+        }
+      ],
+      "id": 6693347,
+      "updated_at": "2026-10-26T16:34:56-04:00",
+      "requisition_id": "EG.2025.8091",
+      "title": "Grocery Associate - Wolt Market (full-time)",
+      "company_name": "Wolt - English",
+      "first_published": null,
+      "language": "en",
+      "application_deadline": null
+    },
+    {
+      "absolute_url": "https://job-boards.greenhouse.io/wolt/jobs/8305699",
+      "data_compliance": [
+        {
+          "type": "gdpr",
+          "requires_consent": false,
+          "requires_processing_consent": false,
+          "requires_retention_consent": false,
+          "retention_period": null,
+          "demographic_data_consent_applies": true
+        }
+      ],
+      "internal_job_id": 3591102,
+      "location": {
+        "name": "Nur-Sultan, Kazakhstan"
+      },
+      "metadata": [
+        {
+          "id": 875125,
+          "name": "Availability Date",
+          "value": "2026-10-21",
+          "value_type": "date"
+        },
+        {
+          "id": 875200,
+          "name": "Earliest Hire Date",
+          "value": "2026-10-21",
+          "value_type": "date"
+        },
+        {
+          "id": 170345,
+          "name": "Business Line",
+          "value": null,
+          "value_type": "single_select"
+        },
+        {
+          "id": 170346,
+          "name": "Market",
+          "value": null,
+          "value_type": "single_select"
+        },
+        {
+          "id": 172948,
+          "name": "Entity",
+          "value": "Wolt Technologies Kazakhstan LLP",
+          "value_type": "single_select"
+        },
+        {
+          "id": 174556,
+          "name": "Job Family",
+          "value": "SMB Account Management",
+          "value_type": "single_select"
+        },
+        {
+          "id": 1495483,
+          "name": "Engineering Discipline",
+          "value": null,
+          "value_type": "multi_select"
+        },
+        {
+          "id": 172717,
+          "name": "Job Location",
+          "value": "Astana",
+          "value_type": "single_select"
+        },
+        {
+          "id": 875215,
+          "name": "Time Type",
+          "value": "Full time",
+          "value_type": "single_select"
+        },
+        {
+          "id": 923113,
+          "name": "Hiring Manager with Job Title",
+          "value": "Account Management, Kazakhstan (Aidana Baimukhanova) - Head of Account Management, Kazakhstan",
+          "value_type": "single_select"
+        },
+        {
+          "id": 172248,
+          "name": "Careers Page Sorting: Department",
+          "value": null,
+          "value_type": "single_select"
+        },
+        {
+          "id": 32781020,
+          "name": "US1 - Base Salary Band Midpoint",
+          "value": null,
+          "value_type": "currency"
+        },
+        {
+          "id": 32794284,
+          "name": "US4 - Base Salary Band Minimum",
+          "value": null,
+          "value_type": "currency"
+        },
+        {
+          "id": 32794304,
+          "name": "US1 - Equity Band Midpoint",
+          "value": null,
+          "value_type": "currency"
+        },
+        {
+          "id": 32796921,
+          "name": "USA: Pay Transparency Range",
+          "value": null,
+          "value_type": "currency_range"
+        },
+        {
+          "id": 33181307,
+          "name": "Canada: Pay Transparency Range",
+          "value": null,
+          "value_type": "currency_range"
+        },
+        {
+          "id": 40636812,
+          "name": "Umbrella Corp:",
+          "value": "Wolt",
+          "value_type": "single_select"
+        },
+        {
+          "id": 40689956,
+          "name": "Wolt: Careers Site Department",
+          "value": "Sales & Merchant Operations",
+          "value_type": "single_select"
+        },
+        {
+          "id": 50331873,
+          "name": "Business Title",
+          "value": null,
+          "value_type": "short_text"
+        },
+        {
+          "id": 54550527,
+          "name": "Fountain HVH",
+          "value": null,
+          "value_type": "yes_no"
+        },
+        {
+          "id": 54550663,
+          "name": "Fountain Opening ID",
+          "value": null,
+          "value_type": "short_text"
+        }
+      ],
+      "id": 8305699,
+      "updated_at": "2026-10-26T16:34:56-04:00",
+      "requisition_id": "2026.09931",
+      "title": "Account Development Manager",
+      "company_name": "Wolt - English",
+      "first_published": "2026-10-21T08:29:44-04:00",
+      "language": "en",
+      "application_deadline": null
+    },
+    {
+      "absolute_url": "https://job-boards.greenhouse.io/wolt/jobs/8018380",
+      "data_compliance": [
+        {
+          "type": "gdpr",
+          "requires_consent": false,
+          "requires_processing_consent": false,
+          "requires_retention_consent": false,
+          "retention_period": null,
+          "demographic_data_consent_applies": true
+        }
+      ],
+      "internal_job_id": 3476276,
+      "location": {
+        "name": "Frankfurt am Main, Germany"
+      },
+      "metadata": [
+        {
+          "id": 875125,
+          "name": "Availability Date",
+          "value": "2026-06-19",
+          "value_type": "date"
+        },
+        {
+          "id": 875200,
+          "name": "Earliest Hire Date",
+          "value": "2026-06-19",
+          "value_type": "date"
+        },
+        {
+          "id": 170345,
+          "name": "Business Line",
+          "value": null,
+          "value_type": "single_select"
+        },
+        {
+          "id": 170346,
+          "name": "Market",
+          "value": null,
+          "value_type": "single_select"
+        },
+        {
+          "id": 172948,
+          "name": "Entity",
+          "value": "Wolt Enterprises Deutschland GmbH",
+          "value_type": "single_select"
+        },
+        {
+          "id": 174556,
+          "name": "Job Family",
+          "value": "SMB Account Management",
+          "value_type": "single_select"
+        },
+        {
+          "id": 1495483,
+          "name": "Engineering Discipline",
+          "value": null,
+          "value_type": "multi_select"
+        },
+        {
+          "id": 172717,
+          "name": "Job Location",
+          "value": "Frankfurt",
+          "value_type": "single_select"
+        },
+        {
+          "id": 875215,
+          "name": "Time Type",
+          "value": "Full time",
+          "value_type": "single_select"
+        },
+        {
+          "id": 923113,
+          "name": "Hiring Manager with Job Title",
+          "value": "Account Management Team, Germany (Marvin Pelzl) (SUP-7264) - Account Management Team Lead, Central",
+          "value_type": "single_select"
+        },
+        {
+          "id": 172248,
+          "name": "Careers Page Sorting: Department",
+          "value": null,
+          "value_type": "single_select"
+        },
+        {
+          "id": 32781020,
+          "name": "US1 - Base Salary Band Midpoint",
+          "value": null,
+          "value_type": "currency"
+        },
+        {
+          "id": 32794284,
+          "name": "US4 - Base Salary Band Minimum",
+          "value": null,
+          "value_type": "currency"
+        },
+        {
+          "id": 32794304,
+          "name": "US1 - Equity Band Midpoint",
+          "value": {
+            "unit": "USD",
+            "amount": "0.0"
+          },
+          "value_type": "currency"
+        },
+        {
+          "id": 32796921,
+          "name": "USA: Pay Transparency Range",
+          "value": null,
+          "value_type": "currency_range"
+        },
+        {
+          "id": 33181307,
+          "name": "Canada: Pay Transparency Range",
+          "value": null,
+          "value_type": "currency_range"
+        },
+        {
+          "id": 40636812,
+          "name": "Umbrella Corp:",
+          "value": "Wolt",
+          "value_type": "single_select"
+        },
+        {
+          "id": 40689956,
+          "name": "Wolt: Careers Site Department",
+          "value": "Sales & Merchant Operations",
+          "value_type": "single_select"
+        },
+        {
+          "id": 50331873,
+          "name": "Business Title",
+          "value": null,
+          "value_type": "short_text"
+        },
+        {
+          "id": 54550527,
+          "name": "Fountain HVH",
+          "value": null,
+          "value_type": "yes_no"
+        },
+        {
+          "id": 54550663,
+          "name": "Fountain Opening ID",
+          "value": null,
+          "value_type": "short_text"
+        }
+      ],
+      "id": 8018380,
+      "updated_at": "2026-10-26T16:34:56-04:00",
+      "requisition_id": "2025.06495",
+      "title": "Account Management Executive",
+      "company_name": "Wolt - English",
+      "first_published": "2026-06-19T11:30:52-04:00",
+      "language": "en",
+      "application_deadline": null
+    }
+  ]
+}

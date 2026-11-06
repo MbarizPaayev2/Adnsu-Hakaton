@@ -1,0 +1,72 @@
+# Dependency directories
+node_modules
+jspm_packages/
+web_modules/
+
+# Next.js build output
+.next/
+out/
+
+# NestJS build output
+dist/
+
+# Env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# IDE / Editor configuration
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Log files
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Database / Prisma
+/apps/api/prisma/dev.db
+/apps/api/prisma/dev.db-journal
+
+# Local storage uploads
+/apps/api/uploads/
+
+# Python virtual environments / caches
+.venv/
+__pycache__/
+*.pyc
+
+# Quarantined pre-relocation node_modules (local only; delete once the
+# environment is confirmed healthy). Never commit this.
+.node_modules_icloud_old/
+
+# Written by scripts/deploy.sh as the rollback target. It is host state, and
+# must not make the next deploy fail the script's clean-tree preflight.
+.last-deployed-commit
+.last-deployed-images
+.env.bak.*
+
+# extension test certificates are generated on the fly
+apps/extension/test/certs/
+apps/web/public/agent/
+apps/extension/dist/
+
+dump.rdb
+*.rdb
+
+# Generated private Premium extension archive (built into the API image).
+apps/api/private/agent/

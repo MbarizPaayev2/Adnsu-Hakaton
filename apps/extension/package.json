@@ -1,0 +1,10 @@
+{
+  "name": "@aise/extension",
+  "private": true,
+  "version": "0.1.0",
+  "description": "AISE browser agent (Manifest V3). Plain JavaScript: what is reviewed is what ships.",
+  "scripts": {
+    "pack": "node scripts/pack.mjs",
+    "test:e2e": "node scripts/pack.mjs ../api/private/agent && npm --prefix ../api run build && node --test --test-concurrency=1 test/"
+  }
+}

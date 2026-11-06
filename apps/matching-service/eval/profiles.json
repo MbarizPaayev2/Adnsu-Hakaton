@@ -1,0 +1,457 @@
+[
+  {
+    "evalId": "D1_dev_en",
+    "split": "dev",
+    "description": "Complete English-language profile: 4 years full-stack, remote/hybrid, Baku.",
+    "profile": {
+      "id": "eval-D1",
+      "headline": "Full Stack Engineer building web apps with React, TypeScript and Node.js",
+      "skills": [
+        "TypeScript",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "NestJS",
+        "Node.js",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "Git",
+        "English"
+      ],
+      "location": "Bakı",
+      "salaryExpectation": 2500,
+      "preferredCurrency": "AZN",
+      "jobPreferences": {
+        "roles": [
+          "Software Engineer",
+          "Full Stack Developer",
+          "Backend Developer"
+        ],
+        "locations": [
+          "Bakı"
+        ],
+        "types": [
+          "remote",
+          "hybrid"
+        ]
+      },
+      "experiences": [
+        {
+          "title": "Full Stack Engineer",
+          "company": "Tech Corp",
+          "description": "Built AI dashboards with React, TypeScript and NestJS; designed REST APIs on PostgreSQL.",
+          "startDate": "2022-09-01",
+          "endDate": "2026-09-01"
+        }
+      ],
+      "education": [
+        {
+          "institution": "Khazar University",
+          "degree": "Bachelor",
+          "fieldOfStudy": "Computer Science"
+        }
+      ]
+    }
+  },
+  {
+    "evalId": "D2_acc_az",
+    "split": "dev",
+    "description": "Azerbaijani-language accountant, 3.5 years, prefers Baku.",
+    "profile": {
+      "id": "eval-D2",
+      "headline": "Mühasib, mühasibat uçotu və vergi hesabatları üzrə mütəxəssis",
+      "skills": [
+        "1C",
+        "Excel",
+        "Vergi uçotu",
+        "Maliyyə hesabatı",
+        "Əmək haqqı hesablanması",
+        "Azərbaycan dili",
+        "Rus dili"
+      ],
+      "location": "Bakı",
+      "salaryExpectation": 1200,
+      "preferredCurrency": "AZN",
+      "jobPreferences": {
+        "roles": [
+          "Mühasib"
+        ],
+        "locations": [
+          "Bakı"
+        ],
+        "types": [
+          "onsite"
+        ]
+      },
+      "experiences": [
+        {
+          "title": "Mühasib",
+          "company": "Bakı Ticarət MMC",
+          "description": "İlkin sənədlərin işlənməsi, qaimə-faktura uçotu, əmək haqqı hesablanması, vergi bəyannamələri, 1C proqramında uçot.",
+          "startDate": "2023-03-01",
+          "endDate": "2026-09-01"
+        }
+      ],
+      "education": [
+        {
+          "institution": "Azərbaycan Dövlət İqtisad Universiteti",
+          "degree": "Bakalavr",
+          "fieldOfStudy": "Mühasibat uçotu"
+        }
+      ]
+    }
+  },
+  {
+    "evalId": "D3_sales_az",
+    "split": "dev",
+    "description": "Azerbaijani-language sales specialist, 2 years, Baku.",
+    "profile": {
+      "id": "eval-D3",
+      "headline": "Satış üzrə mütəxəssis, müştəri münasibətləri və danışıqlar",
+      "skills": [
+        "Satış",
+        "Danışıqlar",
+        "CRM",
+        "Müştəri xidməti",
+        "Azərbaycan dili",
+        "Rus dili"
+      ],
+      "location": "Bakı",
+      "salaryExpectation": 1000,
+      "preferredCurrency": "AZN",
+      "jobPreferences": {
+        "roles": [
+          "Satış meneceri",
+          "Satış məsləhətçisi"
+        ],
+        "locations": [
+          "Bakı"
+        ],
+        "types": [
+          "onsite"
+        ]
+      },
+      "experiences": [
+        {
+          "title": "Satış məsləhətçisi",
+          "company": "Elektron Mağaza",
+          "description": "Müştərilərə məhsul təqdimatı, aylıq satış hədəflərinin yerinə yetirilməsi, müştəri şikayətlərinin həlli.",
+          "startDate": "2024-09-01",
+          "endDate": "2026-09-01"
+        }
+      ],
+      "education": [
+        {
+          "institution": "Bakı Biznes Universiteti",
+          "degree": "Bakalavr",
+          "fieldOfStudy": "Marketinq"
+        }
+      ]
+    }
+  },
+  {
+    "evalId": "D4_incomplete",
+    "split": "dev",
+    "description": "Incomplete profile: a headline and nothing else (no skills, roles, preferences, experience or education).",
+    "expectNoEmail": true,
+    "profile": {
+      "id": "eval-D4",
+      "headline": "İş axtarıram",
+      "skills": [],
+      "location": "",
+      "salaryExpectation": null,
+      "preferredCurrency": "AZN",
+      "jobPreferences": {},
+      "experiences": [],
+      "education": []
+    }
+  },
+  {
+    "evalId": "D5_junior_mkt",
+    "split": "dev",
+    "description": "Fresh marketing graduate, six months of internship, Azerbaijani/English mix.",
+    "profile": {
+      "id": "eval-D5",
+      "headline": "Marketinq məzunu, SMM və kontent yaradıcılığı",
+      "skills": [
+        "SMM",
+        "Instagram",
+        "Canva",
+        "Kontent yazısı",
+        "English"
+      ],
+      "location": "Bakı",
+      "salaryExpectation": 700,
+      "preferredCurrency": "AZN",
+      "jobPreferences": {
+        "roles": [
+          "SMM mütəxəssisi",
+          "Marketing Specialist"
+        ],
+        "locations": [
+          "Bakı"
+        ],
+        "types": [
+          "onsite",
+          "hybrid"
+        ]
+      },
+      "experiences": [
+        {
+          "title": "SMM təcrübəçisi",
+          "company": "Brand House",
+          "description": "Instagram üçün kontent planı, Canva ilə dizayn, postların yerləşdirilməsi.",
+          "startDate": "2026-03-01",
+          "endDate": "2026-09-01"
+        }
+      ],
+      "education": [
+        {
+          "institution": "Azərbaycan Universiteti",
+          "degree": "Bakalavr",
+          "fieldOfStudy": "Marketinq"
+        }
+      ]
+    }
+  },
+  {
+    "evalId": "D6_risk_bank",
+    "split": "dev",
+    "description": "Bank risk analyst, 3 years; a domain the concept dictionary does not cover.",
+    "profile": {
+      "id": "eval-D6",
+      "headline": "Risk analitiki, bank risklərinin idarə edilməsi və kredit riskinin təhlili",
+      "skills": [
+        "Kredit riski",
+        "Risk təhlili",
+        "Excel",
+        "SQL",
+        "Maliyyə hesabatlarının təhlili",
+        "Hesabat hazırlanması",
+        "English"
+      ],
+      "location": "Bakı",
+      "salaryExpectation": 1800,
+      "preferredCurrency": "AZN",
+      "jobPreferences": {
+        "roles": [
+          "Risk üzrə mütəxəssis",
+          "Kredit risk analitiki"
+        ],
+        "locations": [
+          "Bakı"
+        ],
+        "types": [
+          "onsite"
+        ]
+      },
+      "experiences": [
+        {
+          "title": "Risk üzrə mütəxəssis",
+          "company": "Bakı Bankı",
+          "description": "Kredit portfelinin monitorinqi, borcalanların maliyyə vəziyyətinin təhlili və risk hesabatlarının hazırlanması.",
+          "startDate": "2023-09-01",
+          "endDate": "2026-09-01"
+        }
+      ],
+      "education": [
+        {
+          "institution": "Bakı Dövlət Universiteti",
+          "degree": "Bakalavr",
+          "fieldOfStudy": "Maliyyə"
+        }
+      ]
+    }
+  },
+  {
+    "evalId": "D7_teacher",
+    "split": "dev",
+    "description": "Mathematics teacher, 4 years; an education profile the concept dictionary does not cover.",
+    "profile": {
+      "id": "eval-D7",
+      "headline": "Riyaziyyat müəllimi, imtahana hazırlıq",
+      "skills": [
+        "Riyaziyyat tədrisi",
+        "Dərs planı",
+        "İmtahana hazırlıq",
+        "Sinif idarəetməsi",
+        "English"
+      ],
+      "location": "Bakı",
+      "salaryExpectation": 900,
+      "preferredCurrency": "AZN",
+      "jobPreferences": {
+        "roles": [
+          "Riyaziyyat müəllimi",
+          "Math Teacher"
+        ],
+        "locations": [
+          "Bakı"
+        ],
+        "types": [
+          "onsite"
+        ]
+      },
+      "experiences": [
+        {
+          "title": "Riyaziyyat müəllimi",
+          "company": "Bakı Liseyi",
+          "description": "9-11-ci siniflərə riyaziyyat tədrisi, dərs planlarının hazırlanması və imtahanlara hazırlıq.",
+          "startDate": "2022-09-01",
+          "endDate": "2026-09-01"
+        }
+      ],
+      "education": [
+        {
+          "institution": "Bakı Dövlət Universiteti",
+          "degree": "Bakalavr",
+          "fieldOfStudy": "Riyaziyyat"
+        }
+      ]
+    }
+  },
+  {
+    "evalId": "H1_support_ru_az",
+    "split": "heldout",
+    "description": "Call-centre specialist, Azerbaijani and Russian, 2 years.",
+    "profile": {
+      "id": "eval-H1",
+      "headline": "Müştəri xidməti və çağrı mərkəzi üzrə operator",
+      "skills": [
+        "Müştəri xidməti",
+        "Telefon ünsiyyəti",
+        "CRM",
+        "Rus dili",
+        "Azərbaycan dili",
+        "Excel"
+      ],
+      "location": "Bakı",
+      "salaryExpectation": 800,
+      "preferredCurrency": "AZN",
+      "jobPreferences": {
+        "roles": [
+          "Çağrı mərkəzi operatoru",
+          "Müştəri xidməti mütəxəssisi"
+        ],
+        "locations": [
+          "Bakı"
+        ],
+        "types": [
+          "onsite"
+        ]
+      },
+      "experiences": [
+        {
+          "title": "Çağrı mərkəzi operatoru",
+          "company": "Azərtel Xidmət",
+          "description": "Gələn zənglərə cavab vermək, müştəri şikayətlərinin həlli, CRM-də qeydlər.",
+          "startDate": "2024-09-01",
+          "endDate": "2026-09-01"
+        }
+      ],
+      "education": [
+        {
+          "institution": "Bakı Slavyan Universiteti",
+          "degree": "Bakalavr",
+          "fieldOfStudy": "Filologiya"
+        }
+      ]
+    }
+  },
+  {
+    "evalId": "H2_nurse",
+    "split": "heldout",
+    "description": "Nurse, 5 years, secondary technical (medical college) education.",
+    "profile": {
+      "id": "eval-H2",
+      "headline": "Tibb bacısı, pasiyent qulluğu və sterilizasiya",
+      "skills": [
+        "Pasiyent qulluğu",
+        "İnyeksiya",
+        "Sterilizasiya",
+        "Birinci yardım",
+        "Azərbaycan dili"
+      ],
+      "location": "Bakı",
+      "salaryExpectation": 800,
+      "preferredCurrency": "AZN",
+      "jobPreferences": {
+        "roles": [
+          "Tibb bacısı"
+        ],
+        "locations": [
+          "Bakı",
+          "Sumqayıt"
+        ],
+        "types": [
+          "onsite"
+        ]
+      },
+      "experiences": [
+        {
+          "title": "Tibb bacısı",
+          "company": "Şəhər Xəstəxanası",
+          "description": "Pasiyentlərə qulluq, inyeksiyalar, sterilizasiya və həkim təyinatlarının icrası.",
+          "startDate": "2021-09-01",
+          "endDate": "2026-09-01"
+        }
+      ],
+      "education": [
+        {
+          "institution": "Bakı Tibb Kolleci",
+          "degree": "Orta texniki təhsil",
+          "fieldOfStudy": "Tibb bacısı"
+        }
+      ]
+    }
+  },
+  {
+    "evalId": "H3_civil_eng",
+    "split": "heldout",
+    "description": "Civil engineer, 6 years; posting titles use equivalent wording (İnşaat mühəndisi / Site Engineer).",
+    "profile": {
+      "id": "eval-H3",
+      "headline": "İnşaat mühəndisi, tikinti nəzarəti və smeta",
+      "skills": [
+        "AutoCAD",
+        "Smeta",
+        "Tikinti nəzarəti",
+        "MS Project",
+        "Texniki nəzarət",
+        "English"
+      ],
+      "location": "Bakı",
+      "salaryExpectation": 2200,
+      "preferredCurrency": "AZN",
+      "jobPreferences": {
+        "roles": [
+          "İnşaat mühəndisi",
+          "Site Engineer"
+        ],
+        "locations": [
+          "Bakı",
+          "Sumqayıt"
+        ],
+        "types": [
+          "onsite"
+        ]
+      },
+      "experiences": [
+        {
+          "title": "İnşaat mühəndisi",
+          "company": "Yeni Tikinti MMC",
+          "description": "Tikinti layihələrinin icrası, smeta hazırlamaq, AutoCAD ilə çertyojlar və texniki nəzarət.",
+          "startDate": "2020-09-01",
+          "endDate": "2026-09-01"
+        }
+      ],
+      "education": [
+        {
+          "institution": "Azərbaycan Memarlıq və İnşaat Universiteti",
+          "degree": "Bakalavr",
+          "fieldOfStudy": "İnşaat mühəndisliyi"
+        }
+      ]
+    }
+  }
+]

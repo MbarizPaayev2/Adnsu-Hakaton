@@ -1,0 +1,2 @@
+Search response saved read-only on 16 October 2026 (facets trimmed). robots.txt: "User-agent: * / Allow: /BakerHughes/ / Disallow: /BHSensitiveSite/ / Disallow: /refreshFacet/".
+baker-hughes-job-R169768.json: the public posting JSON for R169768 (GET /wday/cxs/bakerhughes/BakerHughes/job/AZ-BAKU-ABSERON-SALYAN-HIGHWAY-22-KM/Quality-Compliance-Specialist_R169768-1), saved read-only on 16 October 2026; only the "similarJobs" list was removed.

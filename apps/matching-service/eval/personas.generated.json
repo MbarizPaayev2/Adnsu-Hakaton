@@ -1,0 +1,569 @@
+[
+  {
+    "evalId": "D1_dev_en",
+    "split": "dev",
+    "expectNoEmail": false,
+    "persona": {
+      "candidate_id": "eval-D1",
+      "name": "",
+      "email": "",
+      "location": "Bakı",
+      "languages": [
+        {
+          "code": "en"
+        }
+      ],
+      "years_of_experience": 4,
+      "summary": "Full Stack Engineer building web apps with React, TypeScript and Node.js",
+      "target_titles": [
+        "Software Engineer",
+        "Full Stack Developer",
+        "Backend Developer"
+      ],
+      "hard_skills": [
+        "TypeScript",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "NestJS",
+        "Node.js",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "Git",
+        "English"
+      ],
+      "soft_skills": [],
+      "experience_history": [
+        {
+          "company": "Tech Corp",
+          "role": "Full Stack Engineer",
+          "location": "",
+          "dates": "",
+          "achievements": [
+            "Built AI dashboards with React, TypeScript and NestJS; designed REST APIs on PostgreSQL."
+          ]
+        }
+      ],
+      "education": {
+        "rank": 4
+      },
+      "salary_expectation": {
+        "monthly_min": 2500,
+        "monthly_max": null,
+        "currency": "AZN"
+      },
+      "preferred_cities": [
+        "Bakı"
+      ],
+      "work_arrangements": [
+        "remote",
+        "hybrid"
+      ],
+      "citizenship": null,
+      "certifications": []
+    }
+  },
+  {
+    "evalId": "D2_acc_az",
+    "split": "dev",
+    "expectNoEmail": false,
+    "persona": {
+      "candidate_id": "eval-D2",
+      "name": "",
+      "email": "",
+      "location": "Bakı",
+      "languages": [
+        {
+          "code": "az"
+        },
+        {
+          "code": "ru"
+        }
+      ],
+      "years_of_experience": 3.5,
+      "summary": "Mühasib, mühasibat uçotu və vergi hesabatları üzrə mütəxəssis",
+      "target_titles": [
+        "Mühasib"
+      ],
+      "hard_skills": [
+        "1C",
+        "Excel",
+        "Vergi uçotu",
+        "Maliyyə hesabatı",
+        "Əmək haqqı hesablanması",
+        "Azərbaycan dili",
+        "Rus dili"
+      ],
+      "soft_skills": [],
+      "experience_history": [
+        {
+          "company": "Bakı Ticarət MMC",
+          "role": "Mühasib",
+          "location": "",
+          "dates": "",
+          "achievements": [
+            "İlkin sənədlərin işlənməsi, qaimə-faktura uçotu, əmək haqqı hesablanması, vergi bəyannamələri, 1C proqramında uçot."
+          ]
+        }
+      ],
+      "education": {
+        "rank": 4
+      },
+      "salary_expectation": {
+        "monthly_min": 1200,
+        "monthly_max": null,
+        "currency": "AZN"
+      },
+      "preferred_cities": [
+        "Bakı"
+      ],
+      "work_arrangements": [
+        "onsite"
+      ],
+      "citizenship": null,
+      "certifications": []
+    }
+  },
+  {
+    "evalId": "D3_sales_az",
+    "split": "dev",
+    "expectNoEmail": false,
+    "persona": {
+      "candidate_id": "eval-D3",
+      "name": "",
+      "email": "",
+      "location": "Bakı",
+      "languages": [
+        {
+          "code": "az"
+        },
+        {
+          "code": "ru"
+        }
+      ],
+      "years_of_experience": 2,
+      "summary": "Satış üzrə mütəxəssis, müştəri münasibətləri və danışıqlar",
+      "target_titles": [
+        "Satış meneceri",
+        "Satış məsləhətçisi"
+      ],
+      "hard_skills": [
+        "Satış",
+        "Danışıqlar",
+        "CRM",
+        "Müştəri xidməti",
+        "Azərbaycan dili",
+        "Rus dili"
+      ],
+      "soft_skills": [],
+      "experience_history": [
+        {
+          "company": "Elektron Mağaza",
+          "role": "Satış məsləhətçisi",
+          "location": "",
+          "dates": "",
+          "achievements": [
+            "Müştərilərə məhsul təqdimatı, aylıq satış hədəflərinin yerinə yetirilməsi, müştəri şikayətlərinin həlli."
+          ]
+        }
+      ],
+      "education": {
+        "rank": 4
+      },
+      "salary_expectation": {
+        "monthly_min": 1000,
+        "monthly_max": null,
+        "currency": "AZN"
+      },
+      "preferred_cities": [
+        "Bakı"
+      ],
+      "work_arrangements": [
+        "onsite"
+      ],
+      "citizenship": null,
+      "certifications": []
+    }
+  },
+  {
+    "evalId": "D4_incomplete",
+    "split": "dev",
+    "expectNoEmail": true,
+    "persona": {
+      "candidate_id": "eval-D4",
+      "name": "",
+      "email": "",
+      "location": "",
+      "languages": [],
+      "years_of_experience": 0,
+      "summary": "İş axtarıram",
+      "target_titles": [],
+      "hard_skills": [],
+      "soft_skills": [],
+      "experience_history": [],
+      "education": {
+        "rank": 0
+      },
+      "salary_expectation": {
+        "monthly_min": null,
+        "monthly_max": null,
+        "currency": "AZN"
+      },
+      "preferred_cities": [],
+      "work_arrangements": [],
+      "citizenship": null,
+      "certifications": []
+    }
+  },
+  {
+    "evalId": "D5_junior_mkt",
+    "split": "dev",
+    "expectNoEmail": false,
+    "persona": {
+      "candidate_id": "eval-D5",
+      "name": "",
+      "email": "",
+      "location": "Bakı",
+      "languages": [
+        {
+          "code": "en"
+        }
+      ],
+      "years_of_experience": 0.5,
+      "summary": "Marketinq məzunu, SMM və kontent yaradıcılığı",
+      "target_titles": [
+        "SMM mütəxəssisi",
+        "Marketing Specialist"
+      ],
+      "hard_skills": [
+        "SMM",
+        "Instagram",
+        "Canva",
+        "Kontent yazısı",
+        "English"
+      ],
+      "soft_skills": [],
+      "experience_history": [
+        {
+          "company": "Brand House",
+          "role": "SMM təcrübəçisi",
+          "location": "",
+          "dates": "",
+          "achievements": [
+            "Instagram üçün kontent planı, Canva ilə dizayn, postların yerləşdirilməsi."
+          ]
+        }
+      ],
+      "education": {
+        "rank": 4
+      },
+      "salary_expectation": {
+        "monthly_min": 700,
+        "monthly_max": null,
+        "currency": "AZN"
+      },
+      "preferred_cities": [
+        "Bakı"
+      ],
+      "work_arrangements": [
+        "onsite",
+        "hybrid"
+      ],
+      "citizenship": null,
+      "certifications": []
+    }
+  },
+  {
+    "evalId": "D6_risk_bank",
+    "split": "dev",
+    "expectNoEmail": false,
+    "persona": {
+      "candidate_id": "eval-D6",
+      "name": "",
+      "email": "",
+      "location": "Bakı",
+      "languages": [
+        {
+          "code": "en"
+        }
+      ],
+      "years_of_experience": 3,
+      "summary": "Risk analitiki, bank risklərinin idarə edilməsi və kredit riskinin təhlili",
+      "target_titles": [
+        "Risk üzrə mütəxəssis",
+        "Kredit risk analitiki"
+      ],
+      "hard_skills": [
+        "Kredit riski",
+        "Risk təhlili",
+        "Excel",
+        "SQL",
+        "Maliyyə hesabatlarının təhlili",
+        "Hesabat hazırlanması",
+        "English"
+      ],
+      "soft_skills": [],
+      "experience_history": [
+        {
+          "company": "Bakı Bankı",
+          "role": "Risk üzrə mütəxəssis",
+          "location": "",
+          "dates": "",
+          "achievements": [
+            "Kredit portfelinin monitorinqi, borcalanların maliyyə vəziyyətinin təhlili və risk hesabatlarının hazırlanması."
+          ]
+        }
+      ],
+      "education": {
+        "rank": 4
+      },
+      "salary_expectation": {
+        "monthly_min": 1800,
+        "monthly_max": null,
+        "currency": "AZN"
+      },
+      "preferred_cities": [
+        "Bakı"
+      ],
+      "work_arrangements": [
+        "onsite"
+      ],
+      "citizenship": null,
+      "certifications": []
+    }
+  },
+  {
+    "evalId": "D7_teacher",
+    "split": "dev",
+    "expectNoEmail": false,
+    "persona": {
+      "candidate_id": "eval-D7",
+      "name": "",
+      "email": "",
+      "location": "Bakı",
+      "languages": [
+        {
+          "code": "en"
+        }
+      ],
+      "years_of_experience": 4,
+      "summary": "Riyaziyyat müəllimi, imtahana hazırlıq",
+      "target_titles": [
+        "Riyaziyyat müəllimi",
+        "Math Teacher"
+      ],
+      "hard_skills": [
+        "Riyaziyyat tədrisi",
+        "Dərs planı",
+        "İmtahana hazırlıq",
+        "Sinif idarəetməsi",
+        "English"
+      ],
+      "soft_skills": [],
+      "experience_history": [
+        {
+          "company": "Bakı Liseyi",
+          "role": "Riyaziyyat müəllimi",
+          "location": "",
+          "dates": "",
+          "achievements": [
+            "9-11-ci siniflərə riyaziyyat tədrisi, dərs planlarının hazırlanması və imtahanlara hazırlıq."
+          ]
+        }
+      ],
+      "education": {
+        "rank": 4
+      },
+      "salary_expectation": {
+        "monthly_min": 900,
+        "monthly_max": null,
+        "currency": "AZN"
+      },
+      "preferred_cities": [
+        "Bakı"
+      ],
+      "work_arrangements": [
+        "onsite"
+      ],
+      "citizenship": null,
+      "certifications": []
+    }
+  },
+  {
+    "evalId": "H1_support_ru_az",
+    "split": "heldout",
+    "expectNoEmail": false,
+    "persona": {
+      "candidate_id": "eval-H1",
+      "name": "",
+      "email": "",
+      "location": "Bakı",
+      "languages": [
+        {
+          "code": "az"
+        },
+        {
+          "code": "ru"
+        }
+      ],
+      "years_of_experience": 2,
+      "summary": "Müştəri xidməti və çağrı mərkəzi üzrə operator",
+      "target_titles": [
+        "Çağrı mərkəzi operatoru",
+        "Müştəri xidməti mütəxəssisi"
+      ],
+      "hard_skills": [
+        "Müştəri xidməti",
+        "Telefon ünsiyyəti",
+        "CRM",
+        "Rus dili",
+        "Azərbaycan dili",
+        "Excel"
+      ],
+      "soft_skills": [],
+      "experience_history": [
+        {
+          "company": "Azərtel Xidmət",
+          "role": "Çağrı mərkəzi operatoru",
+          "location": "",
+          "dates": "",
+          "achievements": [
+            "Gələn zənglərə cavab vermək, müştəri şikayətlərinin həlli, CRM-də qeydlər."
+          ]
+        }
+      ],
+      "education": {
+        "rank": 4
+      },
+      "salary_expectation": {
+        "monthly_min": 800,
+        "monthly_max": null,
+        "currency": "AZN"
+      },
+      "preferred_cities": [
+        "Bakı"
+      ],
+      "work_arrangements": [
+        "onsite"
+      ],
+      "citizenship": null,
+      "certifications": []
+    }
+  },
+  {
+    "evalId": "H2_nurse",
+    "split": "heldout",
+    "expectNoEmail": false,
+    "persona": {
+      "candidate_id": "eval-H2",
+      "name": "",
+      "email": "",
+      "location": "Bakı",
+      "languages": [
+        {
+          "code": "az"
+        }
+      ],
+      "years_of_experience": 5,
+      "summary": "Tibb bacısı, pasiyent qulluğu və sterilizasiya",
+      "target_titles": [
+        "Tibb bacısı"
+      ],
+      "hard_skills": [
+        "Pasiyent qulluğu",
+        "İnyeksiya",
+        "Sterilizasiya",
+        "Birinci yardım",
+        "Azərbaycan dili"
+      ],
+      "soft_skills": [],
+      "experience_history": [
+        {
+          "company": "Şəhər Xəstəxanası",
+          "role": "Tibb bacısı",
+          "location": "",
+          "dates": "",
+          "achievements": [
+            "Pasiyentlərə qulluq, inyeksiyalar, sterilizasiya və həkim təyinatlarının icrası."
+          ]
+        }
+      ],
+      "education": {
+        "rank": 2
+      },
+      "salary_expectation": {
+        "monthly_min": 800,
+        "monthly_max": null,
+        "currency": "AZN"
+      },
+      "preferred_cities": [
+        "Bakı",
+        "Sumqayıt"
+      ],
+      "work_arrangements": [
+        "onsite"
+      ],
+      "citizenship": null,
+      "certifications": []
+    }
+  },
+  {
+    "evalId": "H3_civil_eng",
+    "split": "heldout",
+    "expectNoEmail": false,
+    "persona": {
+      "candidate_id": "eval-H3",
+      "name": "",
+      "email": "",
+      "location": "Bakı",
+      "languages": [
+        {
+          "code": "en"
+        }
+      ],
+      "years_of_experience": 6,
+      "summary": "İnşaat mühəndisi, tikinti nəzarəti və smeta",
+      "target_titles": [
+        "İnşaat mühəndisi",
+        "Site Engineer"
+      ],
+      "hard_skills": [
+        "AutoCAD",
+        "Smeta",
+        "Tikinti nəzarəti",
+        "MS Project",
+        "Texniki nəzarət",
+        "English"
+      ],
+      "soft_skills": [],
+      "experience_history": [
+        {
+          "company": "Yeni Tikinti MMC",
+          "role": "İnşaat mühəndisi",
+          "location": "",
+          "dates": "",
+          "achievements": [
+            "Tikinti layihələrinin icrası, smeta hazırlamaq, AutoCAD ilə çertyojlar və texniki nəzarət."
+          ]
+        }
+      ],
+      "education": {
+        "rank": 4
+      },
+      "salary_expectation": {
+        "monthly_min": 2200,
+        "monthly_max": null,
+        "currency": "AZN"
+      },
+      "preferred_cities": [
+        "Bakı",
+        "Sumqayıt"
+      ],
+      "work_arrangements": [
+        "onsite"
+      ],
+      "citizenship": null,
+      "certifications": []
+    }
+  }
+]

@@ -1,0 +1,2 @@
+export const EMAIL_APPLY_CONFIG = Symbol('EMAIL_APPLY_CONFIG');
+export const EMAIL_TRANSPORT = Symbol('EMAIL_TRANSPORT');

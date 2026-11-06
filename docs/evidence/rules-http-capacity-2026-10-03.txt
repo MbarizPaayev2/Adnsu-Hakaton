@@ -1,0 +1,6 @@
+baseline: 40.8MiB / 1GiB
+REAL inventory, first pass (cold cache): 1425 postings in 67.7 s; per-25 median 0.88 s p95 2.34 s max 3.41 s; container memory 69.81MiB / 1GiB
+REAL inventory, second pass (warm): 1425 postings in 2.0 s; per-25 median 0.00 s p95 0.01 s max 0.01 s; container memory 70.12MiB / 1GiB
+SYNTHETIC 5,000, first pass (every posting new to the cache): 5000 postings in 240.0 s; per-25 median 0.88 s p95 2.26 s max 3.31 s; container memory 166.7MiB / 1GiB
+SYNTHETIC 5,000, second pass (warm): 5000 postings in 2.1 s; per-25 median 0.00 s p95 0.01 s max 0.02 s; container memory 166.9MiB / 1GiB
+{"mode":"rules","version":"rules-v1.2+lexicon-2026-10-03.4","rulesCache":{"entries":6425,"hits":6425,"misses":6425,"evictions":0,"expired":0},"embeddingCache":{"entries":0,"hits":0,"misses":0}}

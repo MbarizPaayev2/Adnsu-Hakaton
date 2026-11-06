@@ -1,0 +1,45 @@
+// Real compiled web/API, isolated database and synthetic candidates. No employer submission.
+import test, { before, after } from 'node:test';
+import assert from 'node:assert/strict';
+import { startHarness, WEB_PORT } from './harness.mjs';
+let H;
+const WEB = `http://127.0.0.1:${WEB_PORT}`;
+before(async () => { H = await startHarness({ web: true }); });
+after(async () => { await H?.close(); });
+
+test('Free mobile tracker, complete employer directory, password recovery and Premium download UX', { timeout: 120000 }, async () => {
+  const candidate = await H.candidate('Free Workflow Candidate', { password: 'Ui-Test-Password-1', plan: 'FREE' });
+  const job = await H.posting(701, candidate.id, { over: { company: 'Workflow Employer Alpha' } });
+  const second = await H.posting(702, candidate.id, { over: { company: 'Workflow Employer Beta' } });
+  const page = await H.context.newPage(); await page.setViewportSize({ width: 375, height: 812 });
+  await page.goto(`${WEB}/login`);
+  const cookies = page.getByRole('button', { name: /Yalnız zəruri/ }); if (await cookies.isVisible()) await cookies.click();
+  await page.getByLabel(/E-poçt/).fill(candidate.email);
+  await page.getByLabel(/Şifrə/).first().fill('Ui-Test-Password-1');
+  await page.getByRole('button', { name: /Daxil ol/ }).click(); await page.waitForURL(/dashboard/, { timeout: 30000 });
+  await page.goto(`${WEB}/dashboard/companies?q=Workflow`);
+  await page.getByRole('heading', { name: 'Workflow Employer Alpha' }).waitFor();
+  assert.equal(await page.getByRole('heading', { name: 'Workflow Employer Beta' }).count(), 1);
+  await page.goto(`${WEB}/dashboard/applications/tracker`);
+  await page.getByRole('heading', { name: 'Müraciət cədvəlim' }).waitFor();
+  await page.getByRole('button', { name: 'Müraciət əlavə et' }).click();
+  await page.getByLabel('Yeni vəzifə').fill('Business Analyst'); await page.getByLabel('Yeni şirkət').fill('My Employer');
+  await page.getByRole('button', { name: 'Əlavə et', exact: true }).click();
+  await page.getByRole('cell').filter({ has: page.locator('input[value="Business Analyst"]') }).waitFor();
+  const notes = page.getByLabel('Hazırlanır: notes'); await notes.fill('First note'); await notes.press('Tab');
+  await page.getByRole('status').filter({ hasText: 'Saxlanıldı.' }).waitFor();
+  await notes.fill(''); await notes.press('Tab');
+  await page.getByRole('status').filter({ hasText: 'Saxlanıldı.' }).waitFor();
+  await page.reload(); await page.getByRole('heading', { name: 'Müraciət cədvəlim' }).waitFor();
+  assert.equal(await page.getByLabel('Hazırlanır: notes').inputValue(), '');
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), true, 'table scroll stays inside its container');
+  await page.goto(`${WEB}/dashboard/agent`);
+  await page.getByRole('heading', { name: 'Brauzer köməkçisi Premium planına daxildir' }).waitFor();
+  assert.equal(await page.getByRole('button', { name: /Agent faylını yüklə/ }).count(), 0);
+  await page.goto(`${WEB}/forgot-password`);
+  await page.getByLabel(/E-poçt/).fill(candidate.email);
+  const response = page.waitForResponse(r => r.url().includes('/auth/forgot-password') && r.request().method() === 'POST');
+  await page.getByRole('button', { name: /göndər/i }).click();
+  assert.equal((await response).status(), 201);
+  assert.equal(H.lever.received.length, 0);
+});

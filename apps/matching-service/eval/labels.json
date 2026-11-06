@@ -1,0 +1,157 @@
+{
+  "_doc": "Expected relevance per persona, written BEFORE any scorer change. strong = should be a good suggestion and reach the email floor; partial = related but a weaker fit; hard = a clear qualification/seniority/field mismatch that must never be recommended; everything unlisted = poor. Grades: strong 2, partial 1, poor and hard 0.",
+  "D1_dev_en": {
+    "strong": [
+      "j01",
+      "j02",
+      "j03"
+    ],
+    "partial": [
+      "j04",
+      "j05",
+      "j06",
+      "j07",
+      "j08",
+      "j44"
+    ],
+    "hard": [
+      "j09",
+      "j29",
+      "j40"
+    ]
+  },
+  "D2_acc_az": {
+    "strong": [
+      "j11",
+      "j12"
+    ],
+    "partial": [
+      "j10",
+      "j13",
+      "j14"
+    ],
+    "hard": [
+      "j09",
+      "j29",
+      "j40"
+    ]
+  },
+  "D3_sales_az": {
+    "strong": [
+      "j15",
+      "j16"
+    ],
+    "partial": [
+      "j17",
+      "j18",
+      "j19",
+      "j30",
+      "j43"
+    ],
+    "hard": [
+      "j09",
+      "j29",
+      "j40"
+    ]
+  },
+  "D4_incomplete": {
+    "strong": [],
+    "partial": [],
+    "hard": [
+      "j09",
+      "j29",
+      "j40"
+    ]
+  },
+  "D5_junior_mkt": {
+    "strong": [
+      "j20",
+      "j23"
+    ],
+    "partial": [
+      "j21",
+      "j24"
+    ],
+    "hard": [
+      "j19",
+      "j22",
+      "j29"
+    ]
+  },
+  "H1_support_ru_az": {
+    "strong": [
+      "j18",
+      "j25",
+      "j26"
+    ],
+    "partial": [
+      "j16",
+      "j27",
+      "j41"
+    ],
+    "hard": [
+      "j09",
+      "j29",
+      "j40"
+    ]
+  },
+  "H2_nurse": {
+    "strong": [
+      "j28"
+    ],
+    "partial": [
+      "j30"
+    ],
+    "hard": [
+      "j09",
+      "j10",
+      "j29",
+      "j31",
+      "j40"
+    ]
+  },
+  "H3_civil_eng": {
+    "strong": [
+      "j31",
+      "j32"
+    ],
+    "partial": [
+      "j33",
+      "j34"
+    ],
+    "hard": [
+      "j10",
+      "j29",
+      "j40"
+    ]
+  },
+  "D6_risk_bank": {
+    "strong": [
+      "j45",
+      "j46"
+    ],
+    "partial": [
+      "j13",
+      "j47",
+      "j52"
+    ],
+    "hard": [
+      "j09",
+      "j29",
+      "j40"
+    ]
+  },
+  "D7_teacher": {
+    "strong": [
+      "j48"
+    ],
+    "partial": [
+      "j49"
+    ],
+    "hard": [
+      "j09",
+      "j29",
+      "j40"
+    ]
+  }
+}

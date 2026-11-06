@@ -1,0 +1,1206 @@
+[
+ {
+  "evalId": "v01",
+  "family": "",
+  "note": "",
+  "title": "Müştəri xidməti operatoru (çağrı mərkəzi)",
+  "slug": "v01",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-01",
+   "name": "Şirkət 01"
+  },
+  "detail": {
+   "title": "Müştəri xidməti operatoru (çağrı mərkəzi)",
+   "company_name": "Şirkət 01",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Gələn zəngləri cavablandırmaq, müştəri müraciətlərini CRM sistemində qeyd etmək və şikayətləri həll etmək. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Azərbaycan və rus dillərində səlis danışıq, kompüter biliyi, CRM ilə işləmək bacarığı. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1 ilədək",
+    "Təhsil": "Orta"
+   }
+  }
+ },
+ {
+  "evalId": "v02",
+  "family": "",
+  "note": "",
+  "title": "IT Support Specialist",
+  "slug": "v02",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-02",
+   "name": "Şirkət 02"
+  },
+  "detail": {
+   "title": "IT Support Specialist",
+   "company_name": "Şirkət 02",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Provide first and second line technical support to employees: user accounts, workstations, printers and network access. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Windows and Office administration, Active Directory, basic networking, hardware troubleshooting, helpdesk ticketing experience. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1-3 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v03",
+  "family": "",
+  "note": "",
+  "title": "Texniki dəstək mühəndisi (IT helpdesk)",
+  "slug": "v03",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-03",
+   "name": "Şirkət 03"
+  },
+  "detail": {
+   "title": "Texniki dəstək mühəndisi (IT helpdesk)",
+   "company_name": "Şirkət 03",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. İstifadəçilərin kompüter, şəbəkə və proqram problemlərinin həlli, avadanlıqların quraşdırılması və texniki dəstək. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Windows, Active Directory, şəbəkə əsasları, aparat təminatının təmiri, helpdesk sistemləri ilə iş təcrübəsi. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1-3 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v04",
+  "family": "",
+  "note": "",
+  "title": "Специалист службы поддержки клиентов",
+  "slug": "v04",
+  "location": "Баку",
+  "company": {
+   "slug": "sirket-04",
+   "name": "Şirkət 04"
+  },
+  "detail": {
+   "title": "Специалист службы поддержки клиентов",
+   "company_name": "Şirkət 04",
+   "location": "Баку",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Консультирование клиентов по телефону и в чате, регистрация обращений в CRM, решение жалоб. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Свободное владение русским и азербайджанским языками (обязательно), грамотная речь, опыт работы с CRM. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1 ilədək",
+    "Təhsil": "Orta"
+   }
+  }
+ },
+ {
+  "evalId": "v05",
+  "family": "",
+  "note": "",
+  "title": "Customer Success Specialist",
+  "slug": "v05",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-05",
+   "name": "Şirkət 05"
+  },
+  "detail": {
+   "title": "Customer Success Specialist",
+   "company_name": "Şirkət 05",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Onboard new business clients, keep them satisfied, resolve issues and identify upsell opportunities. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Client relationship experience, CRM, good communication, English and Azerbaijani. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1-3 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v06",
+  "family": "",
+  "note": "",
+  "title": "Sistem administratoru",
+  "slug": "v06",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-06",
+   "name": "Şirkət 06"
+  },
+  "detail": {
+   "title": "Sistem administratoru",
+   "company_name": "Şirkət 06",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Server və şəbəkə infrastrukturunun idarə olunması, ehtiyat surətlərin çıxarılması, istifadəçi hüquqlarının idarəsi. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Linux və Windows Server, şəbəkə avadanlıqları, ehtiyat surətləmə, virtuallaşdırma bilikləri. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "3-5 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v07",
+  "family": "",
+  "note": "",
+  "title": "Telefon satışı operatoru",
+  "slug": "v07",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-07",
+   "name": "Şirkət 07"
+  },
+  "detail": {
+   "title": "Telefon satışı operatoru",
+   "company_name": "Şirkət 07",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Mövcud və potensial müştərilərə zəng etməklə məhsul və xidmətlərin satışı, satış skriptlərinə əməl etmək. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Telefonla danışıqlar aparmaq bacarığı, satış hədəflərinə çatmaq, CRM biliyi, rus və Azərbaycan dilləri. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1 ilədək",
+    "Təhsil": "Orta"
+   }
+  }
+ },
+ {
+  "evalId": "v08",
+  "family": "",
+  "note": "",
+  "title": "Müştəri xidməti şöbəsinin rəhbəri",
+  "slug": "v08",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-08",
+   "name": "Şirkət 08"
+  },
+  "detail": {
+   "title": "Müştəri xidməti şöbəsinin rəhbəri",
+   "company_name": "Şirkət 08",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Müştəri xidməti komandasının idarə olunması, keyfiyyətə nəzarət, hesabatların hazırlanması. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Müştəri xidməti sahəsində ən azı 3 il təcrübə, komanda idarəçiliyi bacarığı, hesabat hazırlamaq. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "3-5 il",
+    "Təhsil": "Bakalavr",
+    "Vəzifə dərəcəsi": "Rəhbər"
+   }
+  }
+ },
+ {
+  "evalId": "v09",
+  "family": "",
+  "note": "",
+  "title": "Satış meneceri",
+  "slug": "v09",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-09",
+   "name": "Şirkət 09"
+  },
+  "detail": {
+   "title": "Satış meneceri",
+   "company_name": "Şirkət 09",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Müştəri bazasının genişləndirilməsi, satış planının yerinə yetirilməsi, danışıqlar və müqavilələrin bağlanması. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Satış sahəsində 1-3 il təcrübə, danışıqlar aparmaq bacarığı, CRM, sürücülük vəsiqəsi üstünlükdür. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1-3 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v10",
+  "family": "",
+  "note": "",
+  "title": "Satış şöbəsinin rəhbəri (Head of Sales)",
+  "slug": "v10",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-10",
+   "name": "Şirkət 10"
+  },
+  "detail": {
+   "title": "Satış şöbəsinin rəhbəri (Head of Sales)",
+   "company_name": "Şirkət 10",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Satış strategiyasının hazırlanması, satış komandasının idarə olunması, böyük müştərilərlə danışıqlar. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Satış sahəsində ən azı 5 il, o cümlədən rəhbər vəzifədə 3 il təcrübə (tələb olunur), strateji düşüncə. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "5 ildən artıq",
+    "Təhsil": "Bakalavr",
+    "Vəzifə dərəcəsi": "Direktor"
+   }
+  }
+ },
+ {
+  "evalId": "v11",
+  "family": "",
+  "note": "",
+  "title": "Satış məsləhətçisi (mağaza)",
+  "slug": "v11",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-11",
+   "name": "Şirkət 11"
+  },
+  "detail": {
+   "title": "Satış məsləhətçisi (mağaza)",
+   "company_name": "Şirkət 11",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Müştərilərə məhsul seçimində məsləhət vermək, malların yerləşdirilməsi və kassa əməliyyatlarında iştirak. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Müştərilərlə ünsiyyət bacarığı, satış və xidmət sahəsinə maraq, təcrübə tələb olunmur. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "təcrübəsiz",
+    "Təhsil": "Orta"
+   }
+  }
+ },
+ {
+  "evalId": "v12",
+  "family": "",
+  "note": "",
+  "title": "Marketinq meneceri",
+  "slug": "v12",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-12",
+   "name": "Şirkət 12"
+  },
+  "detail": {
+   "title": "Marketinq meneceri",
+   "company_name": "Şirkət 12",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Marketinq strategiyasının icrası, rəqəmsal kampaniyalar, büdcənin idarə olunması və komandanın koordinasiyası. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Marketinq sahəsində 3-5 il təcrübə, rəqəmsal marketinq, analitika, büdcə idarəetməsi. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "3-5 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v13",
+  "family": "",
+  "note": "",
+  "title": "Junior Marketing Specialist",
+  "slug": "v13",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-13",
+   "name": "Şirkət 13"
+  },
+  "detail": {
+   "title": "Junior Marketing Specialist",
+   "company_name": "Şirkət 13",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Support the marketing team with content, social media posts and campaign reports. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Marketing degree or interest, social media, content creation, good writing; no experience required. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1 ilədək",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v14",
+  "family": "",
+  "note": "",
+  "title": "Layihə meneceri (İT layihələr)",
+  "slug": "v14",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-14",
+   "name": "Şirkət 14"
+  },
+  "detail": {
+   "title": "Layihə meneceri (İT layihələr)",
+   "company_name": "Şirkət 14",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. İT layihələrin planlaşdırılması, komandanın koordinasiyası, risklərin idarə olunması və müştərilərlə əlaqə. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "İT layihələrin idarəsində 5 ildən artıq təcrübə, Agile və Scrum, risk idarəetməsi, Jira. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "5 ildən artıq",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v15",
+  "family": "",
+  "note": "",
+  "title": "Project Manager (IT)",
+  "slug": "v15",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-15",
+   "name": "Şirkət 15"
+  },
+  "detail": {
+   "title": "Project Manager (IT)",
+   "company_name": "Şirkət 15",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Plan and deliver software projects, coordinate developers and stakeholders, manage scope, schedule and risks. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "3+ years managing IT projects, Agile/Scrum, risk management, Jira, strong communication. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "3-5 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v16",
+  "family": "",
+  "note": "",
+  "title": "HR meneceri",
+  "slug": "v16",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-16",
+   "name": "Şirkət 16"
+  },
+  "detail": {
+   "title": "HR meneceri",
+   "company_name": "Şirkət 16",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. İşə qəbul, adaptasiya, kadr sənədləşməsi və əməkdaşların qiymətləndirilməsi proseslərinin idarə olunması. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "HR sahəsində 3-5 il təcrübə, Əmək Məcəlləsini bilmək, işə qəbul təcrübəsi. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "3-5 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v17",
+  "family": "",
+  "note": "",
+  "title": "Mühasib",
+  "slug": "v17",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-17",
+   "name": "Şirkət 17"
+  },
+  "detail": {
+   "title": "Mühasib",
+   "company_name": "Şirkət 17",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. İlkin sənədlərin işlənməsi, əmək haqqı hesablanması, vergi hesabatlarının hazırlanması. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Mühasibat uçotu, 1C proqramı, Excel, vergi uçotu biliyi. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1-3 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v18",
+  "family": "",
+  "note": "",
+  "title": "Baş mühasib",
+  "slug": "v18",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-18",
+   "name": "Şirkət 18"
+  },
+  "detail": {
+   "title": "Baş mühasib",
+   "company_name": "Şirkət 18",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Mühasibat uçotunun təşkili, maliyyə hesabatlarının hazırlanması, vergi orqanları ilə əlaqə, mühasiblərin idarə olunması. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Mühasibat sahəsində ən azı 5 il təcrübə, MHBS bilikləri, vergi qanunvericiliyi, 1C. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "5 ildən artıq",
+    "Təhsil": "Bakalavr",
+    "Vəzifə dərəcəsi": "Rəhbər"
+   }
+  }
+ },
+ {
+  "evalId": "v19",
+  "family": "",
+  "note": "",
+  "title": "Financial Analyst",
+  "slug": "v19",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-19",
+   "name": "Şirkət 19"
+  },
+  "detail": {
+   "title": "Financial Analyst",
+   "company_name": "Şirkət 19",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Prepare budgets and forecasts, analyse financial results and support management decisions. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Financial analysis and modelling, Excel, reporting, 1-3 years of experience. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1-3 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v20",
+  "family": "",
+  "note": "",
+  "title": "Maliyyə nəzarətçisi (Financial Controller)",
+  "slug": "v20",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-20",
+   "name": "Şirkət 20"
+  },
+  "detail": {
+   "title": "Maliyyə nəzarətçisi (Financial Controller)",
+   "company_name": "Şirkət 20",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Maliyyə nəzarətinin təşkili, konsolidasiya, büdcənin icrasına nəzarət və audit prosesləri. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "ACCA sertifikatı tələb olunur (mütləq), 5 ildən artıq maliyyə təcrübəsi, MHBS, Excel. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "5 ildən artıq",
+    "Təhsil": "Bakalavr",
+    "Vəzifə dərəcəsi": "Rəhbər"
+   }
+  }
+ },
+ {
+  "evalId": "v21",
+  "family": "",
+  "note": "",
+  "title": "Mühasib (kiçik şirkət)",
+  "slug": "v21",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-21",
+   "name": "Şirkət 21"
+  },
+  "detail": {
+   "title": "Mühasib (kiçik şirkət)",
+   "company_name": "Şirkət 21",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Mühasibat uçotunun aparılması, hesabatlar və vergi bəyannamələri. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Mühasibat uçotu, 1C, Excel. ACCA sertifikatı üstünlük sayılır. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1-3 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v22",
+  "family": "",
+  "note": "",
+  "title": "Riyaziyyat müəllimi (özəl məktəb)",
+  "slug": "v22",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-22",
+   "name": "Şirkət 22"
+  },
+  "detail": {
+   "title": "Riyaziyyat müəllimi (özəl məktəb)",
+   "company_name": "Şirkət 22",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Orta məktəb şagirdlərinə riyaziyyat tədrisi, dərs planlarının hazırlanması, imtahana hazırlıq. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Riyaziyyat üzrə ali təhsil, tədris təcrübəsi, dərs planı hazırlamaq bacarığı. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1-3 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v23",
+  "family": "",
+  "note": "",
+  "title": "İngilis dili müəllimi",
+  "slug": "v23",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-23",
+   "name": "Şirkət 23"
+  },
+  "detail": {
+   "title": "İngilis dili müəllimi",
+   "company_name": "Şirkət 23",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. İngilis dilinin müxtəlif səviyyələrdə tədrisi, dərs planları və imtahana (IELTS) hazırlıq. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "İngilis dili üzrə ali təhsil, tədris təcrübəsi, IELTS üzrə bilik. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1-3 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v24",
+  "family": "",
+  "note": "",
+  "title": "Fizika müəllimi",
+  "slug": "v24",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-24",
+   "name": "Şirkət 24"
+  },
+  "detail": {
+   "title": "Fizika müəllimi",
+   "company_name": "Şirkət 24",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Fizika fənninin tədrisi, laboratoriya məşğələləri, olimpiadaya hazırlıq. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Fizika üzrə ali təhsil, tədris təcrübəsi, dərs planı hazırlamaq. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1-3 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v25",
+  "family": "",
+  "note": "",
+  "title": "Учитель русского языка",
+  "slug": "v25",
+  "location": "Баку",
+  "company": {
+   "slug": "sirket-25",
+   "name": "Şirkət 25"
+  },
+  "detail": {
+   "title": "Учитель русского языка",
+   "company_name": "Şirkət 25",
+   "location": "Баку",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Преподавание русского языка и литературы в средней школе, подготовка планов уроков. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Высшее филологическое образование, опыт преподавания, знание методики. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1-3 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v26",
+  "family": "",
+  "note": "",
+  "title": "Kimya müəllimi",
+  "slug": "v26",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-26",
+   "name": "Şirkət 26"
+  },
+  "detail": {
+   "title": "Kimya müəllimi",
+   "company_name": "Şirkət 26",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Kimya fənninin tədrisi, laboratoriya təcrübələrinin təşkili, dərs planı. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Kimya üzrə ali təhsil, tədris təcrübəsi. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1-3 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v27",
+  "family": "",
+  "note": "",
+  "title": "İbtidai sinif müəllimi",
+  "slug": "v27",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-27",
+   "name": "Şirkət 27"
+  },
+  "detail": {
+   "title": "İbtidai sinif müəllimi",
+   "company_name": "Şirkət 27",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. İbtidai sinif şagirdlərinə bütün fənlərin tədrisi, valideynlərlə əlaqə, dərs planı. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Pedaqoji təhsil, uşaqlarla iş bacarığı, tədris təcrübəsi. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1-3 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v28",
+  "family": "",
+  "note": "",
+  "title": "Kassir",
+  "slug": "v28",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-28",
+   "name": "Şirkət 28"
+  },
+  "detail": {
+   "title": "Kassir",
+   "company_name": "Şirkət 28",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Kassa əməliyyatlarının aparılması, nağd və kart ödənişlərinin qəbulu, günün sonunda kassanın bağlanması. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Dəqiqlik, kassa aparatı ilə işləmək, müştərilərlə nəzakətli ünsiyyət. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "təcrübəsiz",
+    "Təhsil": "Orta"
+   }
+  }
+ },
+ {
+  "evalId": "v29",
+  "family": "",
+  "note": "",
+  "title": "Satış məsləhətçisi (elektronika)",
+  "slug": "v29",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-29",
+   "name": "Şirkət 29"
+  },
+  "detail": {
+   "title": "Satış məsləhətçisi (elektronika)",
+   "company_name": "Şirkət 29",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Elektron məhsulların satışı, müştərilərə texniki xüsusiyyətlər barədə məsləhət, satış planının yerinə yetirilməsi. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Satış təcrübəsi üstünlükdür, müştəri xidməti bacarığı, texnologiyaya maraq. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1 ilədək",
+    "Təhsil": "Orta"
+   }
+  }
+ },
+ {
+  "evalId": "v30",
+  "family": "",
+  "note": "",
+  "title": "Backend Developer (Node.js)",
+  "slug": "v30",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-30",
+   "name": "Şirkət 30"
+  },
+  "detail": {
+   "title": "Backend Developer (Node.js)",
+   "company_name": "Şirkət 30",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Design and build REST APIs and services on Node.js and PostgreSQL, write tests, review code. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Node.js, TypeScript, PostgreSQL, REST API, Git, Docker; 3+ years of experience. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "3-5 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v31",
+  "family": "",
+  "note": "",
+  "title": "Frontend Developer (React)",
+  "slug": "v31",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-31",
+   "name": "Şirkət 31"
+  },
+  "detail": {
+   "title": "Frontend Developer (React)",
+   "company_name": "Şirkət 31",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Build user interfaces with React and TypeScript, work with designers and backend engineers. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "React, TypeScript, HTML, CSS, Git; 1-3 years of experience. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1-3 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v32",
+  "family": "",
+  "note": "",
+  "title": "QA mühəndisi",
+  "slug": "v32",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-32",
+   "name": "Şirkət 32"
+  },
+  "detail": {
+   "title": "QA mühəndisi",
+   "company_name": "Şirkət 32",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Proqram məhsullarının test planlarının hazırlanması, əl ilə və avtomatlaşdırılmış testlər, xətaların qeydiyyatı. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "QA təcrübəsi, test case yazmaq, Postman, SQL biliyi. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1-3 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v33",
+  "family": "",
+  "note": "",
+  "title": "DevOps mühəndisi",
+  "slug": "v33",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-33",
+   "name": "Şirkət 33"
+  },
+  "detail": {
+   "title": "DevOps mühəndisi",
+   "company_name": "Şirkət 33",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. CI/CD boru kəmərlərinin qurulması, Docker və Kubernetes mühitinin idarə olunması, monitorinq. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Linux, Docker, Kubernetes, CI/CD, AWS və ya Azure, skript yazmaq. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "3-5 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v34",
+  "family": "",
+  "note": "",
+  "title": "Data Analyst",
+  "slug": "v34",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-34",
+   "name": "Şirkət 34"
+  },
+  "detail": {
+   "title": "Data Analyst",
+   "company_name": "Şirkət 34",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Collect and analyse business data, build dashboards and reports, support decisions with SQL and Excel. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "SQL, Excel, Power BI or similar, statistics, 1-3 years of experience. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1-3 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v35",
+  "family": "",
+  "note": "",
+  "title": "Tibb bacısı",
+  "slug": "v35",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-35",
+   "name": "Şirkət 35"
+  },
+  "detail": {
+   "title": "Tibb bacısı",
+   "company_name": "Şirkət 35",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Xəstələrə qulluq, inyeksiyaların aparılması, həkimin təyinatlarının icrası, tibbi sənədləşmə. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Orta tibbi təhsil, tibb bacısı vəsiqəsi, xəstələrlə iş təcrübəsi. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1-3 il",
+    "Təhsil": "Orta xüsusi"
+   }
+  }
+ },
+ {
+  "evalId": "v36",
+  "family": "",
+  "note": "",
+  "title": "Həkim-terapevt",
+  "slug": "v36",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-36",
+   "name": "Şirkət 36"
+  },
+  "detail": {
+   "title": "Həkim-terapevt",
+   "company_name": "Şirkət 36",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Xəstələrin qəbulu, diaqnostika, müalicənin təyini və tibbi sənədləşmə. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Ali tibbi təhsil, həkim sertifikatı və lisenziya tələb olunur, 3 ildən artıq təcrübə. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "3-5 il",
+    "Təhsil": "Ali"
+   }
+  }
+ },
+ {
+  "evalId": "v37",
+  "family": "",
+  "note": "",
+  "title": "Aptek satıcısı",
+  "slug": "v37",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-37",
+   "name": "Şirkət 37"
+  },
+  "detail": {
+   "title": "Aptek satıcısı",
+   "company_name": "Şirkət 37",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Aptekdə dərman və tibbi vasitələrin satışı, müştərilərə məsləhət, kassa əməliyyatları. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Tibbi və ya əczaçılıq sahəsinə maraq, müştəri xidməti, dəqiqlik. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "təcrübəsiz",
+    "Təhsil": "Orta"
+   }
+  }
+ },
+ {
+  "evalId": "v38",
+  "family": "",
+  "note": "",
+  "title": "İnşaat mühəndisi",
+  "slug": "v38",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-38",
+   "name": "Şirkət 38"
+  },
+  "detail": {
+   "title": "İnşaat mühəndisi",
+   "company_name": "Şirkət 38",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Tikinti sahəsində işlərin nəzarəti, layihə sənədlərinin yoxlanması, hesabatlar və təhlükəsizlik tələblərinə əməl olunması. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "İnşaat mühəndisliyi üzrə ali təhsil, AutoCAD, tikinti nəzarəti təcrübəsi. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "3-5 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v39",
+  "family": "",
+  "note": "",
+  "title": "Elektrik mühəndisi",
+  "slug": "v39",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-39",
+   "name": "Şirkət 39"
+  },
+  "detail": {
+   "title": "Elektrik mühəndisi",
+   "company_name": "Şirkət 39",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Elektrik sistemlərinin layihələndirilməsi, quraşdırılması və texniki xidməti. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Elektrik mühəndisliyi üzrə ali təhsil, AutoCAD, elektrik təhlükəsizliyi. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "3-5 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v40",
+  "family": "",
+  "note": "",
+  "title": "Smeta mühəndisi",
+  "slug": "v40",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-40",
+   "name": "Şirkət 40"
+  },
+  "detail": {
+   "title": "Smeta mühəndisi",
+   "company_name": "Şirkət 40",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Tikinti layihələri üzrə smeta hesablamalarının hazırlanması və yoxlanması, həcmlərin hesablanması. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Tikinti smetası, AutoCAD, Excel, 1-3 il təcrübə. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1-3 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v41",
+  "family": "",
+  "note": "",
+  "title": "Sürücü (B kateqoriya)",
+  "slug": "v41",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-41",
+   "name": "Şirkət 41"
+  },
+  "detail": {
+   "title": "Sürücü (B kateqoriya)",
+   "company_name": "Şirkət 41",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Şirkət nəqliyyat vasitəsini idarə etmək, işçiləri və sənədləri çatdırmaq, avtomobilin texniki vəziyyətinə nəzarət. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Sürücülük vəsiqəsi (B kateqoriyası) mütləq tələb olunur, Bakını yaxşı bilmək, təmiz sürücülük tarixçəsi. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1-3 il",
+    "Təhsil": "Orta"
+   }
+  }
+ },
+ {
+  "evalId": "v42",
+  "family": "",
+  "note": "",
+  "title": "Kuryer",
+  "slug": "v42",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-42",
+   "name": "Şirkət 42"
+  },
+  "detail": {
+   "title": "Kuryer",
+   "company_name": "Şirkət 42",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Sifarişlərin müştərilərə vaxtında çatdırılması, ödənişlərin qəbulu. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Mobil telefon, məsuliyyət, Bakını bilmək; şəxsi nəqliyyat vasitəsi üstünlükdür. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "təcrübəsiz",
+    "Təhsil": "Orta"
+   }
+  }
+ },
+ {
+  "evalId": "v43",
+  "family": "",
+  "note": "",
+  "title": "Logistika mütəxəssisi",
+  "slug": "v43",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-43",
+   "name": "Şirkət 43"
+  },
+  "detail": {
+   "title": "Logistika mütəxəssisi",
+   "company_name": "Şirkət 43",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Yük daşımalarının planlaşdırılması, təchizatçılarla əlaqə, daşıma sənədlərinin hazırlanması. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Logistika sahəsində təcrübə, Excel, daşıma sənədləri, danışıqlar. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1-3 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v44",
+  "family": "",
+  "note": "",
+  "title": "Anbardar",
+  "slug": "v44",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-44",
+   "name": "Şirkət 44"
+  },
+  "detail": {
+   "title": "Anbardar",
+   "company_name": "Şirkət 44",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Malların qəbulu, saxlanması və buraxılması, anbar uçotunun aparılması. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Anbar uçotu, 1C, məsuliyyətlilik, dəqiqlik. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1-3 il",
+    "Təhsil": "Orta"
+   }
+  }
+ },
+ {
+  "evalId": "v45",
+  "family": "",
+  "note": "",
+  "title": "Aşpaz",
+  "slug": "v45",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-45",
+   "name": "Şirkət 45"
+  },
+  "detail": {
+   "title": "Aşpaz",
+   "company_name": "Şirkət 45",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Restoranın mətbəxində yeməklərin hazırlanması, gigiyena qaydalarına əməl olunması. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Aşpaz təcrübəsi, gigiyena qaydaları, komanda ilə iş. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1-3 il",
+    "Təhsil": "Orta"
+   }
+  }
+ },
+ {
+  "evalId": "v46",
+  "family": "",
+  "note": "",
+  "title": "Ofis meneceri",
+  "slug": "v46",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-46",
+   "name": "Şirkət 46"
+  },
+  "detail": {
+   "title": "Ofis meneceri",
+   "company_name": "Şirkət 46",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Ofisin gündəlik fəaliyyətinin təşkili, təchizat, sənəd dövriyyəsi və direktorun köməkçiliyi. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Ofis idarəçiliyi təcrübəsi, MS Office, təşkilatçılıq, yazışma. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "1-3 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v47",
+  "family": "",
+  "note": "",
+  "title": "Resepşn (katibə)",
+  "slug": "v47",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-47",
+   "name": "Şirkət 47"
+  },
+  "detail": {
+   "title": "Resepşn (katibə)",
+   "company_name": "Şirkət 47",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Qonaqların qarşılanması, zənglərin yönləndirilməsi, yazışmaların və qəbul cədvəlinin aparılması. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Səliqəli görünüş, telefon və yazışma bacarığı, MS Office. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "təcrübəsiz",
+    "Təhsil": "Orta"
+   }
+  }
+ },
+ {
+  "evalId": "v48",
+  "family": "",
+  "note": "",
+  "title": "Hüquqşünas",
+  "slug": "v48",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-48",
+   "name": "Şirkət 48"
+  },
+  "detail": {
+   "title": "Hüquqşünas",
+   "company_name": "Şirkət 48",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Müqavilələrin hazırlanması və yoxlanması, hüquqi məsləhət, məhkəmələrdə şirkətin maraqlarının təmsili. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Hüquq üzrə ali təhsil, müqavilə hüququ təcrübəsi, vəkillik təcrübəsi üstünlükdür. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "3-5 il",
+    "Təhsil": "Ali"
+   }
+  }
+ },
+ {
+  "evalId": "v49",
+  "family": "",
+  "note": "",
+  "title": "Scrum Master",
+  "slug": "v49",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-49",
+   "name": "Şirkət 49"
+  },
+  "detail": {
+   "title": "Scrum Master",
+   "company_name": "Şirkət 49",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Facilitate Scrum ceremonies, remove blockers and coach the team on Agile practices. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Scrum and Agile certification or experience, facilitation, Jira, communication. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "3-5 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ },
+ {
+  "evalId": "v50",
+  "family": "",
+  "note": "",
+  "title": "Product Manager (fintech)",
+  "slug": "v50",
+  "location": "Bakı, Azərbaycan",
+  "company": {
+   "slug": "sirket-50",
+   "name": "Şirkət 50"
+  },
+  "detail": {
+   "title": "Product Manager (fintech)",
+   "company_name": "Şirkət 50",
+   "location": "Bakı",
+   "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir fəaliyyət göstərir. Biz keyfiyyəti və müştəri məmnuniyyətini əsas tuturuq. Təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Define product roadmap, work with engineers and designers, analyse metrics and prioritise features. Maraqlanırsınızsa, CV-nizi göndərin.",
+   "requirements_text": "Product management experience, Agile, analytics, stakeholder communication. Komanda ilə işləmək bacarığı, məsuliyyətlilik, yüksək ünsiyyət qabiliyyəti və vaxtı düzgün idarə etmək.",
+   "category": "",
+   "sidebar": {
+    "Təcrübə": "3-5 il",
+    "Təhsil": "Bakalavr"
+   }
+  }
+ }
+]

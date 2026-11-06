@@ -1,0 +1,113 @@
+name: Deploy
+
+# Manual only, deliberately.
+#
+# Auto-deploying every push to main would be a one-line change (uncomment the
+# `push` trigger below), but it is not the default here for two reasons:
+#
+#  1. The legal pages currently ship visible placeholders for the operating
+#     entity's name, address, VÖEN and contact mailboxes (grep TODO(legal)).
+#     Publishing those is worse than publishing nothing, so a deploy should be
+#     a decision until they are filled in and reviewed.
+#  2. There is one production database. `apps/api`'s container applies
+#     migrations on start, so a push that lands a migration changes production
+#     data the moment it deploys — that deserves a human pressing the button.
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: >-
+          How to reach the server. Use "self-hosted" when the host is a machine
+          that GitHub cannot dial into (a box at home, behind NAT) — a runner
+          installed on it connects outbound instead. Use "ssh" only for a host
+          with a reachable address.
+        required: true
+        type: choice
+        default: self-hosted
+        options: [self-hosted, ssh]
+      ref:
+        description: 'Git ref to deploy (branch, tag or full SHA)'
+        required: true
+        default: 'main'
+      services:
+        description: 'Images to rebuild. matching-service and apply-worker are slow (PyTorch / headless browser) — add them only when they changed.'
+        required: false
+        default: 'api web'
+  # push:
+  #   branches: [main]
+
+# Never let two deploys touch the same host at once.
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  # Re-runs CI's gate against the exact ref being deployed. CI runs on push,
+  # but a manual deploy can name any ref — including one CI never saw. Kept as
+  # its own job so it runs on GitHub's runners either way, rather than tying up
+  # the box that serves the site.
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm ci
+      - run: npm run build --workspace=packages/shared-types
+      - run: npx prisma generate --schema=apps/api/prisma/schema.prisma
+      - run: npx tsc -p apps/api/tsconfig.build.json --noEmit
+      - run: npm test --workspace=apps/api
+      - run: npx tsc -p apps/web/tsconfig.json --noEmit
+      - run: npm test --workspace=apps/web --if-present
+
+  # Path for a host GitHub cannot reach: a self-hosted runner installed on the
+  # machine polls GitHub outbound, so nothing has to be exposed to the
+  # internet — no port forwarding, no tunnel, no SSH key in GitHub. The runner
+  # already sits in the repo checkout's machine, so this just runs the script.
+  deploy-self-hosted:
+    needs: verify
+    if: inputs.mode == 'self-hosted'
+    runs-on: self-hosted
+    environment: production
+    steps:
+      - name: Deploy on this machine
+        # DEPLOY_PATH is the clone the stack actually runs from, which is not
+        # the runner's own workspace.
+        run: |
+          set -euo pipefail
+          cd "${{ secrets.DEPLOY_PATH }}"
+          SERVICES="${{ inputs.services }}" ./scripts/deploy.sh "${{ inputs.ref }}"
+
+  # Path for a host with a reachable address.
+  deploy-ssh:
+    needs: verify
+    if: inputs.mode == 'ssh'
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Deploy over SSH
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          port: ${{ secrets.DEPLOY_PORT || 22 }}
+          # The build runs a full npm install inside Docker; the default 10m
+          # is not enough on a small host.
+          command_timeout: 30m
+          # Abort on the first failing command instead of reporting success.
+          script_stops: true
+          envs: DEPLOY_REF,DEPLOY_SERVICES
+          script: |
+            set -euo pipefail
+            cd "${{ secrets.DEPLOY_PATH }}"
+            SERVICES="$DEPLOY_SERVICES" ./scripts/deploy.sh "$DEPLOY_REF"
+        env:
+          DEPLOY_REF: ${{ inputs.ref }}
+          DEPLOY_SERVICES: ${{ inputs.services }}

@@ -1,0 +1,2198 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// NextAuth Adapter Models & User
+model User {
+  id             String    @id @default(cuid())
+  email          String    @unique
+  hashedPassword String
+  name           String?
+  emailVerified  DateTime?
+  candidateMailAlias String? @unique
+  image          String?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+  // Terms of Use / Privacy Policy acceptance at sign-up (null = account created before acceptance was recorded). Via: register-checkbox | google-notice.
+  legalAcceptedAt  DateTime?
+  legalVersion     String?
+  legalAcceptedVia String?
+
+  // Relations
+  profile              Profile?
+  resumes              Resume[]
+  matches              Match[]
+  matchCandidates      MatchCandidate[]
+  notifications        Notification[]
+  subscription         Subscription?
+  sessions             Session[]
+  accounts             Account[]
+  applications         Application[]
+  externalApplications ExternalApplication[]
+  emailApplications    EmailApplication[]
+  agentCampaigns       AgentCampaign[]
+  agentApplications    AgentApplication[]
+  agentDevices         AgentDevice[]
+  agentPairingCodes    AgentPairingCode[]
+  agentKnownAnswers    AgentKnownAnswer[]
+  emailApplySettings   EmailApplySettings?
+  verificationTokens   VerificationToken[]
+  planOverrides        PlanOverride[]
+  academySeatGrants    AcademySeatGrant[]
+  usageCounters        UsageCounter[]
+  savedJobs            SavedJob[]
+  careerEntries        CareerEntry[]
+  documentCharges      DocumentCharge[]
+  savedSearches        SavedSearch[]
+  companyFollows       CompanyFollow[]
+  notificationPreference NotificationPreference?
+  alertEvents          AlertEvent[]
+  telegramLink         TelegramLink?
+  outcomeEvents        ApplicationOutcomeEvent[]
+  trackerRecords       ApplicationTrackerRecord[]
+  translationMemory    TranslationMemory[]
+  trackerSettings      ApplicationTrackerSettings?
+  academyMembers       AcademyMember[]
+  academyEnrollments   AcademyEnrollment[]
+  academyConsents      AcademyConsent[]
+  candidateOutcomes    CandidateOutcome[]
+  // Operator suspension: sessions end and sign-in is refused until restored.
+  suspendedAt          DateTime?
+  suspendedReason      String?
+}
+
+// An operator-granted plan for a limited time. Separate from Subscription
+// (the payment provider's contract), which it never changes.
+model PlanOverride {
+  id          String           @id @default(cuid())
+  userId      String
+  user        User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  plan        SubscriptionPlan
+  reason      String
+  expiresAt   DateTime
+  createdById String?
+  createdAt   DateTime         @default(now())
+  revokedAt   DateTime?
+  revokedById String?
+  // Set only for an operator-provisioned academy seat. Consumer payment state remains separate.
+  academySeatGrantId String? @unique
+  academySeatGrant   AcademySeatGrant? @relation(fields: [academySeatGrantId], references: [id], onDelete: Cascade)
+
+  @@index([userId, expiresAt])
+}
+
+// Durable operator switches. A missing row means the default (not paused).
+// Pausing is enforced by the server; switching back on never bypasses the
+// environment gates, consent or receipt requirements.
+model FeatureFlag {
+  key         String   @id
+  paused      Boolean  @default(false)
+  reason      String?
+  updatedById String?
+  updatedAt   DateTime @updatedAt
+}
+
+enum VerificationTokenPurpose {
+  EMAIL_VERIFY
+  PASSWORD_RESET
+}
+
+// Single-use, short-lived tokens for email verification and password reset.
+// Consumed and deleted by POST /auth/verify-email or POST /auth/reset-password.
+model VerificationToken {
+  id        String                   @id @default(cuid())
+  token     String                   @unique
+  userId    String
+  user      User                     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  purpose   VerificationTokenPurpose @default(EMAIL_VERIFY)
+  expires   DateTime
+  createdAt DateTime                 @default(now())
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+// Core Business Models
+model Profile {
+  id                    String    @id @default(cuid())
+  userId                String    @unique
+  user                  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  headline              String
+  // The profile paragraph exactly as the candidate wrote it (the CV's summary). Distinct from the one-line headline.
+  summary               String?   @db.Text
+  skills                String[]
+  location              String
+  jobPreferences        Json // { roles: string[], locations: string[], types: string[], salaryMin?: number, salaryMax?: number }
+  onboardingCompletedAt DateTime? // Set once the first-login step-by-step wizard is finished; null = still onboarding.
+
+  // External job-application fields (glorri.az apply automation). All optional/nullable
+  // since they're only required at the point a user tries to use that feature, not at signup.
+  phone              String?
+  address            String?
+  dob                DateTime?
+  citizenship        String?
+  salaryExpectation  Int?
+  preferredNetGross  String? // "Net" | "Gross"
+  preferredCurrency  String? // "AZN" | "USD" | "EUR"
+  idDocumentUrl      String?
+  defaultCoverLetter String?   @db.Text
+
+  // Opt-in toggle for free, unmetered in-app notifications about youth
+  // volunteering opportunities — entirely separate from paid-plan job
+  // matching (no CV scoring, no quota, no email; see VolunteeringService).
+  volunteerOpportunitiesOptIn Boolean @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  experiences Experience[]
+  education   Education[]
+}
+
+model Experience {
+  id          String    @id @default(cuid())
+  profileId   String
+  profile     Profile   @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  title       String
+  company     String
+  // Where this role was held, only as stated ("Remote", "Baku, Azerbaijan"). Never copied from the candidate's home city.
+  location    String?
+  startDate   DateTime
+  endDate     DateTime?
+  // "YEAR" when only the year is stated (the date is then 1 January and is shown as the year alone); null means month precision.
+  startPrecision String?
+  endPrecision   String?
+  // One bullet per line.
+  description String
+}
+
+model Education {
+  id           String    @id @default(cuid())
+  profileId    String
+  profile      Profile   @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  institution  String
+  degree       String
+  fieldOfStudy String
+  location     String?
+  // Null when the record states no dates (a course, an undated school): never filled in.
+  startDate    DateTime?
+  endDate      DateTime?
+  startPrecision String?
+  endPrecision   String?
+}
+
+enum ResumeStatus {
+  PENDING
+  NEEDS_REVIEW // Tailored draft generated and fact-checked; the candidate has not approved it yet
+  READY
+  FAILED
+}
+
+model Resume {
+  id             String       @id @default(cuid())
+  userId         String
+  user           User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  isBase         Boolean      @default(false)
+  fileUrl        String? // Null while a tailored resume is still being generated
+  parsedContent  Json? // Parsed JSON representation of CV sections
+  version        Int          @default(1)
+  matchId        String? // Nullable, set if this resume was tailored for a specific Match
+  match          Match?       @relation("TailoredResume", fields: [matchId], references: [id], onDelete: SetNull)
+  privateVacancy Json? // Candidate supplied one-off vacancy context; never entered into the shared catalogue.
+  status         ResumeStatus @default(READY) // Tailored resumes start PENDING until the AI+PDF job finishes
+  statusError    String? // Populated when status = FAILED
+  // Tailored drafts: fact-check findings shown to the candidate, provider
+  // call accounting (no CV content), and when the candidate approved it.
+  reviewNotes    Json?
+  generationMeta Json?
+  reviewedAt     DateTime?
+  createdAt      DateTime     @default(now())
+  // Documents: CV (fuller), RESUME (concise) and LETTER (job-specific motivation letter) share this table and the generation allowance.
+  docKind        DocumentKind @default(CV)
+  language       String? // the document's language (az|en|ru|tr)
+  bundleId       String? // rows requested together (a CV plus a letter)
+  letterInputs   Json? // what the candidate supplied for a letter (motivation, chosen evidence); never the vacancy text
+  provenance     Json? // facts snapshot: source entry ids, job reference and text hash, language, format, template version, parent document
+  snapshots      DocumentSnapshot[]
+  charges        DocumentCharge[]
+
+  @@index([userId, matchId, status])
+  @@index([userId, bundleId])
+}
+
+enum DocumentKind {
+  CV
+  RESUME
+  LETTER
+}
+
+enum DocumentSnapshotKind {
+  GENERATED
+  EDITED
+  APPROVED
+}
+
+// Append-only versions of a document: what was generated, what the candidate edited, what they approved (with the approved file's SHA-256).
+// A snapshot is never updated; it is the factual record of what each approval covered.
+model DocumentSnapshot {
+  id          String               @id @default(cuid())
+  resumeId    String
+  resume      Resume               @relation(fields: [resumeId], references: [id], onDelete: Cascade)
+  revision    Int
+  kind        DocumentSnapshotKind
+  content     Json
+  provenance  Json?
+  contentHash String
+  fileSha256  String?
+  createdAt   DateTime             @default(now())
+
+  @@unique([resumeId, revision, kind])
+  @@index([resumeId, createdAt])
+}
+
+enum DocumentChargeStatus {
+  RESERVED
+  COMMITTED
+  REFUNDED
+}
+
+// One generation unit of the monthly document allowance. RESERVED when a generation is accepted, COMMITTED when it succeeds, REFUNDED when it
+// fails, is cancelled or its reservation expires. Reads count RESERVED (unexpired) + COMMITTED, so concurrent requests cannot exceed the limit.
+model DocumentCharge {
+  id         String               @id @default(cuid())
+  userId     String
+  user       User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  resumeId   String?              @unique
+  resume     Resume?              @relation(fields: [resumeId], references: [id], onDelete: SetNull)
+  periodKey  String // account period (calendar month in Baku), e.g. 2026-10
+  units      Int                  @default(1)
+  status     DocumentChargeStatus @default(RESERVED)
+  reason     String?
+  reservedAt DateTime             @default(now())
+  expiresAt  DateTime
+  settledAt  DateTime?
+
+  @@index([userId, periodKey, status])
+  @@index([status, expiresAt])
+}
+
+enum JobStatus {
+  ACTIVE
+  CLOSED
+}
+
+enum ApplicationMethod {
+  EMAIL
+  ONLINE_FORM
+  EXTERNAL_SITE
+  UNKNOWN
+}
+
+// What AISE has actually established about a source's terms. A robots.txt
+// allowance alone is not a reuse agreement.
+enum SourceAccessReview {
+  UNREVIEWED
+  ROBOTS_ALLOWED_TERMS_PENDING
+  TERMS_REVIEWED_ALLOWED
+  RESTRICTED
+}
+
+// Registry of vacancy sources (the key is the externalId prefix). Health and
+// counts are computed from JobImportRun and Job rows, never stored twice.
+model JobSource {
+  key               String             @id
+  name              String
+  employer          String?
+  homepageUrl       String
+  collectionMethod  String
+  scope             String
+  accessReview      SourceAccessReview @default(UNREVIEWED)
+  accessNote        String?
+  reviewedAt        DateTime?
+  applicationMethods ApplicationMethod[]
+  enabled           Boolean            @default(true)
+  // Whether anything in this deployment runs the collector on a schedule.
+  scheduled         Boolean            @default(false)
+  // Refresh schedule (see jobs/source-scheduler.service.ts). Nothing runs unless the deployment enables the scheduler
+  // AND this source is scheduled, not paused and not restricted.
+  schedulePausedAt  DateTime?
+  intervalMinutes   Int                @default(1440)
+  nextRunAt         DateTime?
+  consecutiveFailures Int              @default(0)
+  // A claim on the source so overlapping scheduler processes, an operator's run-now and the manual import CLI cannot run it twice.
+  leaseUntil        DateTime?
+  // The holder's secret token (only the holder can renew or release) and when it last proved it was alive.
+  leaseOwner        String?
+  leaseHeartbeatAt  DateTime?
+  // A durable pause after repeated failure or a block: nothing is claimed before cooldownUntil. cooldownCount escalates the length until a run succeeds
+  // or an operator resets it.
+  cooldownUntil     DateTime?
+  cooldownReason    String?
+  cooldownCount     Int                @default(0)
+  progress          SourceDiscoveryProgress?
+  createdAt         DateTime           @default(now())
+  updatedAt         DateTime           @updatedAt
+}
+
+// Where a board's deeper traversal stopped, so bounded scheduled runs continue beyond the same head pages. The cursor is source-specific (a page number,
+// an API cursor, the next listing URL, or a queue of shards) and is always paired with `anchors`, the last postings seen before it: a resumed segment must
+// overlap them, otherwise the listing shifted and the traversal restarts. A resumed segment never closes postings; only a single run that walked a whole
+// listing can (JobSourceService.recordRun).
+model SourceDiscoveryProgress {
+  sourceKey            String    @id
+  source               JobSource @relation(fields: [sourceKey], references: [key], onDelete: Cascade)
+  generation           String
+  cursor               Json?
+  anchors              Json?
+  segments             Int       @default(0)
+  listedInGeneration   Int       @default(0)
+  lastHeadAt           DateTime?
+  lastSegmentAt        DateTime?
+  lastDeepCompletedAt  DateTime?
+  restartReason        String?
+  // Whether the last head run (from page 1) reached the end of the listing: true = the board fits one run's budget (a complete listing is possible),
+  // false = it does not (head refreshes stay cheap and the deep traversal does the rest), null = not learned yet.
+  headReachedEnd       Boolean?
+  updatedAt            DateTime  @updatedAt
+}
+
+// Provenance for what a public page of an OBSERVED company (an employer named by imported postings, not a registered AISE employer) may show.
+// Identity is the normalised company name (see observed-companies/observed-company.util.ts); nothing here makes the company a registered employer.
+// A logo is shown only when its source, the page it was taken from and a verification time are all recorded; otherwise the page shows a monogram.
+model ObservedCompanyProfile {
+  companyKey     String    @id
+  displayName    String
+  website        String?
+  logoFile       String? // stored copy served by GET /public/companies/:id/logo (never hot-linked)
+  logoSha256     String?
+  logoSource     String? // employer_website | source_listing | operator_upload
+  logoSourceUrl  String? // the public page the logo was taken from
+  logoVerifiedAt DateTime?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+model Job {
+  id               String    @id @default(cuid())
+  externalId       String    @unique
+  title            String
+  company          String
+  description      String
+  location         String
+  url              String
+  postedAt         DateTime
+  rawPayload       Json?
+  ingestedAt       DateTime  @default(now())
+  // Lifecycle, maintained by the importer (see GlorriScraperService).
+  status           JobStatus @default(ACTIVE)
+  deadline         DateTime? // Source's application deadline, when it states one
+  contentHash      String? // Hash of the normalized fields; changes trigger re-matching
+  contentUpdatedAt DateTime  @default(now())
+  detailFetchedAt  DateTime?
+  lastSeenAt       DateTime  @default(now()) // Last import that listed it
+  missedImports    Int       @default(0) // Consecutive complete listings without it
+  closedAt         DateTime?
+  closedReason     String?
+  // Operator moderation. Independent of the source lifecycle, so an import
+  // that reopens the posting does not undo it.
+  hiddenAt         DateTime?
+  hiddenReason     String?
+  // Deduplication (see jobs/job-dedup.util.ts). A posting that another source
+  // already lists is linked to the earlier one, never deleted or merged: its
+  // own row, matches and history stay, and it is only left out of candidate
+  // lists and matching while its primary is open. Linking is conservative and
+  // reversible (clear the column).
+  canonicalUrl     String? // Normalised destination URL, for cross-source comparison
+  companyKey       String? // Normalised company name, to find candidates cheaply
+  duplicateOfId    String?
+  duplicateOf      Job?      @relation("JobDuplicates", fields: [duplicateOfId], references: [id], onDelete: SetNull)
+  savedBy          SavedJob[]
+  duplicates       Job[]     @relation("JobDuplicates")
+  duplicateReason  String?
+
+  // Facts read from structured source fields or explicit posting text; NULL
+  // means "the source does not say" and is shown as unknown, never guessed.
+  workArrangement  String? // Remote | Hybrid | On-site (same values as native vacancies)
+  experienceLevel  String? // Junior | Mid-level | Senior | Lead
+  // How a candidate can apply, as stated by the posting itself. EMAIL needs an
+  // address the posting explicitly gives for applications (see job-facts.ts).
+  applicationMethod   ApplicationMethod @default(UNKNOWN)
+  applicationEmail    String?
+  applicationEmailEvidence Json? // { excerpt, subjectLine?, reference?, extractedFrom, extractorVersion }
+
+  matches Match[]
+  matchCandidates MatchCandidate[]
+  emailApplications EmailApplication[]
+  agentApplications AgentApplication[]
+
+  @@index([status, postedAt])
+  @@index([canonicalUrl])
+  @@index([companyKey])
+  @@index([duplicateOfId])
+}
+
+enum JobImportStatus {
+  RUNNING
+  SUCCEEDED
+  PARTIAL
+  FAILED
+}
+
+enum JobImportOutcome {
+  COMPLETE_CENSUS
+  BOUNDED_PROGRESS
+  UPSTREAM_FAILURE
+  INVALID_DETAIL
+  NO_OPENINGS
+}
+
+// One row per importer run: what the source listing yielded and whether the
+// listing was traversed completely (the only runs allowed to close jobs).
+model JobImportRun {
+  id              String          @id @default(cuid())
+  source          String
+  status          JobImportStatus @default(RUNNING)
+  outcome         JobImportOutcome?
+  startedAt       DateTime        @default(now())
+  finishedAt      DateTime?
+  listingComplete Boolean         @default(false)
+  pagesFetched    Int             @default(0)
+  listed          Int             @default(0)
+  created         Int             @default(0)
+  updated         Int             @default(0)
+  unchanged       Int             @default(0)
+  reopened        Int             @default(0)
+  closed          Int             @default(0)
+  detailFailures  Int             @default(0)
+  // Reported by collectors that parse detail pages (see PublicJobCollector).
+  discovered      Int             @default(0)
+  rejected        Int             @default(0) // detail present but failed validation
+  skipped         Int             @default(0) // outside scope (e.g. not Azerbaijan)
+  expired         Int             @default(0) // listed with a deadline already past
+  closureSkipped  String? // why a complete run still closed nothing (e.g. listing shrank)
+  // Identity of the run (source + the collector's start instant): reporting the same run again is a no-op.
+  runKey          String?         @unique
+  error           String?
+
+  @@index([source, startedAt])
+}
+
+enum MatchStatus {
+  NEW
+  VIEWED
+  DISMISSED
+  APPLIED
+}
+
+model Match {
+  id         String      @id @default(cuid())
+  userId     String
+  user       User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  // Exactly one side is set: external/scraped postings link jobId,
+  // employer-posted platform vacancies link vacancyId (see MatchingService).
+  jobId      String?
+  job        Job?        @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  vacancyId  String?
+  vacancy    Vacancy?    @relation(fields: [vacancyId], references: [id], onDelete: Cascade)
+  score      Float // Score between 0.0 and 1.0
+  details    Json? // MatchScoreDetails (@aise/shared-types): { score, matchedKeywords }
+  status     MatchStatus @default(NEW)
+  createdAt  DateTime    @default(now())
+  notifiedAt DateTime? // Set once this match has been included in a sent match-alert email
+  // Set when a silent re-scoring rollout created or refreshed this match: it must never be emailed or
+  // announced because of that rollout. Names the rollout. notifiedAt is left alone (it means "an email was sent").
+  suppressedRollout String?
+
+  tailoredResumes      Resume[]              @relation("TailoredResume")
+  externalApplications ExternalApplication[]
+
+  @@unique([userId, jobId])
+  @@unique([userId, vacancyId])
+}
+
+// Eligible scored postings wait here until the user's plan cadence selects
+// the strongest available recommendations. This prevents ingestion order
+// from deciding which daily/weekly slots are consumed.
+model MatchCandidate {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  jobId     String?
+  job       Job?     @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  vacancyId String?
+  vacancy   Vacancy? @relation(fields: [vacancyId], references: [id], onDelete: Cascade)
+  score     Float
+  details   Json
+  scoredAt  DateTime @default(now()) @updatedAt
+
+  @@unique([userId, jobId])
+  @@unique([userId, vacancyId])
+  @@index([userId, score, scoredAt])
+}
+
+enum NotificationType {
+  NEW_MATCH
+  DIGEST
+  VOLUNTEER_OPPORTUNITY
+  PLAN_OFFER
+  NEW_JOB
+  AGENT_REVIEW
+}
+
+model Notification {
+  id        String           @id @default(cuid())
+  userId    String
+  user      User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type      NotificationType
+  message   String // Human-readable rendered summary shown in the UI
+  payload   Json // JSON details of match / digest
+  read      Boolean          @default(false)
+  createdAt DateTime         @default(now())
+}
+
+// FREE = 3 matches/month, BASIC = 10, STANDARD = 30, Limitsiz = no cap.
+// See PLAN_MATCH_QUOTAS in @aise/shared-types for the actual quota numbers.
+// ── Career evidence beyond jobs and degrees (projects, volunteering, certifications, languages, awards, short stories) ──────────────────────────
+// Keyed by user (not profile) so suggestions extracted from an upload can exist before the profile is saved. Every field except the title is
+// optional: what the source does not say stays NULL. `status` separates what the parser merely SUGGESTED from what the candidate CONFIRMED;
+// only CONFIRMED entries reach document generation. `sourceEvidence` keeps the original lines an extraction came from.
+enum CareerEntryKind {
+  PROJECT
+  VOLUNTEERING
+  LEADERSHIP
+  EXTRACURRICULAR
+  CERTIFICATION
+  LANGUAGE
+  AWARD
+  STORY
+  OTHER
+}
+
+enum CareerEntryStatus {
+  SUGGESTED
+  CONFIRMED
+  HIDDEN
+}
+
+enum CareerEntryOrigin {
+  EXTRACTED
+  USER_ADDED
+}
+
+model CareerEntry {
+  id             String            @id @default(cuid())
+  userId         String
+  user           User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  kind           CareerEntryKind
+  status         CareerEntryStatus @default(SUGGESTED)
+  origin         CareerEntryOrigin
+  title          String
+  organization   String? // issuer, organisation or employer-like body
+  role           String?
+  startDate      DateTime?
+  endDate        DateTime?
+  current        Boolean           @default(false)
+  issuedAt       DateTime? // single-date facts: certification, award
+  level          String? // language fluency, credential level
+  // How exactly the dates are known: YEAR (only the year is stated) or MONTH. A year-only date is never shown as a month.
+  datePrecision  String            @default("MONTH")
+  description    String?           @db.Text // contribution / what it was
+  result         String?           @db.Text // stated outcome; never inferred
+  situation      String?           @db.Text // STORY: context
+  action         String?           @db.Text // STORY: what the candidate did
+  url            String?
+  // Candidate asked for this entry to be considered even when it would normally be left out for an experienced candidate.
+  alwaysInclude  Boolean           @default(false)
+  sortOrder      Int               @default(0)
+  sourceEvidence Json? // { resumeId?, excerpt, extractedAt, parserVersion }
+  confirmedAt    DateTime?
+  editedAt       DateTime?
+  createdAt      DateTime          @default(now())
+  updatedAt      DateTime          @updatedAt
+
+  @@index([userId, kind, status])
+}
+
+enum SubscriptionPlan {
+  FREE
+  BASIC
+  STANDARD
+  Limitsiz
+  // New single candidate offer (docs/product-model-2026-10-03.md). Not purchasable until a price and provider product are configured.
+  PREMIUM
+  // 8 AZN/month: 30 document generations a month (docs/documents-and-allowances-2026-10-04.md). PREMIUM (15 AZN) is unlimited documents.
+  PLUS
+}
+
+// Metered usage of costly features (tailored CVs, cover letters). One row per user, feature key and period start; increments are
+// atomic and bounded by the entitlement limit (see billing/usage.service.ts). Counting never grants or removes access by itself.
+model UsageCounter {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  key         String
+  periodStart DateTime
+  used        Int      @default(0)
+  updatedAt   DateTime @updatedAt
+
+  @@unique([userId, key, periodStart])
+  @@index([userId, key])
+}
+
+model Subscription {
+  id                 String           @id @default(cuid())
+  userId             String           @unique
+  user               User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  dodoCustomerId     String?
+  dodoSubscriptionId String?
+  plan               SubscriptionPlan @default(FREE)
+  // The provider's status, verbatim ("active", "on_hold", "cancelled", ...).
+  // Entitlement is derived from it in billing/entitlement.ts.
+  status             String
+  currentPeriodEnd   DateTime?
+  cancelAtPeriodEnd  Boolean          @default(false)
+  providerSyncedAt   DateTime?
+
+  // Rolling monthly match-quota window — independent of Dodo's billing period,
+  // so it applies to FREE users too. Reset lazily (see MatchingService) once
+  // quotaPeriodStart is more than 30 days old.
+  matchesUsedThisPeriod Int      @default(0)
+  quotaPeriodStart      DateTime @default(now())
+
+  @@index([dodoSubscriptionId])
+}
+
+// One row per payment-provider webhook delivery (its webhook-id). A delivery
+// is applied once; redeliveries of a processed id are acknowledged unchanged.
+model BillingWebhookEvent {
+  id             String    @id
+  type           String
+  subscriptionId String?
+  receivedAt     DateTime  @default(now())
+  processedAt    DateTime?
+  outcome        String?
+
+  @@index([subscriptionId])
+}
+
+enum BusinessStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  // Set by an operator; every "APPROVED" check excludes it. Restorable.
+  SUSPENDED
+}
+
+enum VacancyStatus {
+  ACTIVE
+  PAUSED
+  DELETED
+  // Employer plans (docs/employer-plans-2026-10-11.md). ACTIVE stays the single "publicly open and accepting applications" state, so every
+  // existing check keeps its meaning; a vacancy in any state below is not public and not applicable.
+  DRAFT
+  PENDING_REVIEW
+  // Moderation approved, not yet published (publication needs an entitlement: trial, credit or Business).
+  APPROVED
+  REJECTED
+  EXPIRED
+}
+
+enum ApplicationStatus {
+  APPLIED
+  REVIEWING
+  INTERVIEW
+  HIRED
+  REJECTED
+}
+
+enum QuestionType {
+  SHORT_TEXT
+  LONG_TEXT
+  YES_NO
+  MULTIPLE_CHOICE
+  NUMBER
+  FILE_UPLOAD
+}
+
+model Business {
+  id                 String                      @id @default(cuid())
+  email              String                      @unique
+  hashedPassword     String
+  emailVerified      DateTime?
+  createdAt          DateTime                    @default(now())
+  updatedAt          DateTime                    @updatedAt
+  sessions           BusinessSession[]
+  company            Company?
+  verificationTokens BusinessVerificationToken[]
+}
+
+enum BusinessVerificationTokenPurpose {
+  EMAIL_VERIFY
+  PASSWORD_RESET
+}
+
+// Mirrors User's VerificationToken — kept as a separate model rather than a
+// shared polymorphic one since Business/BusinessSession already parallel
+// User/Session as their own independent auth system throughout this codebase.
+model BusinessVerificationToken {
+  id         String                           @id @default(cuid())
+  token      String                           @unique
+  businessId String
+  business   Business                         @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  purpose    BusinessVerificationTokenPurpose @default(EMAIL_VERIFY)
+  expires    DateTime
+  createdAt  DateTime                         @default(now())
+}
+
+model BusinessSession {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  businessId   String
+  business     Business @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  expires      DateTime
+}
+
+// Admin operators. Not self-registerable — created via the
+// `npm run script:create-admin` CLI script (see src/scripts/create-admin.ts),
+// replacing the old single-shared-ADMIN_TOKEN model with real per-operator
+// identity, sessions, and an audit trail.
+// SUPER_ADMIN: everything, incl. operators/roles and system actions.
+// ADMIN: day-to-day moderation and account operations.
+// SUPPORT: read-only. See admin/permissions.ts for the enforced matrix.
+enum AdminRole {
+  SUPER_ADMIN
+  ADMIN
+  SUPPORT
+}
+
+model AdminUser {
+  id                    String            @id @default(cuid())
+  email                 String            @unique
+  hashedPassword        String
+  name                  String?
+  createdAt             DateTime          @default(now())
+  // New operators get the least privilege; the migration keeps existing
+  // operators at ADMIN and designates only the known founder.
+  role                  AdminRole         @default(SUPPORT)
+  disabledAt            DateTime?
+  passwordChangedAt     DateTime?
+  lastLoginAt           DateTime?
+  // TOTP secret, AES-256-GCM encrypted with ADMIN_MFA_ENCRYPTION_KEY.
+  mfaSecretEnc          String?
+  mfaEnabledAt          DateTime?
+  // SHA-256 hashes of unused single-use recovery codes.
+  mfaRecoveryCodeHashes String[]          @default([])
+  // Last accepted TOTP time step: a code is never accepted twice.
+  mfaLastUsedStep       Int?
+  sessions              AdminSession[]
+  auditLogs             AdminAuditLog[]
+  invitationsSent       AdminInvitation[] @relation("InvitedBy")
+}
+
+// Single-use, expiring account setup (INVITE) or password recovery (RESET)
+// link. Only the token hash is stored.
+model AdminInvitation {
+  id             String     @id @default(cuid())
+  kind           String // INVITE | RESET
+  email          String
+  role           AdminRole
+  tokenHash      String     @unique
+  invitedById    String?
+  invitedBy      AdminUser? @relation("InvitedBy", fields: [invitedById], references: [id], onDelete: SetNull)
+  expiresAt      DateTime
+  usedAt         DateTime?
+  revokedAt      DateTime?
+  deliveryStatus String     @default("PENDING") // PENDING | SENT | MOCK | FAILED
+  createdAt      DateTime   @default(now())
+
+  @@index([email])
+}
+
+// Password verified, second factor pending. Short-lived and single-use.
+model AdminLoginChallenge {
+  id          String   @id @default(cuid())
+  tokenHash   String   @unique
+  adminUserId String
+  expiresAt   DateTime
+  attempts    Int      @default(0)
+  createdAt   DateTime @default(now())
+}
+
+model AdminSession {
+  id           String    @id @default(cuid())
+  sessionToken String    @unique
+  adminUserId  String
+  adminUser    AdminUser @relation(fields: [adminUserId], references: [id], onDelete: Cascade)
+  expires      DateTime
+  createdAt    DateTime  @default(now())
+  lastSeenAt   DateTime?
+  // Whether the second factor was verified when this session was created.
+  mfaVerified  Boolean   @default(false)
+  userAgent    String?
+
+  @@index([adminUserId])
+}
+
+// Records every mutating admin action (company approve/reject, etc.) with who
+// did it — the piece the shared-token model had no way to provide at all.
+model AdminAuditLog {
+  id          String     @id @default(cuid())
+  // Nullable + SetNull (not Cascade): the log entry must survive even if the
+  // admin account that performed the action is later deleted.
+  adminUserId String?
+  adminUser   AdminUser? @relation(fields: [adminUserId], references: [id], onDelete: SetNull)
+  action      String
+  targetType  String
+  targetId    String
+  metadata    Json?
+  createdAt   DateTime   @default(now())
+}
+
+model Company {
+  id                     String                 @id @default(cuid())
+  businessId             String                 @unique
+  business               Business               @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  name                   String
+  logo                   String?
+  description            String?
+  website                String?
+  industry               String?
+  location               String?
+  size                   String?
+  foundedYear            Int?
+  contactEmail           String?
+  contactPhone           String?
+  socialLinks            Json?
+  status                 BusinessStatus         @default(PENDING)
+  rejectionReason        String?
+  suspendedReason        String?
+  createdAt              DateTime               @default(now())
+  updatedAt              DateTime               @updatedAt
+  vacancies              Vacancy[]
+  volunteerOpportunities VolunteerOpportunity[]
+  employerTrial          EmployerTrial?
+  employerPurchases      EmployerPurchase[]
+  employerCredits        EmployerCredit[]
+  employerSubscription   EmployerSubscription?
+
+  @@index([status])
+}
+
+// One free seven-day trial per VERIFIED COMPANY. companyId is unique, and so are the normalised name and website domain: a second account for the same
+// company cannot obtain a second trial. Created only when a vacancy is actually published.
+model EmployerTrial {
+  id        String   @id @default(cuid())
+  companyId String   @unique
+  company   Company  @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  vacancyId String
+  nameKey   String   @unique
+  domainKey String?  @unique
+  startedAt DateTime
+  endsAt    DateTime
+  createdAt DateTime @default(now())
+}
+
+// One row per checkout the company started for a 20 AZN single listing. A purchase grants one EmployerCredit only when the provider-confirmed payment
+// matches it; a return URL is never proof.
+model EmployerPurchase {
+  id                String          @id @default(cuid())
+  companyId         String
+  company           Company         @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  kind              String // SINGLE_30D
+  status            String // PENDING | PAID | FAILED | REFUND_PENDING | REFUNDED
+  amountMinor       Int
+  currency          String
+  idempotencyKey    String          @unique
+  checkoutSessionId String?
+  providerPaymentId String?         @unique
+  purchasedByBusiness String?
+  targetVacancyId   String? // set when the purchase is an explicit extension of that listing
+  createdAt         DateTime        @default(now())
+  paidAt            DateTime?
+  failedAt          DateTime?
+  // Operational refund handling (docs/employer-refund-policy-2026-10-11.md): status goes PAID → REFUND_PENDING → REFUNDED (or back to PAID when the provider refuses).
+  refundId          String?         @unique
+  refundReason      String?
+  refundedBy        String? // admin user id
+  refundRequestedAt DateTime?
+  refundedAt        DateTime?
+  credit            EmployerCredit?
+
+  @@index([companyId, status])
+}
+
+// A company-owned entitlement for one 30-day listing period. Spent atomically (AVAILABLE -> CONSUMED) when a vacancy is published or extended.
+model EmployerCredit {
+  id                String           @id @default(cuid())
+  companyId         String
+  company           Company          @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  purchaseId        String           @unique
+  purchase          EmployerPurchase @relation(fields: [purchaseId], references: [id], onDelete: Cascade)
+  status            String           @default("AVAILABLE") // AVAILABLE | CONSUMED | VOIDED (refunded before use)
+  consumedVacancyId String?
+  consumedAt        DateTime?
+  createdAt         DateTime         @default(now())
+
+  @@index([companyId, status])
+}
+
+// The company's Business subscription (100 AZN / month). Separate from the candidate Subscription: a candidate plan never unlocks employer
+// publication and this never unlocks candidate documents.
+model EmployerSubscription {
+  id                 String   @id @default(cuid())
+  companyId          String   @unique
+  company            Company  @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  dodoCustomerId     String?
+  dodoSubscriptionId String?  @unique
+  status             String
+  currentPeriodEnd   DateTime?
+  cancelAtPeriodEnd  Boolean  @default(false)
+  providerSyncedAt   DateTime?
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+}
+
+enum VolunteerOpportunityStatus {
+  ACTIVE
+  CLOSED
+}
+
+// Free, unmetered youth volunteering listings — deliberately separate from
+// Vacancy/Application: no CV/skill matching, no application-quota gating, no
+// email (see VolunteeringService). Interested candidates opt in via
+// Profile.volunteerOpportunitiesOptIn and get an in-app Notification only.
+model VolunteerOpportunity {
+  id          String                     @id @default(cuid())
+  companyId   String
+  company     Company                    @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  title       String
+  description String
+  location    String?
+  status      VolunteerOpportunityStatus @default(ACTIVE)
+  createdAt   DateTime                   @default(now())
+  updatedAt   DateTime                   @updatedAt
+
+  @@index([status])
+}
+
+model Vacancy {
+  id               String                @id @default(cuid())
+  companyId        String
+  company          Company               @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  title            String
+  description      String?
+  responsibilities String?
+  requirements     String?
+  skills           String[]
+  experienceLevel  String?
+  salaryMin        Int?
+  salaryMax        Int?
+  location         String?
+  workArrangement  String?
+  employmentType   String?
+  deadline         DateTime?
+  savedBy          SavedJob[]
+  status           VacancyStatus         @default(ACTIVE)
+  views            Int                   @default(0)
+  createdAt        DateTime              @default(now())
+  updatedAt        DateTime              @updatedAt
+  // Publication under an employer plan. Null on listings that predate employer plans (they keep their existing rules until they close).
+  submittedAt      DateTime?
+  moderatedAt      DateTime?
+  moderationNote   String?
+  publishedAt      DateTime?
+  expiresAt        DateTime?
+  publicationPlan  String? // TRIAL | SINGLE | BUSINESS | LEGACY
+  expiryReason     String? // DEADLINE | DURATION | TRIAL_ENDED | SUBSCRIPTION_LAPSED
+  reconfirmedAt    DateTime?
+  questions        ApplicationQuestion[]
+  applications     Application[]
+  matches          Match[]
+  matchCandidates  MatchCandidate[]
+  // Where the employer wants to be told about new applications. Kept off the vacancy row on purpose: the vacancy is returned to candidates in many
+  // places, this address must never be.
+  applicationDestination VacancyApplicationDestination?
+
+  @@index([companyId])
+  @@index([status])
+  @@index([status, expiresAt])
+}
+
+// The employer's chosen e-mail destination for "new application" notices (a link into the AISE inbox; no CV is attached). One per vacancy.
+model VacancyApplicationDestination {
+  vacancyId String   @id
+  vacancy   Vacancy  @relation(fields: [vacancyId], references: [id], onDelete: Cascade)
+  email     String
+  updatedAt DateTime @updatedAt
+}
+
+model ApplicationQuestion {
+  id        String                      @id @default(cuid())
+  vacancyId String
+  vacancy   Vacancy                     @relation(fields: [vacancyId], references: [id], onDelete: Cascade)
+  label     String
+  type      QuestionType
+  required  Boolean                     @default(false)
+  order     Int                         @default(0)
+  options   ApplicationQuestionOption[]
+  answers   ApplicationAnswer[]
+}
+
+model ApplicationQuestionOption {
+  id         String              @id @default(cuid())
+  questionId String
+  question   ApplicationQuestion @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  label      String
+  order      Int                 @default(0)
+}
+
+model Application {
+  id        String              @id @default(cuid())
+  vacancyId String
+  vacancy   Vacancy             @relation(fields: [vacancyId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  status    ApplicationStatus   @default(APPLIED)
+  createdAt DateTime            @default(now())
+  updatedAt DateTime            @updatedAt
+  answers   ApplicationAnswer[]
+  files     ApplicationFile[]
+
+  @@unique([vacancyId, userId])
+  @@index([vacancyId])
+  @@index([userId])
+}
+
+model ApplicationAnswer {
+  id            String              @id @default(cuid())
+  applicationId String
+  application   Application         @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  questionId    String
+  question      ApplicationQuestion @relation(fields: [questionId], references: [id], onDelete: Restrict)
+  value         String?
+  fileUrl       String?
+
+  @@index([applicationId])
+}
+
+model ApplicationFile {
+  id            String      @id @default(cuid())
+  applicationId String
+  application   Application @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  fieldName     String
+  fileUrl       String
+  originalName  String
+  mimeType      String
+  createdAt     DateTime    @default(now())
+}
+
+// External job-application automation (glorri.az). Separate from the
+// Business/Vacancy/Application models above, which are for employers who post
+// directly on this platform - this tracks automated applications to externally
+// scraped Jobs, driven by the apply-worker Playwright service.
+// DRAFT: destination + recipient notice shown, nothing transmitted, no consent yet.
+// FILLING: candidate authorised preparation; the worker is entering data on the
+//   destination's form (the destination may receive it before the final send).
+// SUBMITTING: a final-send (or OTP) attempt is claimed and persisted; the
+//   worker call is in flight. Never re-sent automatically.
+// SUBMITTED: validated destination receipt evidence only (receiptReference set).
+//   Rows written before receipt evidence existed have no receiptReference and
+//   must be read as unconfirmed.
+// DELIVERY_UNCONFIRMED: the send may have happened but no receipt is known
+//   (timeout, crash, no recognisable confirmation). Needs reconciliation.
+// FAILED: known outcome without receipt (not sent, destination rejected, notice
+//   changed, OTP attempts exhausted).
+enum ExternalApplicationStatus {
+  DRAFT
+  FILLING
+  NEEDS_INPUT
+  READY_FOR_REVIEW
+  AWAITING_OTP
+  SUBMITTED
+  SUBMITTED_DRY_RUN
+  FAILED
+  EXPIRED
+  CANCELLED
+  SUBMITTING
+  DELIVERY_UNCONFIRMED
+}
+
+model ExternalApplication {
+  id                  String                    @id @default(cuid())
+  matchId             String
+  match               Match                     @relation(fields: [matchId], references: [id], onDelete: Cascade)
+  userId              String
+  user                User                      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  status              ExternalApplicationStatus @default(DRAFT)
+  applyUrl            String
+  previewData         Json?
+  missingFields       Json?
+  reviewScreenshotUrl String?
+  sessionExpiresAt    DateTime?
+  otpAttempts         Int                       @default(0)
+  errorMessage        String?
+  submittedAt         DateTime?
+  createdAt           DateTime                  @default(now())
+  updatedAt           DateTime                  @updatedAt
+
+  // Destination registry key/host this row was prepared for.
+  destinationKey        String?
+  destinationHost       String?
+  // Bumped whenever reviewable content changes; a final confirm must name
+  // the version the candidate actually reviewed.
+  reviewVersion         Int     @default(0)
+  // Stable owned copies transmitted instead of the mutable base files.
+  cvSnapshotUrl         String?
+  cvSnapshotSha256      String?
+  idDocumentSnapshotUrl String?
+  // Short machine-readable reason for the current state (no personal data).
+  stateReason           String?
+  // Confirmed receipt: reference validated against the destination's receipt
+  // contract; evidence holds method/url path/text hash only.
+  receiptReference      String?
+  receiptEvidence       Json?
+  dryRun                Boolean @default(false)
+  activeAttemptId       String?
+
+  answerOverrides ExternalApplicationAnswer[]
+  consents        ExternalApplicationConsent[]
+  attempts        ExternalApplicationAttempt[]
+
+  @@index([matchId])
+  @@index([userId])
+  @@index([status])
+}
+
+// Scoped candidate authority for one external application: this candidate,
+// this vacancy, this destination, this recipient notice, these fields and
+// documents, at this time. Not reusable for another vacancy or destination.
+model ExternalApplicationConsent {
+  id                    String              @id @default(cuid())
+  externalApplicationId String
+  externalApplication   ExternalApplication @relation(fields: [externalApplicationId], references: [id], onDelete: Cascade)
+  userId                String
+  jobId                 String
+  destinationKey        String
+  destinationHost       String
+  applyUrl              String
+  noticeVersion         String
+  noticeHash            String
+  noticeUrl             String
+  approvedFields        Json // field keys the candidate approved
+  disclosure            Json // the exact values authorised for transmission
+  disclosureHash        String
+  approvedDocuments     Json // [{ kind, sha256, reason }]
+  grantedAt             DateTime            @default(now())
+  revokedAt             DateTime?
+  revokedReason         String?
+
+  @@index([externalApplicationId])
+  @@index([userId])
+}
+
+// One final-send or OTP attempt, persisted before the worker is contacted.
+// The id is the client-generated attempt id, so a repeated id is a replay,
+// never a second send.
+model ExternalApplicationAttempt {
+  id                    String              @id
+  externalApplicationId String
+  externalApplication   ExternalApplication @relation(fields: [externalApplicationId], references: [id], onDelete: Cascade)
+  userId                String
+  kind                  String // CONFIRM | OTP
+  dryRun                Boolean             @default(false)
+  status                String // IN_FLIGHT | RECEIPT_CONFIRMED | AWAITING_OTP | OTP_INVALID | UNCONFIRMED | REJECTED | NOT_SENT | DRY_RUN_COMPLETE
+  outcomeCode           String?
+  startedAt             DateTime            @default(now())
+  finishedAt            DateTime?
+
+  @@index([externalApplicationId])
+  @@index([userId, startedAt])
+}
+
+model ExternalApplicationAnswer {
+  id                    String              @id @default(cuid())
+  externalApplicationId String
+  externalApplication   ExternalApplication @relation(fields: [externalApplicationId], references: [id], onDelete: Cascade)
+  fieldKey              String
+  label                 String
+  value                 String
+  source                String // "AUTO" | "HUMAN"
+  createdAt             DateTime            @default(now())
+
+  @@index([externalApplicationId])
+}
+
+
+// ── Candidate-approved e-mail applications ──────────────────────────────────
+// Two separate state machines: delivery (what the e-mail provider evidences)
+// and recruitment (what the candidate or an employer reply evidences).
+enum EmailDeliveryState {
+  DRAFT             // being prepared
+  AWAITING_APPROVAL // preview ready; nothing will be sent until the candidate approves
+  QUEUED            // approved; waiting for a worker
+  SENDING           // claimed by a worker
+  PROVIDER_ACCEPTED // the provider took the message. This is NOT delivery evidence.
+  DELIVERED         // provider webhook evidence that the recipient's server accepted it
+  BOUNCED
+  COMPLAINED
+  FAILED            // definitively not sent
+  UNCERTAIN         // outcome unknown; never re-sent automatically
+  CANCELLED
+}
+
+enum RecruitmentState {
+  NOT_SENT
+  SENT
+  ACKNOWLEDGED
+  INTERVIEW_INVITED
+  INTERVIEW_SCHEDULED
+  OFFER
+  REJECTED
+  WITHDRAWN
+  HIRED
+}
+
+enum EmailApplicationMode {
+  REVIEW_AND_SEND
+  AUTOMATIC
+}
+
+enum EmailAttemptOutcome {
+  PENDING
+  ACCEPTED
+  REJECTED
+  RETRYABLE
+  AMBIGUOUS
+}
+
+enum StatusEvidence {
+  PROVIDER_ACCEPTED
+  PROVIDER_EVENT
+  CANDIDATE_REPORTED
+  REPLY_CONFIRMED_BY_CANDIDATE
+  SYSTEM
+}
+
+// One application sent by e-mail to the address the posting itself gives. The
+// approved content (recipient, subject, letter, CV bytes) is fixed by
+// payloadSha256 at approval and never edited afterwards.
+model EmailApplication {
+  id        String  @id @default(cuid())
+  userId    String
+  user      User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  // The posting may later be deleted; its facts are kept here.
+  jobId     String?
+  job       Job?    @relation(fields: [jobId], references: [id], onDelete: SetNull)
+  jobTitle  String
+  jobCompany String
+  jobUrl    String
+
+  mode          EmailApplicationMode @default(REVIEW_AND_SEND)
+  // Set when AISE prepared this application in the background (review queue); the candidate still approves the exact payload.
+  preparedByAgentAt DateTime?
+  deliveryState EmailDeliveryState   @default(AWAITING_APPROVAL)
+  recruitmentState RecruitmentState  @default(NOT_SENT)
+  // Why a queued application is waiting (pause, daily limit), shown to the candidate.
+  holdReason    String?
+
+  // What the posting said, kept verbatim as evidence.
+  recipient         String
+  recipientEvidence Json
+  instructions      String?
+  reference         String?
+  subject           String
+  subjectSource     String // published | reference | generated | candidate
+  body              String
+  bodySha256        String
+  copyToSelf        Boolean @default(true)
+  replyTo           String
+  senderEmail String?
+  senderName        String
+
+  // CV: the live resume is only a source. The snapshot is taken at approval.
+  cvResumeId     String?
+  cvKind         String // base | tailored
+  cvFileName     String
+  cvMimeType     String
+  cvPreviewSha256 String // hash of the file the candidate previewed
+  cvSnapshotUrl  String?
+  cvSha256       String?
+  cvBytes        Int?
+  // Optional second attachment: a motivation letter the candidate approved for this very vacancy (Resume.docKind LETTER). Same pattern as the CV:
+  // the live document is only a source, the preview hash is what the candidate saw, and a private copy is taken at approval.
+  letterResumeId      String?
+  letterFileName      String?
+  letterPreviewSha256 String?
+  letterSnapshotUrl   String?
+  letterSha256        String?
+  letterBytes         Int?
+
+  payloadSha256     String? // recipient | subject | body | cv hash | replyTo, fixed at approval
+  generation        Int       @default(0) // increments with each approval; part of the provider idempotency key
+  consentVersion    String?
+  approvedAt        DateTime?
+  queuedAt          DateTime?
+  nextAttemptAt     DateTime?
+  lockedAt          DateTime?
+  attemptCount      Int       @default(0)
+  // Candidate-initiated re-sends of an UNCERTAIN outcome (bounded: see MAX_UNCERTAIN_RETRIES).
+  uncertainRetries  Int       @default(0)
+  cancelRequestedAt DateTime?
+  cancelledAt       DateTime?
+
+  // Delivery evidence. Each is a monotonic fact; deliveryState is derived from them.
+  providerMessageId  String?   @unique
+  providerAcceptedAt DateTime?
+  deliveredAt        DateTime?
+  bouncedAt          DateTime?
+  complainedAt       DateTime?
+  providerFailedAt   DateTime?
+  failedAt           DateTime?
+  failureCode        String?
+  uncertainAt        DateTime?
+
+  // Recruitment tracking, candidate controlled.
+  interviewAt       DateTime?
+  interviewTimezone String?
+  interviewNotes    String?
+  reminderOptIn     Boolean   @default(false)
+  reminderSentAt    DateTime?
+  // Unguessable token used to correlate an optional inbound reply.
+  replyToken        String    @unique @default(cuid())
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  attempts       EmailSendAttempt[]
+  deliveryEvents EmailDeliveryEvent[]
+  statusEvents   ApplicationStatusEvent[]
+  inbound        EmailInboundMessage[]
+
+  @@unique([userId, jobId])
+  @@index([deliveryState, nextAttemptAt])
+  @@index([userId, createdAt])
+  @@index([recipient])
+}
+
+// One provider call. The idempotency key is the same for every retry of one
+// approval, so the provider can recognise a repeat of a request it accepted.
+model EmailSendAttempt {
+  id                 String              @id @default(cuid())
+  emailApplicationId String
+  emailApplication   EmailApplication    @relation(fields: [emailApplicationId], references: [id], onDelete: Cascade)
+  generation         Int
+  number             Int
+  idempotencyKey     String
+  startedAt          DateTime            @default(now())
+  finishedAt         DateTime?
+  outcome            EmailAttemptOutcome @default(PENDING)
+  httpStatus         Int?
+  errorCode          String? // a short code, never a provider response body
+  providerMessageId  String?
+
+  @@unique([emailApplicationId, generation, number])
+  @@index([outcome, startedAt])
+}
+
+// Verified webhook events, de-duplicated by the provider's event id.
+model EmailDeliveryEvent {
+  id                 String            @id @default(cuid())
+  svixId             String            @unique
+  emailApplicationId String?
+  emailApplication   EmailApplication? @relation(fields: [emailApplicationId], references: [id], onDelete: SetNull)
+  providerMessageId  String?
+  type               String
+  occurredAt         DateTime
+  receivedAt         DateTime          @default(now())
+  applied            Boolean           @default(false)
+  detail             String? // short code such as the bounce type; never the raw payload
+
+  @@index([emailApplicationId, occurredAt])
+  @@index([providerMessageId])
+}
+
+// Addresses AISE must not send application e-mail to again.
+model EmailSuppression {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  reason    String // BOUNCE | COMPLAINT | MANUAL
+  sourceEventId String?
+  createdAt DateTime @default(now())
+}
+
+// Append-only history of recruitment status changes, with where each came from.
+model ApplicationStatusEvent {
+  id                 String           @id @default(cuid())
+  emailApplicationId String
+  emailApplication   EmailApplication @relation(fields: [emailApplicationId], references: [id], onDelete: Cascade)
+  fromState          RecruitmentState?
+  toState            RecruitmentState
+  evidence           StatusEvidence
+  note               String?
+  createdAt          DateTime         @default(now())
+
+  @@index([emailApplicationId, createdAt])
+}
+
+// An optional reply, correlated by token. Metadata only; attachments are never fetched or stored.
+model EmailInboundMessage {
+  id                 String            @id @default(cuid())
+  providerEmailId    String            @unique
+  emailApplicationId String?
+  emailApplication   EmailApplication? @relation(fields: [emailApplicationId], references: [id], onDelete: SetNull)
+  fromAddress        String
+  subject            String
+  receivedAt         DateTime
+  attachmentCount    Int               @default(0)
+  suggestedState     RecruitmentState?
+  suggestionReason   String?
+  status             String            @default("PENDING_REVIEW") // PENDING_REVIEW | CONFIRMED | DISMISSED
+  createdAt          DateTime          @default(now())
+
+  @@index([emailApplicationId, receivedAt])
+}
+
+// Per-candidate controls, including Mode B (automatic applications), which is
+// off unless the candidate opts in AND the deployment enables it.
+model EmailApplySettings {
+  userId            String    @id
+  user              User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  sendingPausedAt   DateTime?
+  consentRevokedAt  DateTime?
+  automationEnabled Boolean   @default(false)
+  automationConsentedAt DateTime?
+  consentVersion    String?
+  allowedRoles      String[]
+  allowedLocations  String[]
+  allowedEmployers  String[]
+  excludedEmployers String[]
+  excludedKeywords  String[]
+  dailyLimit        Int       @default(3)
+  cvResumeId        String?
+  letterTemplate    String?
+  // Review queue (default agent mode): AISE finds and prepares applications in the background; nothing is sent until the candidate approves
+  // each one. Only postings first seen after `reviewQueueSince` are considered.
+  reviewQueueEnabled Boolean  @default(false)
+  reviewQueueSince  DateTime?
+  updatedAt         DateTime  @updatedAt
+}
+
+// Why Mode B applied, or stopped, for one posting. Each posting is judged once per candidate.
+model EmailAutomationDecision {
+  id        String   @id @default(cuid())
+  userId    String
+  jobId     String
+  outcome   String // APPLIED | SKIPPED | PREPARED (review queue: awaits the candidate's approval)
+  reason    String // a short code, e.g. LOCATION_UNKNOWN
+  createdAt DateTime @default(now())
+
+  @@unique([userId, jobId])
+  @@index([userId, createdAt])
+}
+
+// ── Retention: owner-scoped saved jobs, saved searches and company follows ──────────────────────────────────────────────
+// A saved job points at exactly one posting (imported Job or native Vacancy); a duplicate posting is saved as its canonical original.
+model SavedJob {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  jobId     String?
+  job       Job?     @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  vacancyId String?
+  vacancy   Vacancy? @relation(fields: [vacancyId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@unique([userId, jobId])
+  @@unique([userId, vacancyId])
+  @@index([userId, createdAt])
+}
+
+// Normalised, whitelisted catalogue criteria only (never a URL or SQL). The fingerprint makes an identical search a no-op instead of a duplicate.
+model SavedSearch {
+  id            String   @id @default(cuid())
+  userId        String
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name          String
+  criteria      Json
+  fingerprint   String
+  alertsEnabled Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@unique([userId, fingerprint])
+  @@index([userId, createdAt])
+}
+
+// One follow per canonical company identity (normalised name, the same key deduplication uses), so aliases such as "Kapital Bank ASC" and
+// "kapital bank" are one follow. companyId is set when the followed company also has a native employer account.
+model CompanyFollow {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  companyKey  String
+  displayName String
+  companyId   String?
+  createdAt   DateTime @default(now())
+
+  @@unique([userId, companyKey])
+  @@index([userId, createdAt])
+}
+
+// ── Preference-driven alerts ─────────────────────────────────────────────────────────────────────────────────────────────
+// Defaults reproduce today's behaviour exactly (match e-mails on, in-app on); new-job alerts only ever exist for jobs that hit the user's own
+// saved searches or followed companies. Quiet hours are minutes after midnight in Baku time (UTC+4, no DST); null/null = none.
+enum NotifyFrequency {
+  OFF
+  DAILY
+  INSTANT
+}
+
+model NotificationPreference {
+  id                  String          @id @default(cuid())
+  userId              String          @unique
+  user                User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  matchInApp          Boolean         @default(true)
+  matchEmail          Boolean         @default(true)
+  planOffersEmail     Boolean         @default(false)
+  newJobInApp         Boolean         @default(true)
+  newJobEmail         NotifyFrequency @default(DAILY)
+  newJobTelegram      NotifyFrequency @default(OFF)
+  matchTelegram       Boolean         @default(false)
+  instantDailyCap     Int             @default(5)
+  quietStartMinute    Int?
+  quietEndMinute      Int?
+  pausedUntil         DateTime?
+  emailUnsubscribedAt DateTime?
+  updatedAt           DateTime        @updatedAt
+}
+
+enum AlertChannel {
+  IN_APP
+  EMAIL
+  TELEGRAM
+}
+
+enum AlertDeliveryStatus {
+  PENDING
+  SENT
+  SKIPPED
+  FAILED
+}
+
+// One event per (user, posting): the unique dedupeKey is what suppresses repeats across retries, overlapping searches/follows and duplicate
+// postings (the key is the canonical original posting).
+model AlertEvent {
+  id        String          @id @default(cuid())
+  userId    String
+  user      User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  kind      String // "NEW_JOB"
+  dedupeKey String
+  jobId     String?
+  vacancyId String?
+  reasons   Json // which saved searches / followed company caused it (ids and keys, no content)
+  createdAt DateTime        @default(now())
+  deliveries AlertDelivery[]
+
+  @@unique([userId, dedupeKey])
+  @@index([userId, createdAt])
+}
+
+model AlertDelivery {
+  id           String              @id @default(cuid())
+  eventId      String
+  event        AlertEvent          @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  channel      AlertChannel
+  frequency    NotifyFrequency
+  status       AlertDeliveryStatus @default(PENDING)
+  attempts     Int                 @default(0)
+  lastError    String?
+  skipReason   String?
+  sentAt       DateTime?
+  createdAt    DateTime            @default(now())
+
+  @@unique([eventId, channel])
+  @@index([channel, status])
+}
+
+// ── Telegram (adapter disabled until credentials and live verification exist) ─────────────────────────────────────────────
+enum TelegramLinkStatus {
+  PENDING
+  ACTIVE
+  PAUSED
+  DISCONNECTED
+}
+
+// One link per account and one account per chat. A link token is random, stored only as a hash, expires and is single use. The chat must be
+// the user's private chat (telegram user id == chat id).
+model TelegramLink {
+  id               String             @id @default(cuid())
+  userId           String             @unique
+  user             User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  status           TelegramLinkStatus @default(PENDING)
+  tokenHash        String?            @unique
+  tokenExpiresAt   DateTime?
+  chatId           String?            @unique
+  telegramUserId   String?
+  linkedAt         DateTime?
+  pausedAt         DateTime?
+  disconnectedAt   DateTime?
+  createdAt        DateTime           @default(now())
+  updatedAt        DateTime           @updatedAt
+}
+
+// Webhook idempotency: each Telegram update id is processed once.
+model TelegramUpdate {
+  updateId    BigInt   @id
+  processedAt DateTime @default(now())
+}
+
+// ── Application outcomes with their evidence ──────────────────────────────────────────────────────────────────────────────
+// E-mail applications keep their own recruitment-state history (ApplicationStatusEvent). This table records outcomes for the other channels:
+// EMPLOYER_CONFIRMED comes only from the employer's own status change in AISE; CANDIDATE_REPORTED is what the candidate entered. They are never
+// merged, so any future claim about interview rates can say which kind of evidence supports it.
+enum OutcomeKind {
+  INTERVIEW
+  OFFER
+  HIRED
+  REJECTED
+  WITHDRAWN
+}
+
+enum OutcomeEvidence {
+  EMPLOYER_CONFIRMED
+  CANDIDATE_REPORTED
+}
+
+model ApplicationOutcomeEvent {
+  id            String          @id @default(cuid())
+  userId        String
+  user          User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  channel       String // "native" | "external"
+  applicationId String
+  outcome       OutcomeKind
+  evidence      OutcomeEvidence
+  occurredAt    DateTime
+  note          String?
+  createdAt     DateTime        @default(now())
+
+  @@unique([channel, applicationId, outcome, evidence])
+  @@index([userId, createdAt])
+}
+
+// ── Browser application agent ────────────────────────────────────────────────────────────────────────────────────
+// The agent runs in the candidate's OWN browser (an extension the candidate installs and pairs). AISE keeps the consent, the plan, the evidence and the
+// state machine; the extension keeps the portal session. Nothing here stores portal credentials, cookies or browser profiles.
+enum AgentMode {
+  ASSISTED // prepares the form; the candidate approves every submission
+  AUTONOMOUS // submits inside an explicit, revocable campaign the candidate authorised
+}
+
+enum AgentCampaignStatus {
+  ACTIVE
+  PAUSED
+  REVOKED // consent withdrawn: nothing queued or running may be submitted
+  EXPIRED
+  STOPPED // emergency stop
+}
+
+enum AgentApplicationState {
+  QUEUED
+  PREPARING
+  AWAITING_INPUT
+  READY
+  SUBMITTING
+  SUBMITTED
+  FAILED
+  CANCELLED
+  UNCERTAIN // a submit was attempted and its outcome is unknown; never retried before the candidate reconciles
+}
+
+// A campaign is the candidate's own authority. It is immutable once consented (a change of scope is a NEW campaign), apart from pause/resume/revoke/stop.
+model AgentCampaign {
+  id                String              @id @default(cuid())
+  userId            String
+  user              User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name              String
+  mode              AgentMode
+  status            AgentCampaignStatus @default(ACTIVE)
+  portals           String[]
+  employerAllow     String[] // portal-specific employer slugs the campaign may apply to (never empty)
+  employerDeny      String[]
+  targetRoles       String[] // case-insensitive phrases; a vacancy title must contain one of them
+  locations         String[] // case-insensitive phrases; empty = any location
+  criteria          Json // { minScore, workArrangement?, experienceLevel?, mustInclude?, mustExclude? }
+  resumeId          String // the approved base CV that may be sent
+  resumeSha256      String // its bytes at consent time: a changed file is never sent under this consent
+  coverNote         String?             @db.Text // the candidate-approved cover note (one version, hashed in the consent)
+  useApprovedLetters Boolean            @default(false) // send the letter the candidate approved for THIS vacancy where one exists (named in the consent)
+  answers           Json // permitted answers: contact, links, work authorisation, salary, notice period
+  alwaysAsk         String[] // answer categories the candidate wants to be asked about every time
+  dailyLimit        Int
+  expiresAt         DateTime
+  consentVersion    Int
+  consentHash       String // sha256 of the exact scope shown and accepted
+  consentedAt       DateTime
+  pausedAt          DateTime?
+  revokedAt         DateTime?
+  stoppedAt         DateTime?
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime            @updatedAt
+
+  applications AgentApplication[]
+
+  @@index([userId, status])
+}
+
+model AgentApplication {
+  id               String                @id @default(cuid())
+  userId           String
+  user             User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  campaignId       String
+  campaign         AgentCampaign         @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  jobId            String
+  job              Job                   @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  portal           String
+  applyUrl         String
+  mode             AgentMode
+  state            AgentApplicationState @default(QUEUED)
+  stateReason      String? // short machine-readable reason, no personal data
+  matchScore       Float?
+  matchedKeywords  Json?
+  // What will be filled in, computed from the confirmed profile and the campaign's permitted answers. planHash fixes it for approval.
+  plan             Json?
+  planHash         String?
+  questions        Json? // [{ key, label, kind, required, options?, answer? }] awaiting the candidate
+  declarationHash  String? // hash of the legal/AI-use text the form showed when the plan was made
+  approvedPlanHash String? // assisted mode: the plan the candidate approved
+  approvedAt       DateTime?
+  attempt          Int                   @default(0)
+  leaseOwner       String? // device id holding the work
+  leaseUntil       DateTime?
+  permitId         String? // single-use submit permit issued immediately before the click
+  permitIssuedAt   DateTime?
+  // Portal-confirmed evidence is kept apart from what the candidate reports.
+  confirmation     String? // PORTAL | CANDIDATE
+  evidence         Json? // { confirmationUrl, portalReference?, textSha256?, capturedAt }
+  submittedAt      DateTime?
+  uncertainAt      DateTime?
+  cancelledAt      DateTime?
+  idempotencyKey   String                @unique
+  createdAt        DateTime              @default(now())
+  updatedAt        DateTime              @updatedAt
+
+  events AgentApplicationEvent[]
+
+  @@unique([userId, jobId])
+  @@index([campaignId, state])
+  @@index([state, leaseUntil])
+}
+
+// Append-only history: who did what, when. Never edited.
+model AgentApplicationEvent {
+  id            String           @id @default(cuid())
+  applicationId String
+  application   AgentApplication @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  userId        String
+  actor         String // system | candidate | extension | portal
+  kind          String
+  detail        Json?
+  createdAt     DateTime         @default(now())
+
+  @@index([applicationId, createdAt])
+}
+
+// A browser the candidate paired. Only a hash of its token is stored; revoking it stops it at once.
+model AgentDevice {
+  id         String    @id @default(cuid())
+  userId     String
+  user       User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name       String
+  tokenHash  String    @unique
+  createdAt  DateTime  @default(now())
+  lastSeenAt DateTime?
+  revokedAt  DateTime?
+  /// Version the extension reported on its last call (null: older than 0.3.3, which did not report one).
+  extensionVersion String?
+
+  @@index([userId])
+}
+
+model AgentPairingCode {
+  id        String    @id @default(cuid())
+  userId    String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  codeHash  String    @unique
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+}
+
+// What the candidate answered to an employer's own question, kept so the same question is not asked again. Never holds sensitive disclosures or declarations.
+model AgentKnownAnswer {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  portal      String
+  employer    String
+  questionKey String
+  value       Json
+  createdAt   DateTime @default(now())
+
+  @@unique([userId, portal, employer, questionKey])
+}
+
+// User edits overlay system application evidence; they never rewrite delivery or employer status.
+model ApplicationTrackerRecord {
+  id        String @id @default(cuid())
+  userId    String
+  user      User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  sourceKey String
+  fields    Json @default("{}")
+  hidden    Boolean @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@unique([userId, sourceKey])
+}
+
+model ApplicationTrackerSettings {
+  userId String @id
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  columns Json @default("[]")
+  updatedAt DateTime @updatedAt
+}
+
+// One hosted-model HTTP attempt during document generation. No prompt, output, CV or vacancy text is ever stored here; token counts are null when
+// the provider did not report them (unknown, not zero). resumeId has no foreign key so the record outlives a deleted draft.
+model AiUsageEvent {
+  id           String   @id @default(cuid())
+  createdAt    DateTime @default(now())
+  resumeId     String?
+  docKind      String?
+  provider     String
+  model        String
+  stage        String
+  outcome      String
+  httpStatus   Int?
+  latencyMs    Int
+  inputTokens  Int?
+  outputTokens Int?
+
+  @@index([createdAt])
+  @@index([resumeId])
+}
+
+// Timing of one document generation run: time waiting in the queue, model work and PDF rendering. Ids, codes and durations only.
+model DocumentRun {
+  id           String   @id @default(cuid())
+  createdAt    DateTime @default(now())
+  resumeId     String
+  docKind      String
+  result       String
+  errorCode    String?
+  queueMs      Int?
+  generationMs Int
+  renderMs     Int?
+  calls        Int
+
+  @@index([createdAt])
+}
+
+// A pilot enquiry from an academy, training provider or university (public form). Contact details of the person who wrote; no student data.
+model InstitutionEnquiry {
+  id           String   @id @default(cuid())
+  createdAt    DateTime @default(now())
+  organization String
+  contactName  String
+  role         String?
+  email        String
+  phone        String?
+  cohortSize   Int?
+  timing       String?
+  message      String?  @db.Text
+  status       String   @default("NEW")
+
+  @@index([createdAt])
+}
+
+// Verified Azerbaijani translations of the candidate's own CV text, reused by the next document instead of being translated again. Owner-scoped and
+// deleted with the account. `key` is a hash of the source text, its kind, the target language, the configured model and the translation prompt version,
+// so a changed source, model or prompt is a different key (stale entries are simply never read again). The source text itself is not stored.
+model TranslationMemory {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  key       String
+  text      String   @db.Text
+  createdAt DateTime @default(now())
+  usedAt    DateTime @default(now())
+
+  @@unique([userId, key])
+}
+
+
+// ── Academy domain (Institutional Career Service & Cohort Analytics) ─────────
+enum AcademyRole {
+  OWNER
+  ADMIN
+  COACH
+}
+
+enum AcademyStatus {
+  ACTIVE
+  SUSPENDED
+}
+
+enum CohortStatus {
+  UPCOMING
+  ACTIVE
+  COMPLETED
+  ARCHIVED
+}
+
+enum EnrollmentStatus {
+  INVITED
+  ACTIVE
+  WITHDRAWN
+  GRADUATED
+}
+
+enum ConsentScope {
+  AGGREGATE_ONLY
+  IDENTIFIABLE_ROSTER
+  SHARED_DOCUMENTS
+}
+
+model Academy {
+  id           String        @id @default(cuid())
+  name         String
+  slug         String        @unique
+  contactEmail String
+  website      String?
+  status       AcademyStatus @default(ACTIVE)
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+
+  members      AcademyMember[]
+  invitations  AcademyStaffInvitation[]
+  cohorts      AcademyCohort[]
+  enrollments  AcademyEnrollment[]
+  consents     AcademyConsent[]
+  sponsorship  AcademySponsorship?
+  seatGrants   AcademySeatGrant[]
+
+  @@index([status])
+}
+
+enum AcademySponsorshipStatus {
+  DRAFT
+  ACTIVE
+  PAUSED
+  ENDED
+}
+
+enum AcademySeatGrantStatus {
+  ACTIVE
+  REVOKED
+}
+
+// One explicit, time-bounded seat offer per academy for the pilot. It is
+// provisioned only by a platform operator; it is not an academy checkout.
+model AcademySponsorship {
+  id           String                  @id @default(cuid())
+  academyId    String                  @unique
+  academy      Academy                 @relation(fields: [academyId], references: [id], onDelete: Cascade)
+  plan         SubscriptionPlan
+  seatCapacity Int
+  startsAt     DateTime
+  endsAt       DateTime
+  status       AcademySponsorshipStatus @default(DRAFT)
+  createdById  String
+  createdAt    DateTime                @default(now())
+  updatedAt    DateTime                @updatedAt
+
+  grants       AcademySeatGrant[]
+
+  @@index([status, startsAt, endsAt])
+}
+
+// A seat binds one verified account to one academy, regardless of cohort count.
+// Revocation preserves both the account and its application history.
+model AcademySeatGrant {
+  id            String                 @id @default(cuid())
+  academyId     String
+  academy       Academy                @relation(fields: [academyId], references: [id], onDelete: Cascade)
+  sponsorshipId String
+  sponsorship   AcademySponsorship     @relation(fields: [sponsorshipId], references: [id], onDelete: Cascade)
+  userId        String
+  user          User                   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  plan          SubscriptionPlan
+  status        AcademySeatGrantStatus @default(ACTIVE)
+  startsAt      DateTime
+  endsAt        DateTime
+  grantedById   String
+  revokedById   String?
+  revokedAt     DateTime?
+  createdAt     DateTime               @default(now())
+  planOverride  PlanOverride?
+
+  @@index([academyId, userId, status])
+  @@index([sponsorshipId, status, endsAt])
+  @@index([userId, status, endsAt])
+}
+
+model AcademyMember {
+  id        String      @id @default(cuid())
+  academyId String
+  academy   Academy     @relation(fields: [academyId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  role      AcademyRole @default(COACH)
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+
+  @@unique([academyId, userId])
+  @@index([userId])
+}
+
+model AcademyStaffInvitation {
+  id         String      @id @default(cuid())
+  academyId  String
+  academy    Academy     @relation(fields: [academyId], references: [id], onDelete: Cascade)
+  email      String
+  role       AcademyRole @default(COACH)
+  token      String      @unique
+  expiresAt  DateTime
+  acceptedAt DateTime?
+  createdAt  DateTime    @default(now())
+
+  @@index([academyId, email])
+}
+
+model AcademyCohort {
+  id          String       @id @default(cuid())
+  academyId   String
+  academy     Academy      @relation(fields: [academyId], references: [id], onDelete: Cascade)
+  name        String
+  slug        String
+  description String?      @db.Text
+  startDate   DateTime
+  endDate     DateTime
+  status      CohortStatus @default(ACTIVE)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  enrollments AcademyEnrollment[]
+
+  @@unique([academyId, slug])
+  @@index([academyId, status])
+}
+
+model AcademyEnrollment {
+  id           String           @id @default(cuid())
+  academyId    String
+  academy      Academy          @relation(fields: [academyId], references: [id], onDelete: Cascade)
+  cohortId     String
+  cohort       AcademyCohort    @relation(fields: [cohortId], references: [id], onDelete: Cascade)
+  userId       String?
+  user         User?            @relation(fields: [userId], references: [id], onDelete: SetNull)
+  invitedEmail String
+  inviteToken  String           @unique
+  expiresAt    DateTime?
+  status       EnrollmentStatus @default(INVITED)
+  joinedAt     DateTime?
+  withdrawnAt  DateTime?
+  createdAt    DateTime         @default(now())
+  updatedAt    DateTime         @updatedAt
+
+  consents     AcademyConsent[]
+
+  @@unique([cohortId, invitedEmail])
+  @@unique([cohortId, userId])
+  @@index([academyId, status])
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+model AcademyConsent {
+  id                 String            @id @default(cuid())
+  enrollmentId       String
+  enrollment         AcademyEnrollment @relation(fields: [enrollmentId], references: [id], onDelete: Cascade)
+  userId             String
+  user               User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  academyId          String
+  academy            Academy           @relation(fields: [academyId], references: [id], onDelete: Cascade)
+  scope              ConsentScope      @default(AGGREGATE_ONLY)
+  consentTextVersion String            @default("v1.0")
+  grantedAt          DateTime          @default(now())
+  revokedAt          DateTime?
+
+  @@index([academyId, userId])
+  @@index([enrollmentId])
+}
+
+// ── Candidate-Reported Outcomes (Self-Reported Employment & Career Progress) ─
+enum CandidateOutcomeType {
+  INTERVIEW
+  OFFER_RECEIVED
+  OFFER_ACCEPTED
+  JOB_STARTED
+  REJECTED
+  WITHDRAWN
+}
+
+enum OutcomeVerificationStatus {
+  UNVERIFIED
+  STUDENT_ATTESTED
+  EMPLOYER_CONFIRMED
+}
+
+model CandidateOutcome {
+  id                 String                    @id @default(cuid())
+  userId             String
+  user               User                      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  outcomeType        CandidateOutcomeType
+  occurredAt         DateTime
+  jobTitle           String?
+  companyName        String?
+  channel            String?                   // "native" | "external" | "email" | "direct"
+  applicationId      String?
+  verificationStatus OutcomeVerificationStatus @default(STUDENT_ATTESTED)
+  note               String?                   @db.Text
+  shareWithAcademy   Boolean                   @default(false)
+  withdrawnAt        DateTime?
+  createdAt          DateTime                  @default(now())
+  updatedAt          DateTime                  @updatedAt
+
+  @@index([userId, outcomeType])
+  @@index([userId, withdrawnAt])
+}
+

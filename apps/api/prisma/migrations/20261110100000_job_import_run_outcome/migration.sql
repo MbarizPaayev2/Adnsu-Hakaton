@@ -1,0 +1,10 @@
+CREATE TYPE "JobImportOutcome" AS ENUM (
+  'COMPLETE_CENSUS',
+  'BOUNDED_PROGRESS',
+  'UPSTREAM_FAILURE',
+  'INVALID_DETAIL',
+  'NO_OPENINGS'
+);
+
+ALTER TABLE "JobImportRun"
+ADD COLUMN "outcome" "JobImportOutcome";

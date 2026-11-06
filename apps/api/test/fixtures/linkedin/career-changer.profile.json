@@ -1,0 +1,200 @@
+{
+  "sidebar": [
+    {
+      "heading": "Contact",
+      "items": [
+        "leyla.example@mail.test",
+        "www.linkedin.com/in/leyla-example-0a1b2c (LinkedIn)"
+      ]
+    },
+    {
+      "heading": "Top Skills",
+      "items": [
+        "SQL",
+        "Power BI",
+        "Customer Analytics"
+      ]
+    },
+    {
+      "heading": "Languages",
+      "items": [
+        "Azerbaijani (Native or Bilingual)",
+        "English (Professional Working)",
+        "Russian (Limited Working)"
+      ]
+    },
+    {
+      "heading": "Certifications",
+      "items": [
+        "Google Data Analytics Professional Certificate",
+        "Microsoft Certified: Power BI Data Analyst Associate",
+        "SQL (Advanced)",
+        "Introduction to Machine Learning with Python and Scikit-learn for Analysts"
+      ]
+    },
+    {
+      "heading": "Honors-Awards",
+      "items": [
+        "Best Graduation Project Award, Faculty of Finance"
+      ]
+    }
+  ],
+  "main": [
+    [
+      "name",
+      "Leyla Mammadova"
+    ],
+    [
+      "headline",
+      "Data Analyst at Northwind Bank | SQL, Power BI and Python | Helping retail teams turn customer data into weekly decisions"
+    ],
+    [
+      "location",
+      "Baku, Azerbaijan"
+    ],
+    [
+      "h",
+      "Summary"
+    ],
+    [
+      "p",
+      "I started in retail operations and moved into analytics after automating the weekly sales report for my team. Today I work with customer, branch and product data to answer practical questions for commercial teams."
+    ],
+    [
+      "p",
+      "I enjoy writing clear SQL, building dashboards people actually open, and explaining the limits of the data. I am now looking for a role where analysis feeds product decisions directly."
+    ],
+    [
+      "h",
+      "Experience"
+    ],
+    [
+      "company",
+      "Northwind Bank"
+    ],
+    [
+      "total",
+      "3 years 2 months"
+    ],
+    [
+      "title",
+      "Senior Data Analyst"
+    ],
+    [
+      "dates",
+      "March 2024 - Present (1 year 8 months)"
+    ],
+    [
+      "place",
+      "Baku, Azerbaijan"
+    ],
+    [
+      "p",
+      "• Built the branch performance dashboard in Power BI used in the weekly regional review."
+    ],
+    [
+      "p",
+      "• Rewrote the customer churn queries in SQL, reducing the monthly refresh from four hours to forty minutes."
+    ],
+    [
+      "p",
+      "• Mentored two junior analysts on query review and documentation."
+    ],
+    [
+      "title",
+      "Data Analyst"
+    ],
+    [
+      "dates",
+      "September 2022 - February 2024 (1 year 6 months)"
+    ],
+    [
+      "place",
+      "Baku, Azerbaijan"
+    ],
+    [
+      "p",
+      "• Prepared the monthly card spending report for the retail banking team, covering more than 40 branches and three customer segments."
+    ],
+    [
+      "p",
+      "• Cleaned and documented the customer master table with the data engineering team."
+    ],
+    [
+      "title",
+      "Analytics Intern"
+    ],
+    [
+      "dates",
+      "June 2022 - August 2022 (3 months)"
+    ],
+    [
+      "p",
+      "Supported the analytics team with data checks and ad hoc Excel reports."
+    ],
+    [
+      "company",
+      "Caspian Retail Group"
+    ],
+    [
+      "title",
+      "Customer Insights Assistant"
+    ],
+    [
+      "dates",
+      "January 2021 - May 2022 (1 year 5 months)"
+    ],
+    [
+      "place",
+      "Baku, Azerbaijan"
+    ],
+    [
+      "p",
+      "Collected store feedback, maintained the customer survey database and prepared the quarterly summary for the marketing manager. Automated the weekly sales report in Excel, which became the reason I moved into analytics."
+    ],
+    [
+      "company",
+      "Self-employed"
+    ],
+    [
+      "title",
+      "Data Visualisation Freelancer"
+    ],
+    [
+      "dates",
+      "2019 - 2020 (1 year)"
+    ],
+    [
+      "p",
+      "Designed charts and simple dashboards for two small local businesses."
+    ],
+    [
+      "h",
+      "Education"
+    ],
+    [
+      "inst",
+      "Azerbaijan State University of Economics (UNEC)"
+    ],
+    [
+      "p",
+      "Bachelor's degree, Finance · (2017 - 2021)"
+    ],
+    [
+      "inst",
+      "Coursera"
+    ],
+    [
+      "p",
+      "Data Science Specialization"
+    ],
+    [
+      "inst",
+      "Code Academy"
+    ],
+    [
+      "p",
+      "Certificate, Front-End Web Development and Responsive Design for Beginners · (2023)"
+    ]
+  ]
+}

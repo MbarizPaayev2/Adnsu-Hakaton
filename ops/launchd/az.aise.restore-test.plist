@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Weekly restore test on the founder's Mac (the private age key lives here; it is never copied to the server).
+  Install:  cp ops/launchd/az.aise.restore-test.plist ~/Library/LaunchAgents/ (after replacing the REPLACE_* values)
+            launchctl load ~/Library/LaunchAgents/az.aise.restore-test.plist
+  launchd runs a missed calendar job when the Mac wakes, so a sleeping Mac delays the test instead of skipping it.
+  Holds no secrets: the rclone remote is configured in ~/.config/rclone (owner-only) and the key path is a path.
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>az.aise.restore-test</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>REPLACE_REPO/scripts/weekly-restore-test.sh</string>
+  </array>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>AISE_OFFHOST_REMOTE</key><string>REPLACE_RCLONE_REMOTE:REPLACE_BUCKET/daily</string>
+    <key>AISE_BACKUP_AGE_IDENTITY</key><string>/Users/REPLACE_USER/.config/aise-backup/age.key</string>
+    <key>AISE_STATUS_SSH</key><string>tefma@100.89.219.95</string>
+  </dict>
+  <key>StartCalendarInterval</key>
+  <dict><key>Weekday</key><integer>0</integer><key>Hour</key><integer>10</integer><key>Minute</key><integer>0</integer></dict>
+  <key>StandardOutPath</key><string>/Users/REPLACE_USER/Library/Logs/aise-restore-test.log</string>
+  <key>StandardErrorPath</key><string>/Users/REPLACE_USER/Library/Logs/aise-restore-test.log</string>
+</dict>
+</plist>

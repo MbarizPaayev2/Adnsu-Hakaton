@@ -1,0 +1,24 @@
+
+=== embedding (9 labelled personas x 52 postings) ===
+  variant                                mean|Δscore| NDCG@5   unsuitable stored strong stored top-3 kept
+  baseline (nothing blanked)             0.000       0.863    71                0.94          1.00
+  no salary expectation                  0.000       0.863    71                0.94          1.00
+  no preferred cities                    0.018       0.844    84                0.94          0.93
+  no languages                           0.002       0.892    73                1.00          0.96
+  experience unknown (0 years)           0.061       0.622    24                0.67          0.63
+  half of the skills missing             0.012       0.871    55                0.94          0.96
+  no target titles                       0.091       0.841    7                 0.72          0.81
+  posting without location               0.018       0.844    84                0.94          0.93
+  posting without requirements section   0.011       0.848    75                0.89          1.00
+
+=== rules (9 labelled personas x 52 postings) ===
+  variant                                mean|Δscore| NDCG@5   unsuitable stored strong stored top-3 kept
+  baseline (nothing blanked)             0.000       0.924    1                 1.00          1.00
+  no salary expectation                  0.000       0.924    1                 1.00          1.00
+  no preferred cities                    0.009       0.929    3                 1.00          0.96
+  no languages                           0.001       0.924    1                 1.00          1.00
+  experience unknown (0 years)           0.064       0.866    1                 1.00          0.85
+  half of the skills missing             0.004       0.905    1                 1.00          0.96
+  no target titles                       0.009       0.899    1                 0.89          0.89
+  posting without location               0.009       0.929    3                 1.00          0.96
+  posting without requirements section   0.009       0.891    1                 1.00          0.89

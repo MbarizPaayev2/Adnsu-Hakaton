@@ -1,0 +1,100 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-test:
+    # GitHub-hosted by default. Setting the repository variable CI_RUNNER to a JSON
+    # label list (for example ["self-hosted","aise-ci"]) sends this job to that runner
+    # instead, e.g. when the hosted-minutes quota is used up. Same steps either way.
+    runs-on: ${{ fromJSON(vars.CI_RUNNER || '"ubuntu-latest"') }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      # Installs every workspace (apps/web, apps/api, apps/apply-worker,
+      # packages/shared-types) in one pass, per the root package.json.
+      - name: Install dependencies
+        run: npm ci
+
+      # apps/api and apps/web both consume @aise/shared-types via its
+      # compiled dist/ (see its package.json "main"/"types"), not
+      # ts-node/paths — nothing downstream typechecks without this first.
+      - name: Build packages/shared-types
+        run: npm run build --workspace=packages/shared-types
+
+      # apps/api's own types won't compile without the generated Prisma
+      # client, which isn't checked into the repo.
+      - name: Generate Prisma client
+        run: npx prisma generate --schema=apps/api/prisma/schema.prisma
+
+      - name: Typecheck apps/api
+        run: npx tsc -p apps/api/tsconfig.build.json --noEmit
+
+      - name: Test apps/api
+        run: npm test --workspace=apps/api
+
+      - name: CV PDF rendering (real Typst render, Azerbaijani text, page breaks)
+        run: npm run test:cv-pdf --workspace=apps/api
+
+      - name: Typecheck apps/web
+        run: npx tsc -p apps/web/tsconfig.json --noEmit
+
+      # --if-present so this doesn't fail the build on a revision where
+      # apps/web has no test script defined yet.
+      - name: Test apps/web
+        run: npm test --workspace=apps/web --if-present
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+          cache-dependency-path: apps/matching-service/requirements-cpu-lock.txt
+
+      - name: Release journey runner fails closed
+        run: python scripts/test-release-journey.py
+
+      # apps/matching-service/requirements.txt now pins exact versions and
+      # has a full-transitive-tree lock (requirements-lock.txt, from `pip
+      # freeze`) — install from the lock for a reproducible, audited set.
+      - name: Install apps/matching-service dependencies
+        run: pip install -r apps/matching-service/requirements-cpu-lock.txt
+
+      - name: Audit apps/matching-service dependencies
+        run: |
+          pip install pip-audit
+          pip-audit -r apps/matching-service/requirements.txt
+
+      # Regression gate for match quality (ranking/concepts/filters). The
+      # golden-ordering section downloads the embedding model on first run
+      # and is cached between runs; the unit section gates even offline.
+      - name: Cache HuggingFace models
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-${{ hashFiles('apps/matching-service/requirements-cpu-lock.txt') }}
+
+      - name: Test apps/matching-service scorer
+        working-directory: apps/matching-service
+        run: |
+          python selftest.py
+          python eval_golden.py
+          # Deterministic rules mode (evaluation candidate, not wired into the API): behaviour checks and the development gate.
+          python rules_selftest.py
+          python rules_cache_selftest.py
+          # v2 is reported, not gated: one development pair (Q4/v37) is disputed, see docs/rules-matching-v2-2026-10-03.md
+          python eval/run_eval.py --split dev --set v2 --gate none --scorer rules=rules:.
+          python eval/run_eval.py --split all --gate dev --scorer rules=rules:.
+          # Relevance on the synthetic evaluation set (docs/matching-evaluation.md):
+          # the development criteria gate the build; held-out results are printed.
+          python eval/run_eval.py --split all --gate dev --scorer candidate=.

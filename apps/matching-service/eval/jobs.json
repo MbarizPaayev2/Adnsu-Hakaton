@@ -1,0 +1,1242 @@
+[
+  {
+    "evalId": "j01",
+    "family": "software",
+    "note": "",
+    "title": "Senior Software Engineer (React / TypeScript)",
+    "slug": "j01",
+    "location": "Uzaqdan",
+    "company": {
+      "slug": "innovate-ai",
+      "name": "Innovate AI"
+    },
+    "detail": {
+      "title": "Senior Software Engineer (React / TypeScript)",
+      "company_name": "Innovate AI",
+      "location": "Uzaqdan",
+      "description_text": "Our company has been operating in the Azerbaijani market for many years and is known as a reliable partner in its field. Our team keeps growing and we are welcoming new colleagues. We value quality, integrity and customer satisfaction in everything we do. We are seeking a Software Engineer to build our AI dashboards and customer-facing web applications. You will design components, review code and ship features weekly. We offer: a competitive salary, a social package, professional development and training, a friendly and supportive working environment and career growth. Working hours: Monday to Friday, 09:00-18:00. Interview stages: phone screening, personal meeting and a test assignment. If you are interested, please send your CV. ",
+      "requirements_text": "Strong experience with React, TypeScript and Tailwind CSS. Node.js backend knowledge is a big plus. Experience with REST APIs and Git. Fully remote role. Ability to work in a team, responsibility, willingness to learn, strong communication skills, resilience to stress and good time management.",
+      "category": "Elm, Texnologiya və Mühəndislik",
+      "sidebar": {
+        "Təcrübə": "3-4 il",
+        "Təhsil": "Bakalavr",
+        "Əmək haqqı": "3000-4500AZN",
+        "Vəzifə dərəcəsi": "Mütəxəssis"
+      }
+    }
+  },
+  {
+    "evalId": "j02",
+    "family": "software",
+    "note": "",
+    "title": "NestJS Backend Developer",
+    "slug": "j02",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "saas-solutions",
+      "name": "SaaS Solutions"
+    },
+    "detail": {
+      "title": "NestJS Backend Developer",
+      "company_name": "SaaS Solutions",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Our company has been operating in the Azerbaijani market for many years and is known as a reliable partner in its field. Our team keeps growing and we are welcoming new colleagues. We value quality, integrity and customer satisfaction in everything we do. Looking for a backend engineer to design scalable APIs for our subscription platform. We offer: a competitive salary, a social package, professional development and training, a friendly and supportive working environment and career growth. Working hours: Monday to Friday, 09:00-18:00. Interview stages: phone screening, personal meeting and a test assignment. If you are interested, please send your CV. ",
+      "requirements_text": "Must have solid experience with NestJS, Node.js, PostgreSQL and TypeScript. Docker knowledge is an advantage. Hybrid work setting. Ability to work in a team, responsibility, willingness to learn, strong communication skills, resilience to stress and good time management.",
+      "category": "Elm, Texnologiya və Mühəndislik",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Bakalavr"
+      }
+    }
+  },
+  {
+    "evalId": "j03",
+    "family": "software",
+    "note": "",
+    "title": "Frontend developer",
+    "slug": "j03",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "kapital-texnologiya",
+      "name": "Kapital Texnologiya"
+    },
+    "detail": {
+      "title": "Frontend developer",
+      "company_name": "Kapital Texnologiya",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Şirkətimizin veb tətbiqlərinin istifadəçi interfeysini hazırlamaq və inkişaf etdirmək. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "React və JavaScript biliyi, HTML və CSS, REST API ilə iş təcrübəsi. Git bilikləri. Komanda ilə işləmək bacarığı. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Elm, Texnologiya və Mühəndislik",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Bakalavr"
+      }
+    }
+  },
+  {
+    "evalId": "j04",
+    "family": "software",
+    "note": "",
+    "title": "Proqramçı (Python)",
+    "slug": "j04",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "dataline-mmc",
+      "name": "DataLine MMC"
+    },
+    "detail": {
+      "title": "Proqramçı (Python)",
+      "company_name": "DataLine MMC",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Daxili biznes sistemlərinin Python ilə hazırlanması və dəstəyi, verilənlər bazası ilə iş. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Python, Django, PostgreSQL biliyi. Git və Linux əsasları. Proqramlaşdırma təcrübəsi tələb olunur. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Elm, Texnologiya və Mühəndislik",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Bakalavr"
+      }
+    }
+  },
+  {
+    "evalId": "j05",
+    "family": "software",
+    "note": "",
+    "title": "Junior Web Developer",
+    "slug": "j05",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "pixel-studio",
+      "name": "Pixel Studio"
+    },
+    "detail": {
+      "title": "Junior Web Developer",
+      "company_name": "Pixel Studio",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Our company has been operating in the Azerbaijani market for many years and is known as a reliable partner in its field. Our team keeps growing and we are welcoming new colleagues. We value quality, integrity and customer satisfaction in everything we do. Join our small team as a junior developer; you will learn by building landing pages and internal tools. We offer: a competitive salary, a social package, professional development and training, a friendly and supportive working environment and career growth. Working hours: Monday to Friday, 09:00-18:00. Interview stages: phone screening, personal meeting and a test assignment. If you are interested, please send your CV. ",
+      "requirements_text": "Basic HTML, CSS and JavaScript. Willingness to learn React. University student or graduate. Ability to work in a team, responsibility, willingness to learn, strong communication skills, resilience to stress and good time management.",
+      "category": "Elm, Texnologiya və Mühəndislik",
+      "sidebar": {
+        "Təhsil": "Bakalavr"
+      }
+    }
+  },
+  {
+    "evalId": "j06",
+    "family": "software",
+    "note": "",
+    "title": "Mobile Developer (Flutter)",
+    "slug": "j06",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "appworks",
+      "name": "AppWorks"
+    },
+    "detail": {
+      "title": "Mobile Developer (Flutter)",
+      "company_name": "AppWorks",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Our company has been operating in the Azerbaijani market for many years and is known as a reliable partner in its field. Our team keeps growing and we are welcoming new colleagues. We value quality, integrity and customer satisfaction in everything we do. Develop and maintain cross-platform mobile applications for banking customers. We offer: a competitive salary, a social package, professional development and training, a friendly and supportive working environment and career growth. Working hours: Monday to Friday, 09:00-18:00. Interview stages: phone screening, personal meeting and a test assignment. If you are interested, please send your CV. ",
+      "requirements_text": "Flutter and Dart experience, REST API integration, Git. Knowledge of Firebase is a plus. Ability to work in a team, responsibility, willingness to learn, strong communication skills, resilience to stress and good time management.",
+      "category": "Elm, Texnologiya və Mühəndislik",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Bakalavr"
+      }
+    }
+  },
+  {
+    "evalId": "j07",
+    "family": "software",
+    "note": "",
+    "title": "IT Support Specialist",
+    "slug": "j07",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "delta-group",
+      "name": "Delta Group"
+    },
+    "detail": {
+      "title": "IT Support Specialist",
+      "company_name": "Delta Group",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Provide first-line technical support to office employees, maintain computers and the office network. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Windows administration, network basics, hardware troubleshooting. Good communication skills. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Elm, Texnologiya və Mühəndislik",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Orta"
+      }
+    }
+  },
+  {
+    "evalId": "j08",
+    "family": "software",
+    "note": "",
+    "title": "Data Analyst (SQL, Python)",
+    "slug": "j08",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "caspian-insights",
+      "name": "Caspian Insights"
+    },
+    "detail": {
+      "title": "Data Analyst (SQL, Python)",
+      "company_name": "Caspian Insights",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Our company has been operating in the Azerbaijani market for many years and is known as a reliable partner in its field. Our team keeps growing and we are welcoming new colleagues. We value quality, integrity and customer satisfaction in everything we do. Build dashboards and analyse product and sales data for management decisions. We offer: a competitive salary, a social package, professional development and training, a friendly and supportive working environment and career growth. Working hours: Monday to Friday, 09:00-18:00. Interview stages: phone screening, personal meeting and a test assignment. If you are interested, please send your CV. ",
+      "requirements_text": "SQL, Python (pandas), Excel, data visualisation tools. Analytical thinking and attention to detail. Ability to work in a team, responsibility, willingness to learn, strong communication skills, resilience to stress and good time management.",
+      "category": "Elm, Texnologiya və Mühəndislik",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Bakalavr"
+      }
+    }
+  },
+  {
+    "evalId": "j09",
+    "family": "software",
+    "note": "",
+    "title": "Director of Engineering",
+    "slug": "j09",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "global-fintech",
+      "name": "Global Fintech"
+    },
+    "detail": {
+      "title": "Director of Engineering",
+      "company_name": "Global Fintech",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Our company has been operating in the Azerbaijani market for many years and is known as a reliable partner in its field. Our team keeps growing and we are welcoming new colleagues. We value quality, integrity and customer satisfaction in everything we do. Lead the engineering organisation of 40 people, own the technical roadmap and hiring. We offer: a competitive salary, a social package, professional development and training, a friendly and supportive working environment and career growth. Working hours: Monday to Friday, 09:00-18:00. Interview stages: phone screening, personal meeting and a test assignment. If you are interested, please send your CV. ",
+      "requirements_text": "10+ years of software engineering including 5+ years leading teams. Architecture, cloud, budgeting. Ability to work in a team, responsibility, willingness to learn, strong communication skills, resilience to stress and good time management.",
+      "category": "Elm, Texnologiya və Mühəndislik",
+      "sidebar": {
+        "Təcrübə": "9 ildən artıq",
+        "Təhsil": "Magistr",
+        "Əmək haqqı": "6000-9000AZN",
+        "Vəzifə dərəcəsi": "Direktor"
+      }
+    }
+  },
+  {
+    "evalId": "j10",
+    "family": "accounting",
+    "note": "",
+    "title": "Baş mühasib",
+    "slug": "j10",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "nur-holding",
+      "name": "Nur Holding"
+    },
+    "detail": {
+      "title": "Baş mühasib",
+      "company_name": "Nur Holding",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Şirkətin mühasibat uçotuna, vergi və maliyyə hesabatlarına rəhbərlik etmək, mühasiblər qrupunu idarə etmək. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Mühasibat uçotu sahəsində ən azı 5 il təcrübə, vergi qanunvericiliyi, 1C proqramı, maliyyə hesabatları. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Maliyyə, Biznes və idarəetmə",
+      "sidebar": {
+        "Təcrübə": "5-8 il",
+        "Təhsil": "Ali",
+        "Vəzifə dərəcəsi": "Rəhbər"
+      }
+    }
+  },
+  {
+    "evalId": "j11",
+    "family": "accounting",
+    "note": "",
+    "title": "Mühasib",
+    "slug": "j11",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "arzu-ticarət",
+      "name": "Arzu Ticarət"
+    },
+    "detail": {
+      "title": "Mühasib",
+      "company_name": "Arzu Ticarət",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. İlkin sənədlərin işlənməsi, qaimə-fakturaların uçotu, əmək haqqı hesablanması və vergi bəyannamələrinin hazırlanması. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Mühasibat uçotu üzrə təhsil, 1C proqramı, Excel, vergi uçotu biliyi. Dəqiqlik və məsuliyyətlilik. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Maliyyə, Biznes və idarəetmə",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Bakalavr"
+      }
+    }
+  },
+  {
+    "evalId": "j12",
+    "family": "accounting",
+    "note": "Same posting as j11 with the employment type stored as the location (the ingestion defect).",
+    "title": "Mühasib",
+    "slug": "j12",
+    "location": "Tam ştat",
+    "company": {
+      "slug": "arzu-ticarət",
+      "name": "Arzu Ticarət"
+    },
+    "detail": {
+      "title": "Mühasib",
+      "company_name": "Arzu Ticarət",
+      "location": "Tam ştat",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. İlkin sənədlərin işlənməsi, qaimə-fakturaların uçotu, əmək haqqı hesablanması və vergi bəyannamələrinin hazırlanması. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Mühasibat uçotu üzrə təhsil, 1C proqramı, Excel, vergi uçotu biliyi. Dəqiqlik və məsuliyyətlilik. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Maliyyə, Biznes və idarəetmə",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Bakalavr"
+      }
+    }
+  },
+  {
+    "evalId": "j13",
+    "family": "accounting",
+    "note": "",
+    "title": "Maliyyə analitiki",
+    "slug": "j13",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "bank-partner",
+      "name": "Bank Partner"
+    },
+    "detail": {
+      "title": "Maliyyə analitiki",
+      "company_name": "Bank Partner",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Büdcələşdirmə, maliyyə təhlili və rəhbərlik üçün hesabatların hazırlanması. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Maliyyə təhlili, Excel (ileri səviyyə), büdcə planlaşdırılması, hesabat hazırlamaq bacarığı. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Maliyyə, Biznes və idarəetmə",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Bakalavr"
+      }
+    }
+  },
+  {
+    "evalId": "j14",
+    "family": "accounting",
+    "note": "",
+    "title": "Mühasib köməkçisi",
+    "slug": "j14",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "baku-plaza",
+      "name": "Baku Plaza"
+    },
+    "detail": {
+      "title": "Mühasib köməkçisi",
+      "company_name": "Baku Plaza",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Mühasibə kömək etmək, sənədləri sistemə daxil etmək, kassa əməliyyatlarının uçotu. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Excel bilikləri, mühasibat uçotunun əsasları, 1C üzrə kurs keçmək üstünlükdür. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Maliyyə, Biznes və idarəetmə",
+      "sidebar": {
+        "Təhsil": "Orta texniki"
+      }
+    }
+  },
+  {
+    "evalId": "j15",
+    "family": "sales",
+    "note": "",
+    "title": "Satış meneceri",
+    "slug": "j15",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "automall",
+      "name": "AutoMall"
+    },
+    "detail": {
+      "title": "Satış meneceri",
+      "company_name": "AutoMall",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Müştərilərlə danışıqlar aparmaq, satış hədəflərini yerinə yetirmək, yeni müştərilər cəlb etmək. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Satış sahəsində 1-3 il təcrübə, danışıq bacarığı, CRM biliyi, müştəri xidməti bacarıqları. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Satış və müştəri xidmətləri",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Bakalavr"
+      }
+    }
+  },
+  {
+    "evalId": "j16",
+    "family": "sales",
+    "note": "",
+    "title": "Satış məsləhətçisi",
+    "slug": "j16",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "mega-mağaza",
+      "name": "Mega Mağaza"
+    },
+    "detail": {
+      "title": "Satış məsləhətçisi",
+      "company_name": "Mega Mağaza",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Mağazada müştərilərə məhsulları təqdim etmək, satış aparmaq və müştəri sualları ilə məşğul olmaq. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Ünsiyyət bacarığı, müştəri yönümlülük, satış üzrə təcrübə üstünlükdür. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Satış və müştəri xidmətləri",
+      "sidebar": {
+        "Təhsil": "Orta"
+      }
+    }
+  },
+  {
+    "evalId": "j17",
+    "family": "sales",
+    "note": "",
+    "title": "Sales Representative (FMCG)",
+    "slug": "j17",
+    "location": "Gəncə, Azərbaycan",
+    "company": {
+      "slug": "fresh-foods",
+      "name": "Fresh Foods"
+    },
+    "detail": {
+      "title": "Sales Representative (FMCG)",
+      "company_name": "Fresh Foods",
+      "location": "Gəncə, Azərbaycan",
+      "description_text": "Our company has been operating in the Azerbaijani market for many years and is known as a reliable partner in its field. Our team keeps growing and we are welcoming new colleagues. We value quality, integrity and customer satisfaction in everything we do. Visit retail outlets in the region, negotiate orders and achieve monthly sales targets. We offer: a competitive salary, a social package, professional development and training, a friendly and supportive working environment and career growth. Working hours: Monday to Friday, 09:00-18:00. Interview stages: phone screening, personal meeting and a test assignment. If you are interested, please send your CV. ",
+      "requirements_text": "Active sales experience, negotiation, customer service. Driving licence preferred. Ability to work in a team, responsibility, willingness to learn, strong communication skills, resilience to stress and good time management.",
+      "category": "Satış və müştəri xidmətləri",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Orta"
+      }
+    }
+  },
+  {
+    "evalId": "j18",
+    "family": "sales",
+    "note": "",
+    "title": "Müştəri xidmətləri üzrə mütəxəssis",
+    "slug": "j18",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "telekom-plus",
+      "name": "Telekom Plus"
+    },
+    "detail": {
+      "title": "Müştəri xidmətləri üzrə mütəxəssis",
+      "company_name": "Telekom Plus",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Müştəri müraciətlərinə cavab vermək, məlumat vermək və şikayətləri həll etmək. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Müştəri xidməti bacarıqları, kompüter biliyi, ünsiyyət. Azərbaycan və rus dillərində səlis danışıq. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Satış və müştəri xidmətləri",
+      "sidebar": {
+        "Təhsil": "Orta"
+      }
+    }
+  },
+  {
+    "evalId": "j19",
+    "family": "sales",
+    "note": "",
+    "title": "Business Development Manager (B2B)",
+    "slug": "j19",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "enterprise-soft",
+      "name": "Enterprise Soft"
+    },
+    "detail": {
+      "title": "Business Development Manager (B2B)",
+      "company_name": "Enterprise Soft",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Our company has been operating in the Azerbaijani market for many years and is known as a reliable partner in its field. Our team keeps growing and we are welcoming new colleagues. We value quality, integrity and customer satisfaction in everything we do. Own the B2B sales pipeline, negotiate large contracts and lead a team of account managers. We offer: a competitive salary, a social package, professional development and training, a friendly and supportive working environment and career growth. Working hours: Monday to Friday, 09:00-18:00. Interview stages: phone screening, personal meeting and a test assignment. If you are interested, please send your CV. ",
+      "requirements_text": "5+ years of B2B sales leadership, CRM, negotiation, strategic account management. Ability to work in a team, responsibility, willingness to learn, strong communication skills, resilience to stress and good time management.",
+      "category": "Satış və müştəri xidmətləri",
+      "sidebar": {
+        "Təcrübə": "5-8 il",
+        "Təhsil": "Bakalavr",
+        "Əmək haqqı": "3500-5000AZN",
+        "Vəzifə dərəcəsi": "Rəhbər"
+      }
+    }
+  },
+  {
+    "evalId": "j43",
+    "family": "sales",
+    "note": "Thin posting: one sentence, no requirements.",
+    "title": "Sales manager",
+    "slug": "j43",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "alpha-trade",
+      "name": "Alpha Trade"
+    },
+    "detail": {
+      "title": "Sales manager",
+      "company_name": "Alpha Trade",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Looking for a sales manager.",
+      "requirements_text": "",
+      "category": "Satış və müştəri xidmətləri",
+      "sidebar": {}
+    }
+  },
+  {
+    "evalId": "j20",
+    "family": "marketing",
+    "note": "",
+    "title": "SMM mütəxəssisi",
+    "slug": "j20",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "brand-house",
+      "name": "Brand House"
+    },
+    "detail": {
+      "title": "SMM mütəxəssisi",
+      "company_name": "Brand House",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Sosial media hesablarının idarə olunması, kontent planı və reklam kampaniyalarının dəstəklənməsi. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "SMM, Instagram, Canva bilikləri, yaradıcılıq və yazı bacarığı. Marketinq sahəsində təhsil üstünlükdür. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Maliyyə, Biznes və idarəetmə",
+      "sidebar": {
+        "Təhsil": "Bakalavr"
+      }
+    }
+  },
+  {
+    "evalId": "j21",
+    "family": "marketing",
+    "note": "",
+    "title": "Marketing Specialist",
+    "slug": "j21",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "kapital-retail",
+      "name": "Kapital Retail"
+    },
+    "detail": {
+      "title": "Marketing Specialist",
+      "company_name": "Kapital Retail",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Our company has been operating in the Azerbaijani market for many years and is known as a reliable partner in its field. Our team keeps growing and we are welcoming new colleagues. We value quality, integrity and customer satisfaction in everything we do. Plan and run marketing campaigns, prepare content and analyse campaign results. We offer: a competitive salary, a social package, professional development and training, a friendly and supportive working environment and career growth. Working hours: Monday to Friday, 09:00-18:00. Interview stages: phone screening, personal meeting and a test assignment. If you are interested, please send your CV. ",
+      "requirements_text": "Marketing degree, social media, content creation, analytical skills, good English. Ability to work in a team, responsibility, willingness to learn, strong communication skills, resilience to stress and good time management.",
+      "category": "Maliyyə, Biznes və idarəetmə",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Bakalavr"
+      }
+    }
+  },
+  {
+    "evalId": "j22",
+    "family": "marketing",
+    "note": "",
+    "title": "Digital Marketing Manager",
+    "slug": "j22",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "nova-group",
+      "name": "Nova Group"
+    },
+    "detail": {
+      "title": "Digital Marketing Manager",
+      "company_name": "Nova Group",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Our company has been operating in the Azerbaijani market for many years and is known as a reliable partner in its field. Our team keeps growing and we are welcoming new colleagues. We value quality, integrity and customer satisfaction in everything we do. Lead the digital marketing department, manage budgets and agency relationships. We offer: a competitive salary, a social package, professional development and training, a friendly and supportive working environment and career growth. Working hours: Monday to Friday, 09:00-18:00. Interview stages: phone screening, personal meeting and a test assignment. If you are interested, please send your CV. ",
+      "requirements_text": "5+ years in digital marketing, team leadership, performance advertising, analytics. Ability to work in a team, responsibility, willingness to learn, strong communication skills, resilience to stress and good time management.",
+      "category": "Maliyyə, Biznes və idarəetmə",
+      "sidebar": {
+        "Təcrübə": "5-8 il",
+        "Təhsil": "Magistr",
+        "Əmək haqqı": "3000-4500AZN",
+        "Vəzifə dərəcəsi": "Rəhbər"
+      }
+    }
+  },
+  {
+    "evalId": "j23",
+    "family": "marketing",
+    "note": "",
+    "title": "Kontent meneceri",
+    "slug": "j23",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "media-mix",
+      "name": "Media Mix"
+    },
+    "detail": {
+      "title": "Kontent meneceri",
+      "company_name": "Media Mix",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Sosial media və vebsayt üçün kontent hazırlamaq, redaktə etmək və yerləşdirmək. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Azərbaycan dilində yazı bacarığı, SMM, kontent strategiyası, Canva. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Maliyyə, Biznes və idarəetmə",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Bakalavr"
+      }
+    }
+  },
+  {
+    "evalId": "j24",
+    "family": "marketing",
+    "note": "",
+    "title": "Qrafik dizayner",
+    "slug": "j24",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "creative-lab",
+      "name": "Creative Lab"
+    },
+    "detail": {
+      "title": "Qrafik dizayner",
+      "company_name": "Creative Lab",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Reklam materialları, bannerlər və sosial media dizaynları hazırlamaq. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Adobe Photoshop, Illustrator, Figma biliyi. Portfel tələb olunur. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Kütləvi İnformasiya vasitələri və İctimaiyyətlə Əlaqələr",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Orta"
+      }
+    }
+  },
+  {
+    "evalId": "j25",
+    "family": "support",
+    "note": "",
+    "title": "Call Center Operator (AZ/RU)",
+    "slug": "j25",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "contactpro",
+      "name": "ContactPro"
+    },
+    "detail": {
+      "title": "Call Center Operator (AZ/RU)",
+      "company_name": "ContactPro",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Gələn zənglərə cavab vermək, müştərilərə məlumat vermək, CRM-də qeydlər aparmaq. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Azərbaycan və rus dillərində səlis danışıq, telefon ünsiyyəti, kompüter biliyi, stress müqaviməti. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Satış və müştəri xidmətləri",
+      "sidebar": {
+        "Təhsil": "Orta"
+      }
+    }
+  },
+  {
+    "evalId": "j26",
+    "family": "support",
+    "note": "",
+    "title": "Çağrı mərkəzi operatoru",
+    "slug": "j26",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "bank-of-baku",
+      "name": "Bank of Baku"
+    },
+    "detail": {
+      "title": "Çağrı mərkəzi operatoru",
+      "company_name": "Bank of Baku",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Müştərilərin zəngləri və müraciətlərinə cavab vermək, problemləri həll etmək. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Müştəri xidməti təcrübəsi, ünsiyyət bacarığı, Excel və CRM bilikləri. Rus dili üstünlükdür. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Satış və müştəri xidmətləri",
+      "sidebar": {
+        "Təhsil": "Orta"
+      }
+    }
+  },
+  {
+    "evalId": "j27",
+    "family": "support",
+    "note": "",
+    "title": "Customer Support Specialist (English)",
+    "slug": "j27",
+    "location": "Uzaqdan",
+    "company": {
+      "slug": "global-tech",
+      "name": "Global Tech"
+    },
+    "detail": {
+      "title": "Customer Support Specialist (English)",
+      "company_name": "Global Tech",
+      "location": "Uzaqdan",
+      "description_text": "Our company has been operating in the Azerbaijani market for many years and is known as a reliable partner in its field. Our team keeps growing and we are welcoming new colleagues. We value quality, integrity and customer satisfaction in everything we do. Support international customers by email and chat, resolve tickets and escalate technical issues. We offer: a competitive salary, a social package, professional development and training, a friendly and supportive working environment and career growth. Working hours: Monday to Friday, 09:00-18:00. Interview stages: phone screening, personal meeting and a test assignment. If you are interested, please send your CV. ",
+      "requirements_text": "Fluent English, customer service experience, ticketing tools, good written communication. Ability to work in a team, responsibility, willingness to learn, strong communication skills, resilience to stress and good time management.",
+      "category": "Satış və müştəri xidmətləri",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Orta"
+      }
+    }
+  },
+  {
+    "evalId": "j28",
+    "family": "health",
+    "note": "",
+    "title": "Tibb bacısı",
+    "slug": "j28",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "aran-klinikası",
+      "name": "Aran Klinikası"
+    },
+    "detail": {
+      "title": "Tibb bacısı",
+      "company_name": "Aran Klinikası",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Pasiyentlərə qulluq göstərmək, inyeksiyalar və sterilizasiya, həkimin təyinatlarının icrası. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Tibb kollecini bitirmək, sertifikat, pasiyent qulluğu təcrübəsi, məsuliyyətlilik. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Səhiyyə",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Orta texniki"
+      }
+    }
+  },
+  {
+    "evalId": "j29",
+    "family": "health",
+    "note": "",
+    "title": "Həkim-terapevt",
+    "slug": "j29",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "mərkəzi-klinika",
+      "name": "Mərkəzi Klinika"
+    },
+    "detail": {
+      "title": "Həkim-terapevt",
+      "company_name": "Mərkəzi Klinika",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Pasiyentlərin qəbulu, diaqnoz qoyulması və müalicənin təyin edilməsi. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Tibb universitetini bitirmək, həkim lisenziyası və sertifikatı, klinik təcrübə. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Səhiyyə",
+      "sidebar": {
+        "Təcrübə": "3-4 il",
+        "Təhsil": "Ali"
+      }
+    }
+  },
+  {
+    "evalId": "j30",
+    "family": "health",
+    "note": "",
+    "title": "Aptek satıcısı",
+    "slug": "j30",
+    "location": "Sumqayıt, Azərbaycan",
+    "company": {
+      "slug": "sağlam-aptek",
+      "name": "Sağlam Aptek"
+    },
+    "detail": {
+      "title": "Aptek satıcısı",
+      "company_name": "Sağlam Aptek",
+      "location": "Sumqayıt, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Aptekdə müştərilərə dərman məhsullarının satışı və məsləhət verilməsi. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Dərman preparatları üzrə əsas biliklər, satış bacarığı, müştəri xidməti. Tibbi təhsil üstünlükdür. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Satış və müştəri xidmətləri",
+      "sidebar": {
+        "Təhsil": "Orta"
+      }
+    }
+  },
+  {
+    "evalId": "j31",
+    "family": "engineering",
+    "note": "",
+    "title": "İnşaat mühəndisi",
+    "slug": "j31",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "tikinti-qrup",
+      "name": "Tikinti Qrup"
+    },
+    "detail": {
+      "title": "İnşaat mühəndisi",
+      "company_name": "Tikinti Qrup",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Tikinti layihələrinin icrası və texniki nəzarəti, smeta və həcm hesablamaları, işçi qrupunun koordinasiyası. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "İnşaat mühəndisliyi təhsili, AutoCAD, smeta hazırlamaq, tikinti normaları və texniki nəzarət təcrübəsi. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Tikinti və Daşınmaz əmlak",
+      "sidebar": {
+        "Təcrübə": "3-4 il",
+        "Təhsil": "Bakalavr"
+      }
+    }
+  },
+  {
+    "evalId": "j32",
+    "family": "engineering",
+    "note": "",
+    "title": "Site Engineer",
+    "slug": "j32",
+    "location": "Sumqayıt, Azərbaycan",
+    "company": {
+      "slug": "baku-builders",
+      "name": "Baku Builders"
+    },
+    "detail": {
+      "title": "Site Engineer",
+      "company_name": "Baku Builders",
+      "location": "Sumqayıt, Azərbaycan",
+      "description_text": "Our company has been operating in the Azerbaijani market for many years and is known as a reliable partner in its field. Our team keeps growing and we are welcoming new colleagues. We value quality, integrity and customer satisfaction in everything we do. Supervise day-to-day construction works on site, check quality and progress against drawings. We offer: a competitive salary, a social package, professional development and training, a friendly and supportive working environment and career growth. Working hours: Monday to Friday, 09:00-18:00. Interview stages: phone screening, personal meeting and a test assignment. If you are interested, please send your CV. ",
+      "requirements_text": "Degree in civil engineering, site supervision experience, AutoCAD, reading of construction drawings, MS Project. Ability to work in a team, responsibility, willingness to learn, strong communication skills, resilience to stress and good time management.",
+      "category": "Tikinti və Daşınmaz əmlak",
+      "sidebar": {
+        "Təcrübə": "3-4 il",
+        "Təhsil": "Bakalavr"
+      }
+    }
+  },
+  {
+    "evalId": "j33",
+    "family": "engineering",
+    "note": "",
+    "title": "Layihə meneceri (tikinti)",
+    "slug": "j33",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "metro-development",
+      "name": "Metro Development"
+    },
+    "detail": {
+      "title": "Layihə meneceri (tikinti)",
+      "company_name": "Metro Development",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Tikinti layihələrinin planlaşdırılması, büdcə və müddətlərə nəzarət, podratçılarla əlaqə. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Tikinti sahəsində 5+ il təcrübə, layihə idarəetməsi, MS Project, smeta, komanda idarəetməsi. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Tikinti və Daşınmaz əmlak",
+      "sidebar": {
+        "Təcrübə": "5-8 il",
+        "Təhsil": "Bakalavr",
+        "Əmək haqqı": "3500-5000AZN",
+        "Vəzifə dərəcəsi": "Rəhbər"
+      }
+    }
+  },
+  {
+    "evalId": "j34",
+    "family": "engineering",
+    "note": "",
+    "title": "Elektrik mühəndisi",
+    "slug": "j34",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "energy-tech",
+      "name": "Energy Tech"
+    },
+    "detail": {
+      "title": "Elektrik mühəndisi",
+      "company_name": "Energy Tech",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Elektrik sistemlərinin layihələndirilməsi və quraşdırılmasına nəzarət. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Elektrik mühəndisliyi təhsili, AutoCAD Electrical, elektrik təhlükəsizliyi normaları. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Elm, Texnologiya və Mühəndislik",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Bakalavr"
+      }
+    }
+  },
+  {
+    "evalId": "j35",
+    "family": "other",
+    "note": "",
+    "title": "Kuryer",
+    "slug": "j35",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "express-çatdırılma",
+      "name": "Express Çatdırılma"
+    },
+    "detail": {
+      "title": "Kuryer",
+      "company_name": "Express Çatdırılma",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Sifarişlərin müştərilərə vaxtında çatdırılması. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Bakı ünvanlarını yaxşı bilmək, məsuliyyətlilik, mobil telefon. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Logistika və nəqliyyat",
+      "sidebar": {}
+    }
+  },
+  {
+    "evalId": "j36",
+    "family": "other",
+    "note": "",
+    "title": "Sürücü",
+    "slug": "j36",
+    "location": "Sumqayıt, Azərbaycan",
+    "company": {
+      "slug": "sumqayıt-nəqliyyat",
+      "name": "Sumqayıt Nəqliyyat"
+    },
+    "detail": {
+      "title": "Sürücü",
+      "company_name": "Sumqayıt Nəqliyyat",
+      "location": "Sumqayıt, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Yük avtomobilini idarə etmək, yükün təhlükəsiz daşınması. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "B və C kateqoriyalı sürücülük vəsiqəsi, təcrübə. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Logistika və nəqliyyat",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Orta"
+      }
+    }
+  },
+  {
+    "evalId": "j37",
+    "family": "other",
+    "note": "",
+    "title": "Anbardar",
+    "slug": "j37",
+    "location": "Xırdalan, Azərbaycan",
+    "company": {
+      "slug": "logistik-mərkəz",
+      "name": "Logistik Mərkəz"
+    },
+    "detail": {
+      "title": "Anbardar",
+      "company_name": "Logistik Mərkəz",
+      "location": "Xırdalan, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Anbara daxil olan və çıxan malların qəbulu, uçotu və saxlanması. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Anbar uçotu, 1C, məsuliyyətlilik, Excel. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Logistika və nəqliyyat",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Orta"
+      }
+    }
+  },
+  {
+    "evalId": "j38",
+    "family": "other",
+    "note": "",
+    "title": "Kadrlar üzrə mütəxəssis (HR)",
+    "slug": "j38",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "alfa-group",
+      "name": "Alfa Group"
+    },
+    "detail": {
+      "title": "Kadrlar üzrə mütəxəssis (HR)",
+      "company_name": "Alfa Group",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Kadr sənədləşməsi, işə qəbul prosesləri, əmək müqavilələrinin hazırlanması. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Əmək qanunvericiliyi, kadr sənədləşməsi, Excel, ünsiyyət bacarığı. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Maliyyə, Biznes və idarəetmə",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Bakalavr"
+      }
+    }
+  },
+  {
+    "evalId": "j39",
+    "family": "other",
+    "note": "",
+    "title": "Təmizlik işçisi",
+    "slug": "j39",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "clean-plus",
+      "name": "Clean Plus"
+    },
+    "detail": {
+      "title": "Təmizlik işçisi",
+      "company_name": "Clean Plus",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Ofis və ticarət məkanlarının təmizliyi. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Məsuliyyətlilik, səliqə. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Satış və müştəri xidmətləri",
+      "sidebar": {}
+    }
+  },
+  {
+    "evalId": "j40",
+    "family": "other",
+    "note": "",
+    "title": "Hüquqşünas",
+    "slug": "j40",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "law-&-partners",
+      "name": "Law & Partners"
+    },
+    "detail": {
+      "title": "Hüquqşünas",
+      "company_name": "Law & Partners",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Şirkətin müqavilələrinin hüquqi ekspertizası, məhkəmələrdə təmsilçilik. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Hüquq təhsili, hüquqşünas təcrübəsi, müqavilə hüququ, məhkəmə təcrübəsi. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Maliyyə, Biznes və idarəetmə",
+      "sidebar": {
+        "Təcrübə": "3-4 il",
+        "Təhsil": "Ali"
+      }
+    }
+  },
+  {
+    "evalId": "j41",
+    "family": "other",
+    "note": "",
+    "title": "Ofis meneceri",
+    "slug": "j41",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "zenith-mmc",
+      "name": "Zenith MMC"
+    },
+    "detail": {
+      "title": "Ofis meneceri",
+      "company_name": "Zenith MMC",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Ofisin gündəlik işinin təşkili, sənədləşmə, yazışmalar və zənglərə cavab vermək. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Ofis idarəetməsi, MS Office, təşkilatçılıq, ünsiyyət bacarığı. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Maliyyə, Biznes və idarəetmə",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Bakalavr"
+      }
+    }
+  },
+  {
+    "evalId": "j42",
+    "family": "other",
+    "note": "",
+    "title": "Aşpaz",
+    "slug": "j42",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "kafe-lale",
+      "name": "Kafe Lale"
+    },
+    "detail": {
+      "title": "Aşpaz",
+      "company_name": "Kafe Lale",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Kafedə yeməklərin hazırlanması və mətbəxin təmizliyi. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Aşpaz təcrübəsi, gigiyena qaydaları. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Satış və müştəri xidmətləri",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Orta"
+      }
+    }
+  },
+  {
+    "evalId": "j44",
+    "family": "software",
+    "note": "Thin posting: no requirements, no salary.",
+    "title": "Software Engineer",
+    "slug": "j44",
+    "location": "Uzaqdan",
+    "company": {
+      "slug": "stealth-startup",
+      "name": "Stealth Startup"
+    },
+    "detail": {
+      "title": "Software Engineer",
+      "company_name": "Stealth Startup",
+      "location": "Uzaqdan",
+      "description_text": "We build software.",
+      "requirements_text": "",
+      "category": "Elm, Texnologiya və Mühəndislik",
+      "sidebar": {}
+    }
+  },
+  {
+    "evalId": "j45",
+    "family": "risk",
+    "note": "",
+    "title": "Risklərin idarə edilməsi üzrə kiçik mütəxəssis",
+    "slug": "j45",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "kapital-bank-partner",
+      "name": "Kapital Bank Partner"
+    },
+    "detail": {
+      "title": "Risklərin idarə edilməsi üzrə kiçik mütəxəssis",
+      "company_name": "Kapital Bank Partner",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Bank risklərinin qiymətləndirilməsi, kredit portfelinin monitorinqi və risk hesabatlarının hazırlanması. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Maliyyə və ya iqtisadiyyat üzrə təhsil, Excel və SQL biliyi, analitik təfəkkür, risk idarəetməsi anlayışı. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Maliyyə, Biznes və idarəetmə",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Bakalavr"
+      }
+    }
+  },
+  {
+    "evalId": "j46",
+    "family": "risk",
+    "note": "",
+    "title": "Kredit risklərinin təhlili üzrə aparıcı mütəxəssis",
+    "slug": "j46",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "azər-bank",
+      "name": "Azər Bank"
+    },
+    "detail": {
+      "title": "Kredit risklərinin təhlili üzrə aparıcı mütəxəssis",
+      "company_name": "Azər Bank",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Kredit risklərinin təhlili, borcalanların maliyyə vəziyyətinin qiymətləndirilməsi, kredit komitəsi üçün rəylərin hazırlanması. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Bank sektorunda kredit riski təcrübəsi, maliyyə hesabatlarının təhlili, Excel, Basel normativləri barədə biliklər. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Maliyyə, Biznes və idarəetmə",
+      "sidebar": {
+        "Təcrübə": "3-4 il",
+        "Təhsil": "Bakalavr",
+        "Vəzifə dərəcəsi": "Mütəxəssis"
+      }
+    }
+  },
+  {
+    "evalId": "j47",
+    "family": "risk",
+    "note": "",
+    "title": "Senior FP&A Specialist",
+    "slug": "j47",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "nova-group",
+      "name": "Nova Group"
+    },
+    "detail": {
+      "title": "Senior FP&A Specialist",
+      "company_name": "Nova Group",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Our company has been operating in the Azerbaijani market for many years and is known as a reliable partner in its field. Our team keeps growing and we are welcoming new colleagues. We value quality, integrity and customer satisfaction in everything we do. Prepare budgets and forecasts, analyse variances and support management with financial planning. We offer: a competitive salary, a social package, professional development and training, a friendly and supportive working environment and career growth. Working hours: Monday to Friday, 09:00-18:00. Interview stages: phone screening, personal meeting and a test assignment. If you are interested, please send your CV. ",
+      "requirements_text": "5+ years in financial planning and analysis, advanced Excel, financial modelling, strong reporting skills. Ability to work in a team, responsibility, willingness to learn, strong communication skills, resilience to stress and good time management.",
+      "category": "Maliyyə, Biznes və idarəetmə",
+      "sidebar": {
+        "Təcrübə": "5-8 il",
+        "Təhsil": "Bakalavr"
+      }
+    }
+  },
+  {
+    "evalId": "j48",
+    "family": "education",
+    "note": "",
+    "title": "Math Teacher (Private Lyceum)",
+    "slug": "j48",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "simurq-lyceum",
+      "name": "Simurq Lyceum"
+    },
+    "detail": {
+      "title": "Math Teacher (Private Lyceum)",
+      "company_name": "Simurq Lyceum",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Our company has been operating in the Azerbaijani market for many years and is known as a reliable partner in its field. Our team keeps growing and we are welcoming new colleagues. We value quality, integrity and customer satisfaction in everything we do. Teach mathematics to grades 9-11, prepare lesson plans and prepare students for university entrance exams. We offer: a competitive salary, a social package, professional development and training, a friendly and supportive working environment and career growth. Working hours: Monday to Friday, 09:00-18:00. Interview stages: phone screening, personal meeting and a test assignment. If you are interested, please send your CV. ",
+      "requirements_text": "Bachelor degree in mathematics, teaching experience, classroom management, exam preparation, good English. Ability to work in a team, responsibility, willingness to learn, strong communication skills, resilience to stress and good time management.",
+      "category": "Təhsil",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Bakalavr"
+      }
+    }
+  },
+  {
+    "evalId": "j49",
+    "family": "education",
+    "note": "",
+    "title": "Fizika müəllimi",
+    "slug": "j49",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "bakı-liseyi",
+      "name": "Bakı Liseyi"
+    },
+    "detail": {
+      "title": "Fizika müəllimi",
+      "company_name": "Bakı Liseyi",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Şagirdlərə fizika fənnini tədris etmək, dərs planları hazırlamaq və imtahanlara hazırlaşdırmaq. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Fizika üzrə ali təhsil, pedaqoji təcrübə, sinif idarəetməsi, məsuliyyətlilik. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Təhsil",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Bakalavr"
+      }
+    }
+  },
+  {
+    "evalId": "j50",
+    "family": "other",
+    "note": "",
+    "title": "İnsan Resursları Departament Direktoru",
+    "slug": "j50",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "holding-group",
+      "name": "Holding Group"
+    },
+    "detail": {
+      "title": "İnsan Resursları Departament Direktoru",
+      "company_name": "Holding Group",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. HR departamentinin idarə olunması, kadr strategiyası, işə qəbul və kompensasiya siyasətinin hazırlanması. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "HR sahəsində 10+ il təcrübə, rəhbərlik bacarığı, əmək qanunvericiliyi. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Maliyyə, Biznes və idarəetmə",
+      "sidebar": {
+        "Təcrübə": "9 ildən artıq",
+        "Təhsil": "Magistr",
+        "Vəzifə dərəcəsi": "Direktor"
+      }
+    }
+  },
+  {
+    "evalId": "j51",
+    "family": "other",
+    "note": "",
+    "title": "Çilingər",
+    "slug": "j51",
+    "location": "Bakı, Azərbaycan",
+    "company": {
+      "slug": "tikinti-servis",
+      "name": "Tikinti Servis"
+    },
+    "detail": {
+      "title": "Çilingər",
+      "company_name": "Tikinti Servis",
+      "location": "Bakı, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Binaların su və qızdırma sistemlərinin təmiri və texniki xidməti. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Çilingər təcrübəsi, alətlərlə iş bacarığı. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Sənaye və Kənd Təsərrüfatı",
+      "sidebar": {
+        "Təcrübə": "1-2 il",
+        "Təhsil": "Orta"
+      }
+    }
+  },
+  {
+    "evalId": "j52",
+    "family": "risk",
+    "note": "",
+    "title": "Mikro kredit əməliyyatları üzrə kiçik mütəxəssis",
+    "slug": "j52",
+    "location": "Lənkəran, Azərbaycan",
+    "company": {
+      "slug": "azər-bank",
+      "name": "Azər Bank"
+    },
+    "detail": {
+      "title": "Mikro kredit əməliyyatları üzrə kiçik mütəxəssis",
+      "company_name": "Azər Bank",
+      "location": "Lənkəran, Azərbaycan",
+      "description_text": "Şirkətimiz Azərbaycan bazarında uzun illərdir uğurla fəaliyyət göstərir və öz sahəsində etibarlı tərəfdaş kimi tanınır. Komandamız davamlı olaraq böyüyür və yeni əməkdaşlarla genişlənir. Biz işimizdə keyfiyyəti, dürüstlüyü və müştəri məmnuniyyətini əsas tuturuq. Fiziki şəxslərə mikro kreditlərin rəsmiləşdirilməsi, sənədlərin yoxlanılması və müştərilərə məsləhət verilməsi. Biz təklif edirik: rəqabətli əmək haqqı, sosial paket, peşəkar inkişaf və təlim imkanları, dostcanlı və dəstəkləyici iş mühiti, karyera yüksəlişi imkanları. İş qrafiki: bazar ertəsi - cümə, 09:00-18:00. Namizədlərlə müsahibə mərhələləri: telefon müsahibəsi, şəxsi görüş və test tapşırığı. Maraqlanırsınızsa, CV-nizi göndərin. ",
+      "requirements_text": "Maliyyə və ya iqtisadiyyat üzrə təhsil, Excel, müştəri ilə ünsiyyət bacarığı. Komanda ilə işləmək bacarığı, məsuliyyətlilik, öyrənməyə açıq olmaq, yüksək ünsiyyət qabiliyyəti, stress müqaviməti və vaxtı düzgün idarə etmək bacarığı.",
+      "category": "Maliyyə, Biznes və idarəetmə",
+      "sidebar": {
+        "Təhsil": "Bakalavr"
+      }
+    }
+  }
+]

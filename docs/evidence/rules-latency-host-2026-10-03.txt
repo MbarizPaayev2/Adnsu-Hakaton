@@ -1,0 +1,17 @@
+machine: python 3.14.4, darwin
+
+== REAL inventory (census snapshot): 1425 postings, 10 profiles ==
+  parse all postings (pipeline.parse_*)        39874.2 ms total, 28.0 ms per posting
+  prepare posting features (rules, once)       19517.3 ms total, 13.7 ms per posting
+  score one profile vs all postings (warm)     median 10.4 ms, max 11.2 ms  (0.0 ms per posting)
+  stateless 25-posting request (parse+score)   median 1281.1 ms
+  cold full pass, one profile (parse+prepare+score) ~ 59402.6 ms
+  peak RSS of this process                     102 MB
+
+== SYNTHETIC scale test (mutated copies of the real postings; measures speed only): 5000 postings, 10 profiles ==
+  parse all postings (pipeline.parse_*)        146879.6 ms total, 29.4 ms per posting
+  prepare posting features (rules, once)       72846.9 ms total, 14.6 ms per posting
+  score one profile vs all postings (warm)     median 38.7 ms, max 43.4 ms  (0.0 ms per posting)
+  stateless 25-posting request (parse+score)   median 1398.6 ms
+  cold full pass, one profile (parse+prepare+score) ~ 219770.0 ms
+  peak RSS of this process                     179 MB
