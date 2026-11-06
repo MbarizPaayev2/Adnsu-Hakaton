@@ -133,16 +133,16 @@ export default async function VacancyDetailPage({ params }: { params: Promise<{ 
             )}
             
             <Link
-              href={hasApplied ? '/dashboard/applications' : `/dashboard/companies/${id}/vacancies/${vacancyId}/apply`}
+              href={hasActiveApplied ? '/dashboard/applications' : `/dashboard/companies/${id}/vacancies/${vacancyId}/apply`}
               className={`rounded-xl py-3 px-8 text-sm font-semibold shadow-xs transition-all w-full text-center ${
-                hasApplied
+                hasActiveApplied
                   ? 'bg-green-50 text-green-800 border border-green-200 hover:bg-green-100'
                   : isInactive || isExpired
                     ? 'bg-neutral-dark/20 text-white cursor-not-allowed pointer-events-none'
                     : 'bg-primary text-white hover:bg-primary-hover'
               }`}
             >
-              {hasApplied ? 'Artıq müraciət etmisiniz' : 'Müraciət et'}
+              {hasActiveApplied ? 'Artıq müraciət etmisiniz' : isRejected ? 'Yenidən müraciət et' : 'Müraciət et'}
             </Link>
           </div>
         </div>
